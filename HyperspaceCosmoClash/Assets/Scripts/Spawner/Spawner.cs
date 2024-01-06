@@ -9,7 +9,8 @@ public abstract class Spawner : HaroMonoBehaviour
     [SerializeField] protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
-
+    [SerializeField] protected int spawnedCount = 0;
+    public int SpawnedCount => spawnedCount;
     protected override void LoadComponents()
     {
         this.LoadPrefabs();
@@ -49,9 +50,14 @@ public abstract class Spawner : HaroMonoBehaviour
             Debug.LogWarning("Prefab not found:" + prefabName);
             return null ;
         }
+        return this.Spawn(prefab, spawnPos, rotation);
+    }
+    public virtual Transform Spawn(Transform prefab,Vector3 spawnPos,Quaternion rotation)
+    {
         Transform newPrefab = this.GetObjectFromPool(prefab);
         newPrefab.SetPositionAndRotation(spawnPos, rotation);
         newPrefab.parent = this.holder;
+        this.spawnedCount++;
         return newPrefab;
     }
     protected virtual Transform GetObjectFromPool(Transform prefab)
@@ -77,5 +83,16 @@ public abstract class Spawner : HaroMonoBehaviour
             if (prefab.name == prefabName) return prefab;
         }
         return null;//TO-DO
+    }
+
+    public virtual void Despawn(Transform obj)
+    {
+        this.poolObjs.Add(obj);
+        obj.gameObject.SetActive(false);
+    }
+    public virtual Transform RandomPrefab()
+    {
+        int rand = UnityEngine.Random.Range(0, this.prefabs.Count);
+        return this.prefabs[rand];
     }
 }

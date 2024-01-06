@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class ShipMovement : ObjecMovement
 {
-
-    public virtual void SetSpeed(float value)
-    {
-        this.speed = value;
-    }
     protected virtual void FixedUpdate()
     {
         this.Moving();
