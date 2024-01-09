@@ -16,6 +16,7 @@ public abstract class ObjectShooting : HaroMonoBehaviour
     {
         this.Shooting();
     }
+    
     protected void Shooting()
     {
         this.shootTimer += Time.fixedDeltaTime;

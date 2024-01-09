@@ -1,0 +1,1354 @@
+fileFormatVersion: 2
+guid: 2c07f21cd40d54143a5750db11bfa926
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2545797404506233679
+    second: meteoriteeecompleteremove_0
+  - first:
+      213: -5723778444534227623
+    second: meteoriteeecompleteremove_1
+  - first:
+      213: -1676410450693663757
+    second: meteoriteeecompleteremove_2
+  - first:
+      213: 1848756023201147905
+    second: meteoriteeecompleteremove_3
+  - first:
+      213: 4062844304412330116
+    second: meteoriteeecompleteremove_4
+  - first:
+      213: -9068010231589222016
+    second: meteoriteeecompleteremove_5
+  - first:
+      213: -4114190686257183470
+    second: meteoriteeecompleteremove_6
+  - first:
+      213: -3575059670294853632
+    second: meteoriteeecompleteremove_7
+  - first:
+      213: -7152359459463061231
+    second: meteoriteeecompleteremove_8
+  - first:
+      213: 4453015585501712308
+    second: meteoriteeecompleteremove_9
+  - first:
+      213: -4672284638225494917
+    second: meteoriteeecompleteremove_10
+  - first:
+      213: 1394358226456954973
+    second: meteoriteeecompleteremove_11
+  - first:
+      213: 1887639724454098790
+    second: meteoriteeecompleteremove_12
+  - first:
+      213: 313759220543449736
+    second: meteoriteeecompleteremove_13
+  - first:
+      213: 1132129164717781950
+    second: meteoriteeecompleteremove_14
+  - first:
+      213: -8194556187110624397
+    second: meteoriteeecompleteremove_15
+  - first:
+      213: -6798884295836855589
+    second: meteoriteeecompleteremove_16
+  - first:
+      213: -2400038550447814018
+    second: meteoriteeecompleteremove_17
+  - first:
+      213: -6592924184017659369
+    second: meteoriteeecompleteremove_18
+  - first:
+      213: 4472716187077704906
+    second: meteoriteeecompleteremove_19
+  - first:
+      213: -7076753765217512833
+    second: meteoriteeecompleteremove_20
+  - first:
+      213: -7793402786324806474
+    second: meteoriteeecompleteremove_21
+  - first:
+      213: 6538310064179958463
+    second: meteoriteeecompleteremove_22
+  - first:
+      213: -2631540168764450220
+    second: meteoriteeecompleteremove_23
+  - first:
+      213: -8085693354426250646
+    second: meteoriteeecompleteremove_24
+  - first:
+      213: -5089449262489971604
+    second: meteoriteeecompleteremove_25
+  - first:
+      213: 834898937099688575
+    second: meteoriteeecompleteremove_26
+  - first:
+      213: 7719696826130404592
+    second: meteoriteeecompleteremove_27
+  - first:
+      213: 7572593493858153252
+    second: meteoriteeecompleteremove_28
+  - first:
+      213: 4141269050655526435
+    second: meteoriteeecompleteremove_29
+  - first:
+      213: 4641270581483192194
+    second: meteoriteeecompleteremove_30
+  - first:
+      213: -8415206719246520824
+    second: meteoriteeecompleteremove_31
+  - first:
+      213: -3641734777887344411
+    second: meteoriteeecompleteremove_32
+  - first:
+      213: -3185692607875549959
+    second: meteoriteeecompleteremove_33
+  - first:
+      213: 3232101322228679058
+    second: meteoriteeecompleteremove_34
+  - first:
+      213: -7420563733272629336
+    second: meteoriteeecompleteremove_35
+  - first:
+      213: -3531589880395489015
+    second: meteoriteeecompleteremove_36
+  - first:
+      213: -5355795019436518664
+    second: meteoriteeecompleteremove_37
+  - first:
+      213: 9069234014761870433
+    second: meteoriteeecompleteremove_38
+  - first:
+      213: 4397215513643041276
+    second: meteoriteeecompleteremove_39
+  - first:
+      213: 5819466941735420064
+    second: meteoriteeecompleteremove_40
+  - first:
+      213: -1017492204881971952
+    second: meteoriteeecompleteremove_41
+  - first:
+      213: -3560814881474649678
+    second: meteoriteeecompleteremove_42
+  - first:
+      213: 2675405351230661792
+    second: meteoriteeecompleteremove_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 586
+        width: 378
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 126, y: 119.5}
+        - {x: 35, y: 156.5}
+        - {x: -123, y: 122.5}
+        - {x: -172, y: 81.5}
+        - {x: -189, y: -50.5}
+        - {x: -115, y: -142.5}
+        - {x: 84, y: -145.5}
+        - {x: 148, y: -108.5}
+        - {x: 174, y: -74.5}
+        - {x: 187, y: 39.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b94bd404d745320800000000000000
+      internalID: 2545797404506233679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_1
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 607
+        width: 326
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -147, y: -34.5}
+        - {x: -97, y: -102.5}
+        - {x: 17, y: -134.5}
+        - {x: 135, y: -76.5}
+        - {x: 163, y: 8.5}
+        - {x: 144, y: 134.5}
+        - {x: -26, y: 131.5}
+        - {x: -159, y: 51.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ddf70a4dd0190b0800000000000000
+      internalID: -5723778444534227623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_2
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 631
+        width: 308
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -97, y: 110.5}
+        - {x: -135, y: 70.5}
+        - {x: -152, y: 14.5}
+        - {x: -152, y: -86.5}
+        - {x: -137, y: -111.5}
+        - {x: 20, y: -111.5}
+        - {x: 154, y: -38.5}
+        - {x: 154, y: 101.5}
+        - {x: 95, y: 110.5}
+      - - {x: 105, y: -43.5}
+        - {x: 106, y: -46.5}
+        - {x: 109, y: -46.5}
+        - {x: 111, y: -44.5}
+        - {x: 110, y: -41.5}
+        - {x: 107, y: -41.5}
+      - - {x: 143, y: 65.5}
+        - {x: 145, y: 63.5}
+        - {x: 148, y: 64.5}
+        - {x: 148, y: 67.5}
+        - {x: 146, y: 69.5}
+        - {x: 143, y: 68.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3d6acb3913cb8e0800000000000000
+      internalID: -1676410450693663757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_3
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 630
+        width: 218
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -60, y: 112}
+        - {x: -109, y: 60}
+        - {x: -109, y: -20}
+        - {x: -107, y: -26}
+        - {x: -79, y: -69}
+        - {x: 88, y: -69}
+        - {x: 108, y: -27}
+        - {x: 108, y: 74}
+        - {x: 75, y: 112}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ca447dec918a910800000000000000
+      internalID: 1848756023201147905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_4
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 588
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48847367e5f126830800000000000000
+      internalID: 4062844304412330116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_5
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 434
+        width: 156
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -21, y: 66}
+        - {x: -45, y: 66}
+        - {x: -73, y: 44}
+        - {x: -78, y: 39}
+        - {x: -78, y: -53}
+        - {x: -69, y: -77}
+        - {x: 13, y: -77}
+        - {x: 55, y: -73}
+        - {x: 77, y: -40}
+        - {x: 77, y: 4}
+        - {x: -13, y: 63}
+      - - {x: -19, y: 63}
+        - {x: -16, y: 64}
+        - {x: -16, y: 67}
+        - {x: -19, y: 68}
+        - {x: -21, y: 66}
+      - - {x: -19, y: 84}
+        - {x: -19, y: 86}
+        - {x: -24, y: 86}
+        - {x: -22, y: 83}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089448e1db4f72280800000000000000
+      internalID: -9068010231589222016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 397
+        width: 280
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 101, y: -86}
+        - {x: 102, y: -88}
+        - {x: 106, y: -88}
+        - {x: 107, y: -87}
+        - {x: 106, y: -84}
+        - {x: 103, y: -84}
+      - - {x: -139, y: 88}
+        - {x: -139, y: 12}
+        - {x: -111, y: -29}
+        - {x: 72, y: -29}
+        - {x: 140, y: -22}
+        - {x: 140, y: 88}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2158b676e5577e6c0800000000000000
+      internalID: -4114190686257183470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_7
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 433
+        width: 200
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 31, y: 77.5}
+        - {x: -62, y: 77.5}
+        - {x: -100, y: 28.5}
+        - {x: -100, y: -32.5}
+        - {x: -72, y: -69.5}
+        - {x: 11, y: -69.5}
+        - {x: 96, y: -50.5}
+        - {x: 98, y: -36.5}
+        - {x: 98, y: 35.5}
+        - {x: 74, y: 67.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008004ddb26d26ec0800000000000000
+      internalID: -3575059670294853632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_8
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 307
+        width: 159
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -53.5, y: 47.5}
+        - {x: -71.5, y: 38.5}
+        - {x: -71.5, y: 11.5}
+        - {x: -68.5, y: 0.5}
+        - {x: -57.5, y: -31.5}
+        - {x: 5.5, y: -42.5}
+        - {x: 69.5, y: -42.5}
+        - {x: 78.5, y: -28.5}
+        - {x: 78.5, y: 22.5}
+        - {x: 67.5, y: 47.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111acc867f6bdbc90800000000000000
+      internalID: -7152359459463061231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_9
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 303
+        width: 104
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: 54.5}
+        - {x: -52, y: 28.5}
+        - {x: -52, y: -39.5}
+        - {x: -44, y: -53.5}
+        - {x: 26, y: -53.5}
+        - {x: 50, y: -34.5}
+        - {x: 50, y: 54.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf8b19f41a4ccd30800000000000000
+      internalID: 4453015585501712308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_10
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 436
+        width: 177
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -33.5, y: 76}
+        - {x: -88.5, y: 42}
+        - {x: -88.5, y: -40}
+        - {x: -87.5, y: -50}
+        - {x: -60.5, y: -76}
+        - {x: 48.5, y: -76}
+        - {x: 60.5, y: -73}
+        - {x: 88.5, y: -13}
+        - {x: 88.5, y: 30}
+        - {x: 61.5, y: 76}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c0e0950e5b82fb0800000000000000
+      internalID: -4672284638225494917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_11
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 308
+        width: 116
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 21, y: 41}
+        - {x: -7, y: 17}
+        - {x: -48, y: 43}
+        - {x: -56, y: -16}
+        - {x: -54, y: -32}
+        - {x: -29, y: -49}
+        - {x: 11, y: -49}
+        - {x: 42, y: -42}
+        - {x: 56, y: -5}
+        - {x: 56, y: 49}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d584c995b61c95310800000000000000
+      internalID: 1394358226456954973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_12
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 431
+        width: 134
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 41, y: 77}
+        - {x: -5, y: 77}
+        - {x: -33, y: 72}
+        - {x: -67, y: 18}
+        - {x: -67, y: -30}
+        - {x: -22, y: -63}
+        - {x: 37, y: -63}
+        - {x: 67, y: -31}
+        - {x: 67, y: 42}
+        - {x: 44, y: 75}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667b008045e323a10800000000000000
+      internalID: 1887639724454098790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_13
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 440
+        width: 179
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 54.5, y: 58}
+        - {x: 16.5, y: 71}
+        - {x: -16.5, y: 71}
+        - {x: -67.5, y: 49}
+        - {x: -67.5, y: -11}
+        - {x: -64.5, y: -47}
+        - {x: -29.5, y: -70}
+        - {x: 25.5, y: -70}
+        - {x: 58.5, y: -55}
+        - {x: 89.5, y: -3}
+        - {x: 89.5, y: 31}
+        - {x: 88.5, y: 34}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88aee754952ba5400800000000000000
+      internalID: 313759220543449736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_14
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 326
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -31.5, y: -17.5}
+        - {x: -21.5, y: -30.5}
+        - {x: 18.5, y: -30.5}
+        - {x: 32.5, y: -25.5}
+        - {x: 32.5, y: 27.5}
+        - {x: 31.5, y: 31.5}
+        - {x: -4.5, y: 31.5}
+        - {x: -26.5, y: 23.5}
+        - {x: -31.5, y: 14.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3fcde1a7126bf00800000000000000
+      internalID: 1132129164717781950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_15
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 329
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -27.5, y: 28}
+        - {x: -27.5, y: -5}
+        - {x: -20.5, y: -27}
+        - {x: 0.5, y: -27}
+        - {x: 10.5, y: -22}
+        - {x: 11.5, y: -20}
+        - {x: 11.5, y: 7}
+        - {x: -0.5, y: 28}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373ba4f7096174e80800000000000000
+      internalID: -8194556187110624397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_16
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 354
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd299a541c285a1a0800000000000000
+      internalID: -6798884295836855589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_17
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 262
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a805187a951bed0800000000000000
+      internalID: -2400038550447814018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 217
+        width: 78
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a9b8ca26a3184a0800000000000000
+      internalID: -6592924184017659369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_19
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 211
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accf7e7bca7421e30800000000000000
+      internalID: 4472716187077704906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_20
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 202
+        width: 79
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f725d4dd1f15acd90800000000000000
+      internalID: -7076753765217512833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_21
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 196
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b40291057548d390800000000000000
+      internalID: -7793402786324806474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_22
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 188
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2dec6ac5ebcba50800000000000000
+      internalID: 6538310064179958463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 233
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a9f94b824ea7bd0800000000000000
+      internalID: -2631540168764450220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_24
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 241
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6acfa6ebb8d9cf80800000000000000
+      internalID: -8085693354426250646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_25
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 238
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6459ee5cd4ae59b0800000000000000
+      internalID: -5089449262489971604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_26
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 224
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a9d29e828269b00800000000000000
+      internalID: 834898937099688575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_27
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 243
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f49637dc5fd12b60800000000000000
+      internalID: 7719696826130404592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_28
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 237
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42379dd49a1471960800000000000000
+      internalID: 7572593493858153252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_29
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 239
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e44ab924eb87930800000000000000
+      internalID: 4141269050655526435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_30
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 194
+        width: 76
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fb6cbd00b196040800000000000000
+      internalID: 4641270581483192194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_31
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 200
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ea4d3131e273b80800000000000000
+      internalID: -8415206719246520824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_32
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 206
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8b6d5a385f57dc0800000000000000
+      internalID: -3641734777887344411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_33
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 211
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f47dff93752ac3d0800000000000000
+      internalID: -3185692607875549959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_34
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 207
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291c285370bbadc20800000000000000
+      internalID: 3232101322228679058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_35
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 108
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af6325b99cd40990800000000000000
+      internalID: -7420563733272629336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_36
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 100
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901a9a607b54dfec0800000000000000
+      internalID: -3531589880395489015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_37
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 91
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f21ea85ec46ca5b0800000000000000
+      internalID: -5355795019436518664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_38
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 83
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16465ca19446cdd70800000000000000
+      internalID: 9069234014761870433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_39
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 87
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1c783563c060d30800000000000000
+      internalID: 4397215513643041276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_40
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 91
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0c444c956e2c050800000000000000
+      internalID: 5819466941735420064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_41
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 102
+        width: 65
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015f7460b3421e1f0800000000000000
+      internalID: -1017492204881971952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_42
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 142
+        width: 47
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b167c63bb1759ec0800000000000000
+      internalID: -3560814881474649678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meteoriteeecompleteremove_43
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 117
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a46846fdf2f02520800000000000000
+      internalID: 2675405351230661792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
