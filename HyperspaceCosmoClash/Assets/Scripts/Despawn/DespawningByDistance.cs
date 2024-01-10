@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DespawningByDistance : Despawn
+public class DespawningByDistance : Despawning
 {
     [Header("DespawnByDistance")]
     [SerializeField] protected float disLimit = 70f;
@@ -12,7 +12,6 @@ public class DespawningByDistance : Despawn
     {
         this.LoadCamera();
     }
-
     protected virtual void LoadCamera()
     {
         if (this.mainCam != null) return;

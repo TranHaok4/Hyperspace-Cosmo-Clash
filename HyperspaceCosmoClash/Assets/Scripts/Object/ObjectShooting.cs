@@ -17,6 +17,7 @@ public abstract class ObjectShooting : HaroMonoBehaviour
         this.Shooting();
     }
     
+
     protected void Shooting()
     {
         this.shootTimer += Time.fixedDeltaTime;
@@ -28,7 +29,7 @@ public abstract class ObjectShooting : HaroMonoBehaviour
         Quaternion rotation = transform.parent.rotation;
         Transform newBullet = BulletSpawner.Instance.Spawn(BulletSpawner.bulletOne, spawnPos, rotation);
         if (newBullet == null) return;
-
+        newBullet.GetComponent<BulletCtrl>().SetShooter(this.transform.parent);
         newBullet.gameObject.SetActive(true);
     }
 

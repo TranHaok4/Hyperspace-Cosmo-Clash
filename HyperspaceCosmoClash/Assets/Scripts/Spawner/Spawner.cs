@@ -89,6 +89,7 @@ public abstract class Spawner : HaroMonoBehaviour
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
+        spawnedCount--;
     }
     public virtual Transform RandomPrefab()
     {

@@ -7,7 +7,7 @@ public class MeteoriteSpawner : Spawner
     private static MeteoriteSpawner instance;
     public static MeteoriteSpawner Instance { get => instance; }
 
-    public static string bulletOne = "Meteorite1";
+    public static string Meteorite1 = "Meteorite1";
 
     protected override void Awake()
     {

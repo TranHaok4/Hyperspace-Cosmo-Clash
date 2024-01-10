@@ -4,19 +4,9 @@ using UnityEngine;
 
 public abstract class Despawn : HaroMonoBehaviour
 {
-    protected virtual void FixedUpdate()
-    {
-        this.Despawning();
-    }
-    protected virtual void Despawning()
-    {
-        if (!this.CanDespawn()) return;
-        DespawnObject();
-    }
+
     public virtual void DespawnObject()
     {
-        //TO-DO
+        //Inherit
     }
-
-    protected abstract bool CanDespawn();
 }
