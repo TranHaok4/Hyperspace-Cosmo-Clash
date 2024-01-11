@@ -11,7 +11,7 @@ public class BulletImpart : HaroMonoBehaviour
     public BulletCtrl Bulletctrl { get => bulletCtrl; }
 
     [Header("BulletImpart")]
-    [SerializeField] protected CircleCollider2D Collider;
+    [SerializeField] protected CircleCollider2D _collider;
     [SerializeField] protected Rigidbody2D _rigibody;
 
     protected override void LoadComponents()
@@ -29,9 +29,10 @@ public class BulletImpart : HaroMonoBehaviour
     }
     protected virtual void LoadCollider()
     {
-        if (this.Collider != null) return;
-        this.Collider = GetComponent<CircleCollider2D>();
-        this.Collider.isTrigger = true;
+        if (this._collider != null) return;
+        this._collider = GetComponent<CircleCollider2D>();
+        this._collider.isTrigger = true;
+        this._collider.radius = 0.2f;
         Debug.Log(transform.name + "LoadCollider", gameObject);
     }
     protected virtual void LoadRigibody()
