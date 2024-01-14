@@ -14,4 +14,6 @@ public class ExpItemProfileSO : ScriptableObject
         //Debug.Log(kq);
         return kq;
     }
+
+
 }

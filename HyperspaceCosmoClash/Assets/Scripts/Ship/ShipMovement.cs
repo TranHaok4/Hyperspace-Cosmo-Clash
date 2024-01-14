@@ -11,7 +11,7 @@ public class ShipMovement : ObjecMovement
     protected virtual void Moving()
     {
         Vector3 momevement = new Vector3(InputManager.Instance.HorizontalValue, 
-            InputManager.Instance.VerticalValue,0) * speed * Time.fixedDeltaTime;
+        InputManager.Instance.VerticalValue,0) * speed * Time.fixedDeltaTime;
         transform.parent.position += momevement;
     }
 }

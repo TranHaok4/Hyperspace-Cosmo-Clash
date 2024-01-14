@@ -16,6 +16,9 @@ public class InputManager : HaroMonoBehaviour
     public Vector3 MouseWorldPos { get => mouseWorldPos; }
     [SerializeField] protected float onFiring;
     public float OnFiring { get => onFiring; }
+
+    [SerializeField] protected bool onButtonSkill1;
+    public bool OnButtonSkill1 { get => onButtonSkill1; }
     protected override void Awake()
     {
         if (InputManager.instance != null) Debug.LogError("only 1 InputManager");
@@ -24,6 +27,7 @@ public class InputManager : HaroMonoBehaviour
     protected virtual void Update()
     {
         this.GetMouseDown();
+        this.GetOnButtonSkill1();
     }
     protected virtual void FixedUpdate()
     {
@@ -42,5 +46,13 @@ public class InputManager : HaroMonoBehaviour
     protected void GetMouseDown()
     {
         this.onFiring = Input.GetAxis("Fire1");
+    }
+    protected void GetOnButtonSkill1()
+    {
+        this.onButtonSkill1=Input.GetKeyDown(KeyCode.Mouse1)?true:false;
+        if (onButtonSkill1)
+        {
+            Debug.Log("da bam Q");
+        }
     }
 }
