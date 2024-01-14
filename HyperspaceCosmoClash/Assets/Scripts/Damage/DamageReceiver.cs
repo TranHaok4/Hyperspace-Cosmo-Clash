@@ -57,6 +57,7 @@ public abstract class DamageReceiver : HaroMonoBehaviour
         this.isDead = true;
         this.OnDead();
     }
-    
+
+
     protected abstract void OnDead();
 }

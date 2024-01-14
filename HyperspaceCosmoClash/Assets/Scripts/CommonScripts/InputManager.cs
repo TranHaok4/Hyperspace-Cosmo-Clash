@@ -50,9 +50,10 @@ public class InputManager : HaroMonoBehaviour
     protected void GetOnButtonSkill1()
     {
         this.onButtonSkill1=Input.GetKeyDown(KeyCode.Mouse1)?true:false;
+        /*
         if (onButtonSkill1)
         {
-            Debug.Log("da bam Q");
-        }
+            Debug.Log("da bam chuot phai");
+        }*/
     }
 }

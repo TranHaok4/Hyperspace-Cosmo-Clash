@@ -7,6 +7,11 @@ public class ShipDamageReceiver : DamageReceiver
 {
     [SerializeField] protected ShipCtrl shipCtrl;
 
+    protected override void Start()
+    {
+        base.Start();
+        this.NotifyHPvalue();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -23,5 +28,17 @@ public class ShipDamageReceiver : DamageReceiver
     {
         this.Reborn();
         this.shipCtrl.Shipdespawn.DespawnObject();
+    }
+    public override void Deduct(int damage)
+    {
+        base.Deduct(damage);
+        this.NotifyHPvalue();
+
+    }
+
+    protected virtual void NotifyHPvalue()
+    {
+        Debug.Log("notify hp");
+        HPShipPlayerManager.Instance.UpdateHPdataShipPlayer(hp,hpMax);
     }
 }
