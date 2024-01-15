@@ -38,7 +38,7 @@ public class ShipDamageReceiver : DamageReceiver
 
     protected virtual void NotifyHPvalue()
     {
-        Debug.Log("notify hp");
-        HPShipPlayerManager.Instance.UpdateHPdataShipPlayer(hp,hpMax);
+        //Debug.Log("notify hp");
+        HPShipPlayerNotificater.Instance.OnUpdateHPPlayerShipData(hp,hpMax);
     }
 }

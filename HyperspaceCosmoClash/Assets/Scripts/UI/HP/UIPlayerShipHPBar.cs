@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPlayerShipHP : HaroMonoBehaviour
+public class UIPlayerShipHPBar : HaroMonoBehaviour
 {
     protected override void Start()
     {
         base.Start();
-        if(HPShipPlayerManager.Instance!=null)
+        if(HPShipPlayerNotificater.Instance!=null)
         {
-            Debug.Log("add action");
-            HPShipPlayerManager.Instance.UpdateHPPlayerShip += UpdateHealthBar;
+            //Debug.Log("add action");
+            HPShipPlayerNotificater.Instance.UpdateHPPlayerShip += UpdateHealthBar;
         }
     }
 
@@ -30,7 +30,7 @@ public class UIPlayerShipHP : HaroMonoBehaviour
     }
     protected virtual void UpdateHealthBar(int hp,int maxhp)
     {
-        Debug.Log("da tiep tuc hp");
+        //Debug.Log("da tiep tuc hp");
         this.shipHPbar.value = (float)hp / maxhp;
     }
 }

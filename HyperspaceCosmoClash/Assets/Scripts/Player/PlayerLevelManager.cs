@@ -10,7 +10,7 @@ public class PlayerLevelManager : HaroMonoBehaviour
 
     [SerializeField] protected LevelDataSO levelDataStats;
     [SerializeField] protected int currentLevel;
-    [SerializeField] protected int currentExp;
+    [SerializeField] protected int currentExp=0;
     protected override void Awake()
     {
         base.Awake();
@@ -21,27 +21,30 @@ public class PlayerLevelManager : HaroMonoBehaviour
     {
         base.Start();
         currentLevel = 1;
+        NotifyExpandLevelPlayerShip();
     }
 
     public virtual void AddExp(int value)
     {
-        if((currentExp+value)>=levelDataStats.LevelDataUpgrade[currentLevel])
-        {
-            CheckCurrentLevel();
-        }
         currentExp += value;
-    }
-    protected virtual void CheckCurrentLevel()
-    {
-        if (currentLevel >= levelDataStats.LevelDataUpgrade.Count - 1)
-        {
-            currentExp = levelDataStats.LevelDataUpgrade[currentLevel];
-        }
-
-        if(currentExp>=levelDataStats.LevelDataUpgrade[currentLevel])
+        if (currentExp >= levelDataStats.LevelDataUpgrade[currentLevel])
         {
             currentExp -= levelDataStats.LevelDataUpgrade[currentLevel];
             currentLevel += 1;
         }
+
+        if (currentLevel > levelDataStats.LevelDataUpgrade.Count - 1)
+        {
+            currentLevel = levelDataStats.LevelDataUpgrade.Count - 1;
+            currentExp = levelDataStats.LevelDataUpgrade[currentLevel];
+
+        }
+        NotifyExpandLevelPlayerShip();
+    }
+    
+    protected virtual void NotifyExpandLevelPlayerShip()
+    {
+        ExpShipPlayerNotificater.Instance.OnUpdateExpPlayerShipData(currentExp, levelDataStats.LevelDataUpgrade[currentLevel]);
+        ExpShipPlayerNotificater.Instance.OnUpdateLevelPlayerShipData(currentLevel);
     }
 }
