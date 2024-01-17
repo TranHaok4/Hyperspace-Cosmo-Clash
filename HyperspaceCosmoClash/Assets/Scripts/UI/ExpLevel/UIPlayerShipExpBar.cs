@@ -11,7 +11,7 @@ public class UIPlayerShipExpBar : HaroMonoBehaviour
         if (ExpShipPlayerNotificater.Instance != null)
         {
             //Debug.Log("add action");
-            ExpShipPlayerNotificater.Instance.UpdateExpPlayerShip += UpdateExpBar;
+            ExpShipPlayerNotificater.Instance.updateExpPlayerShip += UpdateExpBar;
         }
     }
 

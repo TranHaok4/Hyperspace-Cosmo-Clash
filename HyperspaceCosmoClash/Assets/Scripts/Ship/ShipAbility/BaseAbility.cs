@@ -10,6 +10,11 @@ public abstract class BaseAbility : HaroMonoBehaviour
 
     [SerializeField] protected ShipCtrl shipCtrl;
     public ShipCtrl Shipctrl { get => shipCtrl; }
+    protected override void Start()
+    {
+        NotifySkillCoolDown();
+        NotifySkillState();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -22,11 +27,6 @@ public abstract class BaseAbility : HaroMonoBehaviour
         Debug.Log(transform.name+":LoadShipCtrl", gameObject);
     }
 
-    protected enum AbilityState
-    {
-        Ready = 0,
-        CoolDown = 1,
-    }
     [SerializeField] protected AbilityState abilitystate;
     public abstract void ActiveSkill();
 
@@ -34,7 +34,19 @@ public abstract class BaseAbility : HaroMonoBehaviour
     {
         delaytimer = abilityStats.CoolDownTimer;
         abilitystate = AbilityState.CoolDown;
+        NotifySkillState();
     }
+
+    private void NotifySkillState()
+    {
+        PlayShipSkillNotificater.Instance.OnChangeSkillState(abilitystate);
+    }
+
+    private void NotifySkillCoolDown()
+    {
+        PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(delaytimer);
+    }
+
     public void CoolDowning()
     {
         delaytimer -= Time.deltaTime;
@@ -42,11 +54,17 @@ public abstract class BaseAbility : HaroMonoBehaviour
         {
             delaytimer = 0;
             abilitystate = AbilityState.Ready;
+            NotifySkillState();
         }
+        NotifySkillCoolDown();
     }
     public virtual bool CheckAbilityisReady()
     {
         return abilitystate == AbilityState.Ready;
     }
 }
-
+public enum AbilityState
+{
+    Ready = 0,
+    CoolDown = 1,
+}

@@ -11,7 +11,7 @@ public class UIPlayerShipHPBar : HaroMonoBehaviour
         if(HPShipPlayerNotificater.Instance!=null)
         {
             //Debug.Log("add action");
-            HPShipPlayerNotificater.Instance.UpdateHPPlayerShip += UpdateHealthBar;
+            HPShipPlayerNotificater.Instance.updateHPPlayerShip += UpdateHealthBar;
         }
     }
 

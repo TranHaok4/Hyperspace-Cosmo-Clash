@@ -9,7 +9,7 @@ public class HPShipPlayerNotificater : HaroMonoBehaviour
     private static HPShipPlayerNotificater instance;
     public static HPShipPlayerNotificater Instance { get => instance; }
 
-    public UnityAction<int,int> UpdateHPPlayerShip;
+    public UnityAction<int,int> updateHPPlayerShip;
 
     protected override void Awake()
     {
@@ -21,9 +21,9 @@ public class HPShipPlayerNotificater : HaroMonoBehaviour
 
     public void OnUpdateHPPlayerShipData(int hp,int maxhp )
     {
-        if (UpdateHPPlayerShip != null)
+        if (updateHPPlayerShip != null)
         {
-            UpdateHPPlayerShip(hp,maxhp);
+            updateHPPlayerShip(hp,maxhp);
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPlayerShipLevelNumber : HaroMonoBehaviour
+public class UIPlayerShipLevelText : HaroMonoBehaviour
 {
 
     [SerializeField] protected Text levelNumberText;
@@ -25,7 +25,7 @@ public class UIPlayerShipLevelNumber : HaroMonoBehaviour
         base.Start();
         if(ExpShipPlayerNotificater.Instance!=null)
         {
-            ExpShipPlayerNotificater.Instance.UpdateLevelPlayerShip += UpdateLevel;
+            ExpShipPlayerNotificater.Instance.updateLevelPlayerShip += UpdateLevel;
         }
     }
 

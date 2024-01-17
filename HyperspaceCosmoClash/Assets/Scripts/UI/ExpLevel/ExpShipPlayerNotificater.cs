@@ -8,11 +8,6 @@ public class ExpShipPlayerNotificater : HaroMonoBehaviour
 
     private static ExpShipPlayerNotificater instance;
     public static ExpShipPlayerNotificater Instance { get => instance; }
-
-    public UnityAction<int,int> UpdateExpPlayerShip;
-    public UnityAction<int> UpdateLevelPlayerShip;
-
-
     protected override void Awake()
     {
         base.Awake();
@@ -21,17 +16,19 @@ public class ExpShipPlayerNotificater : HaroMonoBehaviour
         Debug.Log("da co ExpShipPlayerManager" );
     }
 
+    public UnityAction<int, int> updateExpPlayerShip;
+    public UnityAction<int> updateLevelPlayerShip;
     public void OnUpdateExpPlayerShipData(int currentExp,int maxExp)
     {
-        if (UpdateExpPlayerShip == null) return;
+        if (updateExpPlayerShip == null) return;
 
-        UpdateExpPlayerShip(currentExp, maxExp);
+        updateExpPlayerShip(currentExp, maxExp);
     }
     public void OnUpdateLevelPlayerShipData(int currentLevel)
     {
-        if (UpdateLevelPlayerShip == null) return;
+        if (updateLevelPlayerShip == null) return;
 
-        UpdateLevelPlayerShip(currentLevel);
+        updateLevelPlayerShip(currentLevel);
     }
 
 
