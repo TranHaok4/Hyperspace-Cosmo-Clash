@@ -52,6 +52,14 @@ public abstract class Spawner : HaroMonoBehaviour
         }
         return this.Spawn(prefab, spawnPos, rotation);
     }
+    protected virtual Transform GetPrefabByName(string prefabName)
+    {
+        foreach (Transform prefab in prefabs)
+        {
+            if (prefab.name == prefabName) return prefab;
+        }
+        return null;//TO-DO
+    }
     public virtual Transform Spawn(Transform prefab,Vector3 spawnPos,Quaternion rotation)
     {
         Transform newPrefab = this.GetObjectFromPool(prefab);
@@ -76,14 +84,6 @@ public abstract class Spawner : HaroMonoBehaviour
         return newPrefab;
     }
 
-    protected virtual Transform GetPrefabByName(string prefabName)
-    {
-        foreach(Transform prefab in prefabs)
-        {
-            if (prefab.name == prefabName) return prefab;
-        }
-        return null;//TO-DO
-    }
 
     public virtual void Despawn(Transform obj)
     {

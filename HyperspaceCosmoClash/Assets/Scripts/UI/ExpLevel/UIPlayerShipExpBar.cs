@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPlayerShipExpBar : HaroMonoBehaviour
+public class UIPlayerShipExpBar : BaseUIComponent
 {
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
-        if (ExpShipPlayerNotificater.Instance != null)
+        StartCoroutine(WaitForConditionThenExecute());
+    }
+    protected override IEnumerator WaitForConditionThenExecute()
+    {
+
+        while (LevelExpShipPlayerNotificater.Instance == null)
         {
-            //Debug.Log("add action");
-            ExpShipPlayerNotificater.Instance.updateExpPlayerShip += UpdateExpBar;
+            yield return null;
         }
+        Debug.Log("0k");
+        LevelExpShipPlayerNotificater.Instance.updateExpPlayerShip += UpdateExpBar;
     }
 
     [SerializeField] protected Slider shipExpBar;
@@ -30,7 +35,8 @@ public class UIPlayerShipExpBar : HaroMonoBehaviour
     }
     protected virtual void UpdateExpBar(int currentExp, int maxExp)
     {
-        Debug.Log("UpdateExpBar:"+currentExp+" "+maxExp);
+        Debug.Log("haha");
+        //Debug.Log("UpdateExpBar:"+currentExp+" "+maxExp);
         this.shipExpBar.value = (float)currentExp / maxExp;
     }
 }

@@ -9,7 +9,7 @@ public class PlayerLevelManager : HaroMonoBehaviour
     public static PlayerLevelManager Instance { get => instance; }
 
     [SerializeField] protected LevelDataSO levelDataStats;
-    [SerializeField] protected int currentLevel;
+    [SerializeField] protected int currentLevel=1;
     [SerializeField] protected int currentExp=0;
     protected override void Awake()
     {
@@ -20,8 +20,9 @@ public class PlayerLevelManager : HaroMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        currentLevel = 1;
-        NotifyExpandLevelPlayerShip();
+        //Debug.Log("day la ham start ma");
+        NotifyChangeInExpPlayerShip();
+        NotifyChangeInPlayerShipLevel();
     }
 
     public virtual void AddExp(int value)
@@ -31,6 +32,8 @@ public class PlayerLevelManager : HaroMonoBehaviour
         {
             currentExp -= levelDataStats.LevelDataUpgrade[currentLevel];
             currentLevel += 1;
+            //Debug.Log(currentLevel);
+            NotifyChangeInPlayerShipLevel();
         }
 
         if (currentLevel > levelDataStats.LevelDataUpgrade.Count - 1)
@@ -39,12 +42,18 @@ public class PlayerLevelManager : HaroMonoBehaviour
             currentExp = levelDataStats.LevelDataUpgrade[currentLevel];
 
         }
-        NotifyExpandLevelPlayerShip();
+        NotifyChangeInExpPlayerShip();
     }
     
-    protected virtual void NotifyExpandLevelPlayerShip()
+    protected virtual void NotifyChangeInExpPlayerShip()
     {
-        ExpShipPlayerNotificater.Instance.OnUpdateExpPlayerShipData(currentExp, levelDataStats.LevelDataUpgrade[currentLevel]);
-        ExpShipPlayerNotificater.Instance.OnUpdateLevelPlayerShipData(currentLevel);
+        //Debug.Log(currentExp+" "+levelDataStats.LevelDataUpgrade[currentLevel]);
+        LevelExpShipPlayerNotificater.Instance.OnUpdateExpPlayerShipData(currentExp, levelDataStats.LevelDataUpgrade[currentLevel]);
+    }
+
+    protected virtual void NotifyChangeInPlayerShipLevel()
+    {
+        LevelExpShipPlayerNotificater.Instance.OnUpdateLevelPlayerShipData(currentLevel);
+
     }
 }

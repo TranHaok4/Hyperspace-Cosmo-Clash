@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f02046d6bc4be840a63c7a364c8d450, type: 3}
   m_Name: ShipDash
   m_EditorClassIdentifier: 
-  coolDownTimer: 3
+  coolDownTimer: 5
   skillName: ShipDash

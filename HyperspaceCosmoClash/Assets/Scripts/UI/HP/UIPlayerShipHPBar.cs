@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPlayerShipHPBar : HaroMonoBehaviour
+public class UIPlayerShipHPBar : BaseUIComponent
 {
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
-        if(HPShipPlayerNotificater.Instance!=null)
+        StartCoroutine(WaitForConditionThenExecute());
+    }
+    protected override IEnumerator WaitForConditionThenExecute()
+    {
+        //Debug.Log("0k");
+
+        while (HPShipPlayerNotificater.Instance == null)
         {
-            //Debug.Log("add action");
-            HPShipPlayerNotificater.Instance.updateHPPlayerShip += UpdateHealthBar;
+            yield return null;
         }
+        HPShipPlayerNotificater.Instance.updateHPPlayerShip += UpdateHealthBar;
     }
 
     [SerializeField] protected Slider shipHPbar;

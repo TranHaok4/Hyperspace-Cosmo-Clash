@@ -46,7 +46,7 @@ public class BulletImpart : HaroMonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("dumemay");
+        //Debug.Log("dumemay");
         if (other.transform.parent == this.bulletCtrl.Shooter) return;
         this.bulletCtrl.BulletDamagesender.SendDamage(other.transform);
         this.DespawnBullet();

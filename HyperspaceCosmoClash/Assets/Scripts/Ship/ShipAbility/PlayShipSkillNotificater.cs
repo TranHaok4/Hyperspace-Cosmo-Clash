@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class PlayShipSkillNotificater : HaroMonoBehaviour
+public class PlayShipSkillNotificater : Notificater
 {
     private static PlayShipSkillNotificater instance;
     public static PlayShipSkillNotificater Instance { get => instance; }
     protected override void Awake()
     {
-        base.Awake();
         if (PlayShipSkillNotificater.instance != null) Debug.LogError("Only 1 PlayShipSkillNotificater allow to exist");
         PlayShipSkillNotificater.instance = this;
-        Debug.Log("da co ExpShipPlayerManager");
+        Debug.Log("da co PlayShipSkillNotificater");
     }
 
     public UnityAction<AbilityState> changeSkillState;
@@ -19,15 +18,40 @@ public class PlayShipSkillNotificater : HaroMonoBehaviour
 
     public void OnChangeSkillState(AbilityState state)
     {
-        if (changeSkillState == null) return;
+        if (changeSkillState != null)
+        {
+            changeSkillState(state);
+        }
+        else
+        {
 
-        changeSkillState(state );
+        }
     }
     public void OnChangeSkillCoolDown(float time)
     {
-        if (changeSkillCoolDown == null) return;
+        if (changeSkillCoolDown != null)
+        {
+            changeSkillCoolDown(time);
+        }
+        else
+        {
 
+        }
+    }
+    IEnumerator WaitforOnchangeSkillState(AbilityState state)
+    {
+        while(changeSkillState==null)
+        {
+            yield return null;
+        }
+        changeSkillState(state);
+    }
+    IEnumerator WaitOnChangeSkillCoolDown(float time)
+    {
+        while (changeSkillCoolDown == null)
+        {
+            yield return null;
+        }
         changeSkillCoolDown(time);
     }
-
 }

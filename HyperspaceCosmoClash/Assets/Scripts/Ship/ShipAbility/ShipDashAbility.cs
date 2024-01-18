@@ -17,7 +17,7 @@ public class ShipDashAbility : BaseAbility
         //Debug.Log("da vao duoc day");
         dashTimer = dashDuration;
         float oldShipSpeed = this.shipCtrl.Shipmovement.Speed;
-        Debug.Log(oldShipSpeed);
+        //Debug.Log(oldShipSpeed);
         while(dashTimer>=0)
         {
             this.shipCtrl.Shipmovement.SetSpeed(dashSpeed);

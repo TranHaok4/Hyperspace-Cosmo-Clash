@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPlayerShipLevelText : HaroMonoBehaviour
+public class UIPlayerShipLevelText : BaseUIComponent
 {
 
     [SerializeField] protected Text levelNumberText;
@@ -20,17 +20,22 @@ public class UIPlayerShipLevelText : HaroMonoBehaviour
         this.levelNumberText = this.GetComponent<Text>();
         Debug.Log(transform.name + ":LoadLevelText", gameObject);
     }
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
-        if(ExpShipPlayerNotificater.Instance!=null)
-        {
-            ExpShipPlayerNotificater.Instance.updateLevelPlayerShip += UpdateLevel;
-        }
+        StartCoroutine(WaitForConditionThenExecute());
     }
+    protected override IEnumerator WaitForConditionThenExecute()
+    {
 
+        while (LevelExpShipPlayerNotificater.Instance == null)
+        {
+            yield return null;
+        }
+        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += UpdateLevel;
+    }
     protected virtual void UpdateLevel(int levernumber)
     {
+        Debug.Log(levernumber);
         levelNumberText.text = levernumber.ToString();
     }
 }

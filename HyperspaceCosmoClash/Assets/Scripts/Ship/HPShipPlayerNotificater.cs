@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HPShipPlayerNotificater : HaroMonoBehaviour
+public class HPShipPlayerNotificater : Notificater
 {
     
     private static HPShipPlayerNotificater instance;
@@ -13,7 +13,6 @@ public class HPShipPlayerNotificater : HaroMonoBehaviour
 
     protected override void Awake()
     {
-        base.Awake();
         if (HPShipPlayerNotificater.instance != null) Debug.LogError("Only 1 HPShipPlayerManager allow to exist");
         HPShipPlayerNotificater.instance = this;
         Debug.Log("da co HPShipPlayerManager");
@@ -25,7 +24,18 @@ public class HPShipPlayerNotificater : HaroMonoBehaviour
         {
             updateHPPlayerShip(hp,maxhp);
         }
+        else
+        {
+            StartCoroutine(WaitforOnUpdateHPPlayerShipData(hp,maxhp));
+        }
     }
 
-
+    IEnumerator WaitforOnUpdateHPPlayerShipData(int hp,int maxhp)
+    {
+        while(updateHPPlayerShip==null)
+        {
+            yield return null;
+        }
+        updateHPPlayerShip(hp, maxhp);
+    }
 }
