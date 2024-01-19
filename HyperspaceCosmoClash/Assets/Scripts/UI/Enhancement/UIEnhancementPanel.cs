@@ -6,11 +6,48 @@ using UnityEngine.UI;
 public class UIEnhancementPanel : BaseUIComponent
 {
     [SerializeField] protected Image enhancementBoard;
+    [SerializeField] protected List<EnhancementBox> iconBoxs;
+    [SerializeField] protected Button confirmButton;
+    [SerializeField] protected EnhancementSelectedText enhancementSelectedText;
+
+
+    protected override void Start()
+    {
+        base.Start();
+        foreach (EnhancementBox box in iconBoxs)
+        {
+            box.beClicked += enhancementSelectedText.ChangeSelectedEnhance;
+        }
+    }
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        LoadEnhancementBoard();
+        this.LoadEnhancementBoard();
+        this.LoadConfirmButton();
+        this.LoadEnhancementSelectedText();
+        this.LoadIconBoxs();
+    }
+    protected virtual void LoadIconBoxs()
+    {
+        if (this.iconBoxs.Count != 0) return;
+        foreach(Transform obj in transform)
+        {
+            EnhancementBox box=obj.transform.GetComponent<EnhancementBox>();
+            if (box!=null)
+            {
+                this.iconBoxs.Add(box);
+            }
+        }
+        Debug.Log(transform.name + ":LoadIconBoxs", gameObject);
+
+    }
+
+    protected virtual void LoadEnhancementSelectedText()
+    {
+        if (this.enhancementSelectedText != null) return;
+        this.enhancementSelectedText = this.GetComponentInChildren<EnhancementSelectedText>();
+        Debug.Log(transform.name + ":LoadEnhancementSelectedText", gameObject);
     }
 
     protected virtual void LoadEnhancementBoard()
@@ -19,10 +56,22 @@ public class UIEnhancementPanel : BaseUIComponent
         this.enhancementBoard = this.GetComponent<Image>();
         Debug.Log(transform.name + ":LoadEnhancementBoard", gameObject);
     }
+    protected virtual void LoadConfirmButton()
+    {
+        if (this.confirmButton != null) return;
+        this.confirmButton = this.GetComponentInChildren<Button>();
+        Debug.Log(transform.name + ":LoadConfirmButton", gameObject);
+    }
+
     protected override void Awake()
     {
         StartCoroutine(WaitForConditionThenExecute());
+        if(confirmButton!=null)
+        {
+            confirmButton.onClick.AddListener(TurnOffEnhacementBoard);
+        }
     }
+
     protected override IEnumerator WaitForConditionThenExecute()
     {
         //Debug.Log("0k");
@@ -31,10 +80,18 @@ public class UIEnhancementPanel : BaseUIComponent
         {
             yield return null;
         }
-        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += TurnOnOffEnhancementBoard;
+        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += TurnOnEnhancementBoard;
         this.gameObject.SetActive(false);
     }
-    protected virtual void TurnOnOffEnhancementBoard(int currentlevel)
+    protected virtual void TurnOnEnhancementBoard()
+    {
+        if (!gameObject.activeSelf)
+        {
+            // Debug.Log("haha");
+            this.gameObject.SetActive(true);
+        }
+    }
+    protected virtual void TurnOnEnhancementBoard(int currentlevel)
     {
         //Debug.Log(currentlevel);
         if (currentlevel <= 1) return;
@@ -43,6 +100,15 @@ public class UIEnhancementPanel : BaseUIComponent
         {
            // Debug.Log("haha");
             this.gameObject.SetActive(true);
+        }
+    }
+
+    protected virtual void TurnOffEnhacementBoard()
+    {
+        if (gameObject.activeSelf)
+        {
+            // Debug.Log("haha");
+            this.gameObject.SetActive(false);
         }
     }
 }

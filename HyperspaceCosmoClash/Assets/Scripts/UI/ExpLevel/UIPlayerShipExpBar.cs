@@ -35,7 +35,7 @@ public class UIPlayerShipExpBar : BaseUIComponent
     }
     protected virtual void UpdateExpBar(int currentExp, int maxExp)
     {
-        Debug.Log("haha");
+        //Debug.Log("haha");
         //Debug.Log("UpdateExpBar:"+currentExp+" "+maxExp);
         this.shipExpBar.value = (float)currentExp / maxExp;
     }

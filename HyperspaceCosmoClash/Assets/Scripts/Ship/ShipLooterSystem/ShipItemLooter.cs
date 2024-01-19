@@ -33,7 +33,7 @@ public class ShipItemLooter : HaroMonoBehaviour
     {
         ItemPickupable itempickupable = collider.GetComponent<ItemPickupable>();
         if (itempickupable == null) return;
-        Debug.Log("ok den day");
+        //Debug.Log("ok den day");
         itempickupable.BePickUp();
     }
 }

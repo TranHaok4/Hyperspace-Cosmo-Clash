@@ -14,7 +14,7 @@ public class ExpItemPickupable : ItemPickupable
     protected virtual void SendExpValue()
     {
         int exp_value = expItemProfile.GetExpValue();
-        Debug.Log(exp_value);
+        //Debug.Log(exp_value);
         PlayerLevelManager.Instance.AddExp(exp_value);
     }
 
