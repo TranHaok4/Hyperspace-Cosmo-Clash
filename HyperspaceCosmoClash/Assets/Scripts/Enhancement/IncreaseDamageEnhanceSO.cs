@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "IncreaseDamageEnhanceSO", menuName = "ScriptableObject/Enhancement/IncreaseDamageEnhanceSO")]
 public class IncreaseDamageEnhanceSO : EnhancementDataSO
 {
-    protected override void ApplyEnhancement()
+    public override void ApplyEnhancement()
     {
-        //todo
+        Debug.Log("Da increase Damage");
     }
 }

@@ -7,17 +7,25 @@ public class UIEnhancementPanel : BaseUIComponent
 {
     [SerializeField] protected Image enhancementBoard;
     [SerializeField] protected List<EnhancementBox> iconBoxs;
-    [SerializeField] protected Button confirmButton;
+    [SerializeField] protected EnhanceConfirmButton confirmButton;
     [SerializeField] protected EnhancementSelectedText enhancementSelectedText;
 
 
     protected override void Start()
     {
         base.Start();
+        this.InitlizeComponent();
+    }
+    protected virtual void InitlizeComponent()
+    {
         foreach (EnhancementBox box in iconBoxs)
         {
             box.beClicked += enhancementSelectedText.ChangeSelectedEnhance;
+            confirmButton.ConfirmButton.onClick.AddListener(box.OnBeSelected);
         }
+
+
+        confirmButton.ConfirmButton.onClick.AddListener(TurnOffEnhacementBoard);
     }
 
     protected override void LoadComponents()
@@ -59,17 +67,13 @@ public class UIEnhancementPanel : BaseUIComponent
     protected virtual void LoadConfirmButton()
     {
         if (this.confirmButton != null) return;
-        this.confirmButton = this.GetComponentInChildren<Button>();
+        this.confirmButton = this.GetComponentInChildren<EnhanceConfirmButton>();
         Debug.Log(transform.name + ":LoadConfirmButton", gameObject);
     }
 
     protected override void Awake()
     {
         StartCoroutine(WaitForConditionThenExecute());
-        if(confirmButton!=null)
-        {
-            confirmButton.onClick.AddListener(TurnOffEnhacementBoard);
-        }
     }
 
     protected override IEnumerator WaitForConditionThenExecute()

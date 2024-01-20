@@ -16,4 +16,5 @@ public abstract class DamageSender : HaroMonoBehaviour
     {
         damageReceiver.Deduct(this.damage);
     }
+
 }

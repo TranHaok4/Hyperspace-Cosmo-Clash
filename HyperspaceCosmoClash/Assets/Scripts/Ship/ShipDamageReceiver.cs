@@ -33,7 +33,13 @@ public class ShipDamageReceiver : DamageReceiver
     {
         base.Deduct(damage);
         this.NotifyHPvalue();
+    }
 
+    public virtual void AddHPmax(int value)
+    {
+        this.hpMax += value;
+        this.hp += value;
+        this.NotifyHPvalue();
     }
 
     protected virtual void NotifyHPvalue()
