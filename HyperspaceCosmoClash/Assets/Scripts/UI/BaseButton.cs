@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BaseButton : MonoBehaviour//todolater
+using UnityEngine.UI;
+public class BaseButton : HaroMonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] protected Button button;
+    public Button _Button { get => button; }
 
-    // Update is called once per frame
-    void Update()
+    protected override void LoadComponents()
     {
-        
+        base.LoadComponents();
+        this.LoadButton();
+    }
+    protected virtual void LoadButton()
+    {
+        if (this.button != null) return;
+        this.button = this.GetComponent<Button>();
+        Debug.Log(transform.name + "LoadButton", gameObject);
     }
 }

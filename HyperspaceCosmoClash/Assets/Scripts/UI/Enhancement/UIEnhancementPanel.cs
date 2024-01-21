@@ -21,11 +21,11 @@ public class UIEnhancementPanel : BaseUIComponent
         foreach (EnhancementBox box in iconBoxs)
         {
             box.beClicked += enhancementSelectedText.ChangeSelectedEnhance;
-            confirmButton.ConfirmButton.onClick.AddListener(box.OnBeSelected);
+            confirmButton._Button.onClick.AddListener(box.OnBeSelected);
         }
+            
 
-
-        confirmButton.ConfirmButton.onClick.AddListener(TurnOffEnhacementBoard);
+        confirmButton._Button.onClick.AddListener(TurnOffEnhacementBoard);
     }
 
     protected override void LoadComponents()
