@@ -49,6 +49,7 @@ public class BulletImpart : HaroMonoBehaviour
         //Debug.Log("dumemay");
         if (other.transform.parent == this.bulletCtrl.Shooter) return;
         this.bulletCtrl.BulletDamagesender.SendDamage(other.transform);
+        this.CreateImpactVFX();
         this.DespawnBullet();
     }
 
@@ -56,4 +57,15 @@ public class BulletImpart : HaroMonoBehaviour
     {
         this.bulletCtrl.BulletDespawn.DespawnObject();
     }
+
+    protected virtual void CreateImpactVFX()
+    {
+        string fxName = VFXSpawner.vfxone;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
+    }
+
+
 }
