@@ -22,4 +22,9 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         enemyCtrl.Enemydespawn.DespawnObject();
     }
+    public override void Deduct(int damage)
+    {
+        this.enemyCtrl.EnemyVFXeffect.StartVFX();
+        base.Deduct(damage);
+    }
 }

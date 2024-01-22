@@ -28,7 +28,7 @@ AnimationClip:
     - time: 0.25
       value: {fileID: -7258735533416252098, guid: 0daaf94292b8705428146912b36874e9, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Model
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -39,7 +39,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 374627805
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -60,7 +60,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

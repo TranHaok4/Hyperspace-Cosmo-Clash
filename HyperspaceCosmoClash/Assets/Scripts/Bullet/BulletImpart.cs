@@ -49,7 +49,7 @@ public class BulletImpart : HaroMonoBehaviour
         //Debug.Log("dumemay");
         if (other.transform.parent == this.bulletCtrl.Shooter) return;
         this.bulletCtrl.BulletDamagesender.SendDamage(other.transform);
-        this.CreateImpactVFX();
+        CreateImpactVFX();
         this.DespawnBullet();
     }
 
