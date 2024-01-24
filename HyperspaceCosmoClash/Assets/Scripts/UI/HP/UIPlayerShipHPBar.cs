@@ -7,17 +7,6 @@ public class UIPlayerShipHPBar : BaseUIComponent
 {
     protected override void Awake()
     {
-        StartCoroutine(WaitForConditionThenExecute());
-    }
-    protected override IEnumerator WaitForConditionThenExecute()
-    {
-        //Debug.Log("0k");
-
-        while (HPShipPlayerNotificater.Instance == null)
-        {
-            yield return null;
-        }
-        HPShipPlayerNotificater.Instance.updateHPPlayerShip += UpdateHealthBar;
     }
 
     [SerializeField] protected Slider shipHPbar;
@@ -37,5 +26,10 @@ public class UIPlayerShipHPBar : BaseUIComponent
     {
         //Debug.Log("da tiep tuc hp");
         this.shipHPbar.value = (float)hp / maxhp;
+    }
+
+    public override void SetUpUIlogic()
+    {
+        HPShipPlayerNotificater.Instance.updateHPPlayerShip += UpdateHealthBar;
     }
 }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UICoolDownIcon : HaroMonoBehaviour
+public class UICoolDownIcon : BaseUIComponent
 {
     [SerializeField] protected Image skillIcon;
+
+
 
     protected override void LoadComponents()
     {
@@ -18,15 +20,6 @@ public class UICoolDownIcon : HaroMonoBehaviour
         this.skillIcon = this.GetComponent<Image>();
         Debug.Log(transform.name + ":LoadSkillIcon", gameObject);
     }
-    protected override void Start()
-    {
-        base.Start();
-        if (PlayShipSkillNotificater.Instance != null)
-        {
-            PlayShipSkillNotificater.Instance.changeSkillState += UpdateSkillIconColor;
-        }
-    }
-
     protected virtual void UpdateSkillIconColor(AbilityState state)
     {
         if(state==AbilityState.CoolDown)
@@ -37,5 +30,9 @@ public class UICoolDownIcon : HaroMonoBehaviour
         {
             skillIcon.color = Color.white;
         }
+    }
+    public override void SetUpUIlogic()
+    {
+        PlayShipSkillNotificater.Instance.changeSkillState += UpdateSkillIconColor;
     }
 }

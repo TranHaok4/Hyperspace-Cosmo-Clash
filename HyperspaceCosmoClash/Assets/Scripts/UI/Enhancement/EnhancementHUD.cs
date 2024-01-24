@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnhancementHUD : MonoBehaviour
+public class EnhancementHUD : BaseHUD
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected UIEnhancementPanel uiEnhancementPanel;
+
+
+    protected override void LoadComponents()
     {
-        
+        base.LoadComponents();
+        this.LoadEnhancementPanel();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void LoadEnhancementPanel()
     {
-        
+        if (this.uiEnhancementPanel != null) return;
+        this.uiEnhancementPanel = this.GetComponentInChildren<UIEnhancementPanel>();
+        Debug.Log(transform.name + "LoadEnhancementPanel", gameObject);
+    }
+
+    protected override void Awake()
+    {
+        StartCoroutine(WaitForConditionThenExecute());
+    }
+    protected override IEnumerator WaitForConditionThenExecute()
+    {
+        //Debug.Log("0k");
+
+        while (LevelExpShipPlayerNotificater.Instance == null)
+        {
+            yield return null;
+        }
+        uiEnhancementPanel.SetUpUIlogic();
     }
 }

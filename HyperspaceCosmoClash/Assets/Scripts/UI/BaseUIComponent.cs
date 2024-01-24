@@ -4,6 +4,5 @@ using UnityEngine;
 using UnityEngine.UI;
 public abstract class BaseUIComponent : HaroMonoBehaviour
 {
-    protected abstract IEnumerator WaitForConditionThenExecute();
-
+    public abstract void SetUpUIlogic();
 }

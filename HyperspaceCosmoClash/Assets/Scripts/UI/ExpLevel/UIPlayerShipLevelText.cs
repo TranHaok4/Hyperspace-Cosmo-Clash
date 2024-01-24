@@ -20,22 +20,14 @@ public class UIPlayerShipLevelText : BaseUIComponent
         this.levelNumberText = this.GetComponent<Text>();
         Debug.Log(transform.name + ":LoadLevelText", gameObject);
     }
-    protected override void Awake()
-    {
-        StartCoroutine(WaitForConditionThenExecute());
-    }
-    protected override IEnumerator WaitForConditionThenExecute()
-    {
-
-        while (LevelExpShipPlayerNotificater.Instance == null)
-        {
-            yield return null;
-        }
-        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += UpdateLevel;
-    }
     protected virtual void UpdateLevel(int levernumber)
     {
         Debug.Log(levernumber);
         levelNumberText.text = levernumber.ToString();
+    }
+
+    public override void SetUpUIlogic()
+    {
+        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += UpdateLevel;
     }
 }

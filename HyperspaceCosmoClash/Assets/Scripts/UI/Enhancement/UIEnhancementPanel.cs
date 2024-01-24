@@ -71,22 +71,6 @@ public class UIEnhancementPanel : BaseUIComponent
         Debug.Log(transform.name + ":LoadConfirmButton", gameObject);
     }
 
-    protected override void Awake()
-    {
-        StartCoroutine(WaitForConditionThenExecute());
-    }
-
-    protected override IEnumerator WaitForConditionThenExecute()
-    {
-        //Debug.Log("0k");
-
-        while (LevelExpShipPlayerNotificater.Instance == null)
-        {
-            yield return null;
-        }
-        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += TurnOnEnhancementBoard;
-        this.gameObject.SetActive(false);
-    }
     protected virtual void TurnOnEnhancementBoard()
     {
         if (!gameObject.activeSelf)
@@ -114,5 +98,11 @@ public class UIEnhancementPanel : BaseUIComponent
             // Debug.Log("haha");
             this.gameObject.SetActive(false);
         }
+    }
+
+    public override void SetUpUIlogic()
+    {
+        LevelExpShipPlayerNotificater.Instance.updateLevelPlayerShip += TurnOnEnhancementBoard;
+        this.gameObject.SetActive(false);
     }
 }

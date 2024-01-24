@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class UICoolDownText : HaroMonoBehaviour
+public class UICoolDownText : BaseUIComponent
 {
     [SerializeField] protected Text cooldownSkillText;
+
 
     protected override void LoadComponents()
     {
@@ -18,18 +19,14 @@ public class UICoolDownText : HaroMonoBehaviour
         this.cooldownSkillText = this.GetComponent<Text>();
         Debug.Log(transform.name + ":LoadLevelText", gameObject);
     }
-    protected override void Start()
-    {
-        base.Start();
-        if(PlayShipSkillNotificater.Instance!=null)
-        {
-            PlayShipSkillNotificater.Instance.changeSkillCoolDown += UpdateSkillcooldownText ;
-        }
-    }
 
     protected virtual void UpdateSkillcooldownText(float time)
     {
         cooldownSkillText.text = time.ToString("F2");
         if (time <= 0) cooldownSkillText.text = "";
+    }
+    public override void SetUpUIlogic()
+    {
+        PlayShipSkillNotificater.Instance.changeSkillCoolDown += UpdateSkillcooldownText;
     }
 }

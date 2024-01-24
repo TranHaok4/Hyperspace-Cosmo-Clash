@@ -5,20 +5,6 @@ using UnityEngine.UI;
 
 public class UIPlayerShipExpBar : BaseUIComponent
 {
-    protected override void Awake()
-    {
-        StartCoroutine(WaitForConditionThenExecute());
-    }
-    protected override IEnumerator WaitForConditionThenExecute()
-    {
-
-        while (LevelExpShipPlayerNotificater.Instance == null)
-        {
-            yield return null;
-        }
-        Debug.Log("0k");
-        LevelExpShipPlayerNotificater.Instance.updateExpPlayerShip += UpdateExpBar;
-    }
 
     [SerializeField] protected Slider shipExpBar;
     protected override void LoadComponents()
@@ -38,5 +24,10 @@ public class UIPlayerShipExpBar : BaseUIComponent
         //Debug.Log("haha");
         //Debug.Log("UpdateExpBar:"+currentExp+" "+maxExp);
         this.shipExpBar.value = (float)currentExp / maxExp;
+    }
+
+    public override void SetUpUIlogic()
+    {
+        LevelExpShipPlayerNotificater.Instance.updateExpPlayerShip += UpdateExpBar;
     }
 }
