@@ -12,7 +12,7 @@ public class EnemyCtrl : HaroMonoBehaviour
 
     [SerializeField] protected EnemyVFXEffect enemyVFXEffect;
     public EnemyVFXEffect EnemyVFXeffect { get => enemyVFXEffect; }
-    protected override void LoadComponents()
+    protected override void LoadComponents()    
     {
         base.LoadComponents();
         this.LoadEnemyDespawn();

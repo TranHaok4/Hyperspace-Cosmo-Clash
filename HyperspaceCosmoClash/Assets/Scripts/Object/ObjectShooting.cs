@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class ObjectShooting : HaroMonoBehaviour
 {
+    [SerializeField] protected TypeBullet bullet;
+
     [SerializeField] protected bool isShooting = false;
     [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;
@@ -27,11 +29,18 @@ public abstract class ObjectShooting : HaroMonoBehaviour
 
         Vector3 spawnPos = transform.position;
         Quaternion rotation = transform.parent.rotation;
-        Transform newBullet = BulletSpawner.Instance.Spawn(BulletSpawner.bulletOne, spawnPos, rotation);
+        Transform newBullet = BulletSpawner.Instance.Spawn(bullet.ToString(), spawnPos, rotation);
         if (newBullet == null) return;
         newBullet.GetComponent<BulletCtrl>().SetShooter(this.transform.parent);
         newBullet.gameObject.SetActive(true);
     }
 
     protected abstract bool IsShooting();
+}
+
+public enum TypeBullet
+{
+    none=0,
+    PlayerBullet=1,
+    EnemyBullet=2,
 }
