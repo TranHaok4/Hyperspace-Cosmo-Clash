@@ -6,7 +6,7 @@ public enum ItemCode
 {
     NoItem=0,
     Exp=1,
-    Gold=2,
+    Coin=2,
     EnhacementRandom=3,
 }
 public class ItemCodeParser

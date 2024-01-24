@@ -14,7 +14,7 @@ public class PlayerLevelManager : HaroMonoBehaviour
     protected override void Awake()
     {
         base.Awake();
-        if (PlayerLevelManager.instance != null) Debug.LogError("Only 1 EnemySpawner allow to exist");
+        if (PlayerLevelManager.instance != null) Debug.LogError("Only 1 PlayerLevelManager allow to exist");
         PlayerLevelManager.instance = this;
     }
     protected override void Start()
