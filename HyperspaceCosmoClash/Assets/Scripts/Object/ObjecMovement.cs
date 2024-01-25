@@ -11,4 +11,5 @@ public class ObjecMovement : HaroMonoBehaviour
     {
         this.speed = speed;
     }
+
 }

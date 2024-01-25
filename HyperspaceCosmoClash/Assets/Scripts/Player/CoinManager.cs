@@ -8,6 +8,12 @@ public class CoinManager : HaroMonoBehaviour
     public static CoinManager Instance { get => instance; }
 
     [SerializeField] protected int coinValue = 0;
+
+    protected override void Start()
+    {
+        base.Start();
+        this.NotifyChangeCoinValue();
+    }
     protected override void Awake()
     {
         base.Awake();
