@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94acf3f064d1ac94eadf1133f35782db, type: 3}
   m_Name: CoinData
   m_EditorClassIdentifier: 
+  itemName: 4
   value: 1

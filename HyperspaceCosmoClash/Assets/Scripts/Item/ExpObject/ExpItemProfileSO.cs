@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ExpData", menuName = "ScriptableObject/ExpData")]
-public class ExpItemProfileSO : ScriptableObject
+public class ExpItemProfileSO : ItemProfileSO
 {
     [SerializeField] protected int minExpValue;
     [SerializeField] protected int maxExpValue;

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958fabe595b78204287fdfde58fb4c70, type: 3}
   m_Name: Exp3
   m_EditorClassIdentifier: 
+  itemName: 3
   minExpValue: 100
   maxExpValue: 150

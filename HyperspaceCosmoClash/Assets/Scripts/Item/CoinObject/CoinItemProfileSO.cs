@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CoinData", menuName = "ScriptableObject/CoinData")]
-public class CoinItemProfileSO : ScriptableObject
+public class CoinItemProfileSO : ItemProfileSO
 {
     [SerializeField] protected int value;
 
