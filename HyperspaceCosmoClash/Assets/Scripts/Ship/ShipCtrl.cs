@@ -15,6 +15,9 @@ public class ShipCtrl : HaroMonoBehaviour
     [SerializeField] protected ShipShootByMouse shipShooter;
     public ShipShootByMouse ShipShooter { get => shipShooter; }
 
+    [SerializeField] protected Rigidbody2D rb;
+    public Rigidbody2D RB { get => rb; }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -22,6 +25,13 @@ public class ShipCtrl : HaroMonoBehaviour
         this.LoadShipMovement();
         this.LoadShipDamageReceiver();
         this.LoadShipShooter();
+        this.LoadRigibody2D();
+    }
+    protected virtual void LoadRigibody2D()
+    {
+        if (this.rb != null) return;
+        this.rb = this.GetComponent<Rigidbody2D>();
+        Debug.Log(transform.name + ":LoadRigibody2D", gameObject);
     }
 
     protected virtual void LoadShipMovement()
