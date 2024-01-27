@@ -16,6 +16,11 @@ public class ShipMovement : ObjecMovement
         this.shipCtrl = transform.parent.GetComponent<ShipCtrl>();
         Debug.Log(transform.name + "LoadShipCtrl", gameObject);
     }
+    protected override void Awake()
+    {
+        base.Awake();
+        this.speed = this.shipCtrl.ShipStat.ShipMoveSpeed;
+    }
     protected virtual void FixedUpdate()
     {
         this.Moving();

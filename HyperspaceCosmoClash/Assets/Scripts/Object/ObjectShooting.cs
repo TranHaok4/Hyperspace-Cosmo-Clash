@@ -20,7 +20,7 @@ public abstract class ObjectShooting : HaroMonoBehaviour
     }
     
 
-    protected void Shooting()
+    protected virtual void Shooting()
     {
         this.shootTimer += Time.fixedDeltaTime;
         if (!this.isShooting) return;

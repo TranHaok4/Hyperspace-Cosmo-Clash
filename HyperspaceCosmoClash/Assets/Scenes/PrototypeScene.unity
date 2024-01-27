@@ -1588,6 +1588,7 @@ GameObject:
   - component: {fileID: 269794017}
   - component: {fileID: 269794018}
   - component: {fileID: 269794019}
+  - component: {fileID: 269794020}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -1634,7 +1635,8 @@ MonoBehaviour:
   shipMovement: {fileID: 591310683}
   shipDamageReceiver: {fileID: 1087906656}
   shipShooter: {fileID: 1667055304}
-  rb: {fileID: 0}
+  rb: {fileID: 269794019}
+  shipStats: {fileID: 269794020}
 --- !u!50 &269794019
 Rigidbody2D:
   serializedVersion: 4
@@ -1650,12 +1652,28 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &269794020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269794016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce1f6527a5704f44a8af8d364d8961e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipmoveSpeed: 3.5
+  shipDamage: 2
+  shipShootSpeed: 0.2
+  shipHealth: 20
 --- !u!1 &272504689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,8 +3313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10907adc7cfc83246ad264f56c53924d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  shipCtrl: {fileID: 0}
+  speed: 0.01
+  shipCtrl: {fileID: 269794018}
 --- !u!1 &595000779
 GameObject:
   m_ObjectHideFlags: 0
@@ -8638,6 +8656,7 @@ MonoBehaviour:
   isShooting: 0
   shootDelay: 0.25
   shootTimer: 0
+  shipCtrl: {fileID: 0}
 --- !u!1 &1674564115
 GameObject:
   m_ObjectHideFlags: 0

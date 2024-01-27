@@ -17,6 +17,9 @@ public abstract class DamageSender : HaroMonoBehaviour
         damageReceiver.Deduct(this.damage);
     }
     
-
+    public virtual void ChangeDamage(int value)
+    {
+        damage = value;
+    }
 
 }

@@ -18,6 +18,8 @@ public class ShipCtrl : HaroMonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     public Rigidbody2D RB { get => rb; }
 
+    [SerializeField] protected ShipStats shipStats;
+    public ShipStats ShipStat { get => shipStats; }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -26,11 +28,13 @@ public class ShipCtrl : HaroMonoBehaviour
         this.LoadShipDamageReceiver();
         this.LoadShipShooter();
         this.LoadRigibody2D();
+        this.LoadShipStats();
     }
     protected virtual void LoadRigibody2D()
     {
         if (this.rb != null) return;
         this.rb = this.GetComponent<Rigidbody2D>();
+        this.rb.freezeRotation = true;
         Debug.Log(transform.name + ":LoadRigibody2D", gameObject);
     }
 
@@ -58,5 +62,11 @@ public class ShipCtrl : HaroMonoBehaviour
         if (shipShooter != null) return;
         shipShooter = this.GetComponentInChildren<ShipShootByMouse>();
         Debug.Log(transform.name + ":LoadShipShooter", gameObject);
+    }
+    protected virtual void LoadShipStats()
+    {
+        if (shipStats != null) return;
+        shipStats = this.GetComponent<ShipStats>();
+        Debug.Log(transform.name + ":LoadShipStats", gameObject);
     }
 }

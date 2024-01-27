@@ -7,6 +7,11 @@ public class ShipDamageReceiver : DamageReceiver
 {
     [SerializeField] protected ShipCtrl shipCtrl;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        this.hpMax = shipCtrl.ShipStat.ShipHeath;
+    }
     protected override void Start()
     {
         base.Start();

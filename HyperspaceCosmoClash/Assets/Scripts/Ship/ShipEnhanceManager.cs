@@ -33,6 +33,13 @@ public class ShipEnhanceManager : HaroMonoBehaviour
                         shootspeedEnhance.beApplyEnhance += IncreaseShootSpeed;
                     }
                     break;
+                case EnhancementType.IncreaseDamage:
+                    IncreaseDamageEnhanceSO damageEnhance = enhance as IncreaseDamageEnhanceSO;
+                    if (damageEnhance != null)
+                    {
+                        damageEnhance.beApplyEnhance += IncreaseShipDamage;
+                    }
+                    break;
             }
 
         }
@@ -58,6 +65,10 @@ public class ShipEnhanceManager : HaroMonoBehaviour
     protected virtual void IncreaseShootSpeed(float value)
     {
         this.shipCtrl.ShipShooter.IncreaseShootRate(value);
+    }
+    protected virtual void IncreaseShipDamage(int value)
+    {
+        this.shipCtrl.ShipStat.IncreaseShipDamage(value);
     }
 
 
