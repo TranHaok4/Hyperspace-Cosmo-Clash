@@ -10,6 +10,7 @@ public class SpawnRandom : HaroMonoBehaviour
     [SerializeField] protected float randomTimer = 0f;
     [SerializeField] protected float randomLimit = 4f;
 
+    [SerializeField] protected bool isSpawning;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -28,6 +29,7 @@ public class SpawnRandom : HaroMonoBehaviour
     }
     protected virtual void Spawning()
     {
+        if (!isSpawning) return;
         if (this.ReachRandomLimit()) return;
         this.randomTimer += Time.fixedDeltaTime;
         if (this.randomTimer <= randomDelay) return;

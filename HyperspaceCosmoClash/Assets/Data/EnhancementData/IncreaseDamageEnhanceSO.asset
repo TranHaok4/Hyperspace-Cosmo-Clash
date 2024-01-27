@@ -15,3 +15,4 @@ MonoBehaviour:
   discriptionEnhance: 'Increase Damage '
   enhacementImage: {fileID: 21300000, guid: 1074f2b91303a17489a60faf2fbb38f1, type: 3}
   enhanceType: 3
+  damageIncreaseValue: 1

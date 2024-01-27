@@ -13,19 +13,12 @@ public class SpawnerCtrl : HaroMonoBehaviour
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadSpawner();
         this.LoadSpawnPoints();
-    }
-    protected virtual void LoadSpawner()
-    {
-        if (this.spawner != null) return;
-        this.spawner = GetComponent<Spawner>();
-        Debug.Log(transform.name + ": LoadSpawner", gameObject);
     }
     protected virtual void LoadSpawnPoints()
     {
         if (this.spawnpoints != null) return;
-        this.spawnpoints = GameObject.Find("SceneSpawnPoints").GetComponent<SpawnPoints>();
+        this.spawnpoints = GetComponent<SpawnPoints>();
         Debug.Log(transform.name + ": LoadSpawnPoints", gameObject);
     }
 }
