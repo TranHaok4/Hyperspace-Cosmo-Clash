@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManager : HaroMonoBehaviour
 {
@@ -34,10 +35,19 @@ public class InputManager : HaroMonoBehaviour
         this.GetMove4Direction();
         this.GetMousePos();
     }
+    public event UnityAction<bool> OnMovementChange;
+
     protected void GetMove4Direction()
     {
-        horinzontalValue= Input.GetAxis("Horizontal");
+        float oldHorizontal = horinzontalValue;
+        float oldVertical = verticalValue;
+
+        horinzontalValue = Input.GetAxis("Horizontal");
         verticalValue = Input.GetAxis("Vertical");
+        if (OnMovementChange != null)
+        {
+            OnMovementChange(!(horinzontalValue == 0f && verticalValue == 0f));
+        }
     }
     protected void GetMousePos()
     {
