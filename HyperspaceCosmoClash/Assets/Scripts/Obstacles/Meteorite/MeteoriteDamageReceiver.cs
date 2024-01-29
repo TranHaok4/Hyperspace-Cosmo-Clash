@@ -20,6 +20,15 @@ public class MeteoriteDamageReceiver : DamageReceiver
     }
     protected override void OnDead()
     {
+        CreateExplosionVFX();
         meteoriteCtrl.Meteoritedespawn.DespawnObject();
+    }
+    protected virtual void CreateExplosionVFX()
+    {
+        string fxName = meteoriteCtrl.MeteoriteVFXEffect.ExplosionVFXname.ToString(); ;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
     }
 }

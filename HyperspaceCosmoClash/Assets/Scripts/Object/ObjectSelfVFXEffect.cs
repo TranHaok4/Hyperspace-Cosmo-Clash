@@ -26,6 +26,6 @@ public enum ExplosionVFXName
 {
     none=0,
     ExplosionVFX=1,
-    player=2,
-    meteorite=3,
+    PlayerExplosionVFX=2,
+    MeteoriteExplosionVFX = 3,
 }
