@@ -20,5 +20,20 @@ public class BulletDamageSender : DamageSender
     public override void SendDamage(DamageReceiver damageReceiver)
     {
         base.SendDamage(damageReceiver);
+        CreateImpactVFX();
+        this.DespawnBullet();
+    }
+    protected virtual void DespawnBullet()
+    {
+        this.bulletCtrl.BulletDespawn.DespawnObject();
+    }
+
+    protected virtual void CreateImpactVFX()
+    {
+        string fxName = VFXSpawner.vfxone;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
     }
 }
