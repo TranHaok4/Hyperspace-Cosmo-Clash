@@ -10,8 +10,8 @@ public class EnemyCtrl : HaroMonoBehaviour
     [SerializeField] protected SpriteRenderer model;
     public SpriteRenderer Model { get => model; }
 
-    [SerializeField] protected EnemyVFXEffect enemyVFXEffect;
-    public EnemyVFXEffect EnemyVFXeffect { get => enemyVFXEffect; }
+    [SerializeField] protected EnemySelfVFXEffect enemyVFXEffect;
+    public EnemySelfVFXEffect EnemyVFXeffect { get => enemyVFXEffect; }
 
     [SerializeField] protected EnemyDropItem enemyDropItem;
     public EnemyDropItem EnemyDropitem { get => enemyDropItem; }
@@ -39,7 +39,7 @@ public class EnemyCtrl : HaroMonoBehaviour
     protected virtual void LoadEnemyVFXEffect()
     {
         if (this.enemyVFXEffect != null) return;
-        this.enemyVFXEffect = transform.GetComponentInChildren<EnemyVFXEffect>();
+        this.enemyVFXEffect = transform.GetComponentInChildren<EnemySelfVFXEffect>();
         Debug.Log(transform.name + ":LoadEnemyDespawn", gameObject);
     }
     protected virtual void LoadEnemyDropItem()

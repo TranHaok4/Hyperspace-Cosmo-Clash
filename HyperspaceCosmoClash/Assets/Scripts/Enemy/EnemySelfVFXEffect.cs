@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyVFXEffect : ObjectVFXEffect
+public class EnemySelfVFXEffect : ObjectSelfVFXEffect
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
     [SerializeField] protected Material originalMaterial;

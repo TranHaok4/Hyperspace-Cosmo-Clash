@@ -20,6 +20,9 @@ public class ShipCtrl : HaroMonoBehaviour
 
     [SerializeField] protected ShipStats shipStats;
     public ShipStats ShipStat { get => shipStats; }
+
+    [SerializeField] protected ShipSelfVFXEffect shipVFXEffect;
+    public ShipSelfVFXEffect ShipVFXEffect { get => shipVFXEffect; }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -29,6 +32,7 @@ public class ShipCtrl : HaroMonoBehaviour
         this.LoadShipShooter();
         this.LoadRigibody2D();
         this.LoadShipStats();
+        this.LoadShipVFXEffect();
     }
     protected virtual void LoadRigibody2D()
     {
@@ -68,5 +72,11 @@ public class ShipCtrl : HaroMonoBehaviour
         if (shipStats != null) return;
         shipStats = this.GetComponent<ShipStats>();
         Debug.Log(transform.name + ":LoadShipStats", gameObject);
+    }
+    protected virtual void LoadShipVFXEffect()
+    {
+        if (shipVFXEffect != null) return;
+        shipVFXEffect = this.GetComponentInChildren<ShipSelfVFXEffect>();
+        Debug.Log(transform.name + ":LoadShipVFXEffect", gameObject);
     }
 }

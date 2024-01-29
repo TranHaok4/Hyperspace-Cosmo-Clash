@@ -50,7 +50,7 @@ public class ObjectDropItem : HaroMonoBehaviour
     protected virtual string GetItemDrop()
     {
         int dropchance = Random.Range(0, 100);
-        Debug.Log("dropchance:"+dropchance);
+        //Debug.Log("dropchance:"+dropchance);
         List<int> itemdropIndex = new List<int>();
         for(int i=0;i<itemDropList.Count;i++)
         {

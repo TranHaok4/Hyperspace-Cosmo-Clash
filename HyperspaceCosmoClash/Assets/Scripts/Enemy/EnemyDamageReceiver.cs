@@ -21,10 +21,19 @@ public class EnemyDamageReceiver : DamageReceiver
     protected override void OnDead()
     {
         enemyCtrl.Enemydespawn.DespawnObject();
+        CreateExplosionVFX();
     }
     public override void Deduct(int damage)
     {
         this.enemyCtrl.EnemyVFXeffect.StartVFX();
         base.Deduct(damage);
+    }
+    protected virtual void CreateExplosionVFX()
+    {
+        string fxName = enemyCtrl.EnemyVFXeffect.ExplosionVFXname.ToString(); ;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
     }
 }

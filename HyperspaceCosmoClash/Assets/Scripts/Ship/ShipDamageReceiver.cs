@@ -32,6 +32,7 @@ public class ShipDamageReceiver : DamageReceiver
     protected override void OnDead()
     {
         this.Reborn();
+        this.CreateExplosionVFX();
         this.shipCtrl.Shipdespawn.DespawnObject();
     }
     public override void Deduct(int damage)
@@ -47,6 +48,14 @@ public class ShipDamageReceiver : DamageReceiver
         this.NotifyHPvalue();
     }
 
+    protected virtual void CreateExplosionVFX()
+    {
+        string fxName = shipCtrl.ShipVFXEffect.ExplosionVFXname.ToString(); ;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
+    }
     protected virtual void NotifyHPvalue()
     {
         //Debug.Log("notify hp");
