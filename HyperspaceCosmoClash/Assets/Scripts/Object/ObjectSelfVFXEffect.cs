@@ -22,10 +22,3 @@ public abstract class ObjectSelfVFXEffect : HaroMonoBehaviour
     }
     protected abstract IEnumerator VFXCoroutine();
 }
-public enum ExplosionVFXName
-{
-    none=0,
-    ExplosionVFX=1,
-    PlayerExplosionVFX=2,
-    MeteoriteExplosionVFX = 3,
-}

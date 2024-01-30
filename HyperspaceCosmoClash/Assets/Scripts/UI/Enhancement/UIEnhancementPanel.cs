@@ -88,6 +88,7 @@ public class UIEnhancementPanel : BaseUIComponent
         {
            // Debug.Log("haha");
             this.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -97,6 +98,7 @@ public class UIEnhancementPanel : BaseUIComponent
         {
             // Debug.Log("haha");
             this.gameObject.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 

@@ -6,6 +6,10 @@ public class BulletDamageSender : DamageSender
 {
     [SerializeField] protected BulletCtrl bulletCtrl;
 
+    protected override void Start()
+    {
+        base.Start();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();

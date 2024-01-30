@@ -16,3 +16,15 @@ public class VFXSpawner : Spawner
         VFXSpawner.instance = this;
     }
 }
+public enum ExplosionVFXName
+{
+    none = 0,
+    ExplosionVFX = 1,
+    PlayerExplosionVFX = 2,
+    MeteoriteExplosionVFX = 3,
+}
+public enum CommonVFXName
+{
+    none=0,
+    LevelUPVFX=1,
+}
