@@ -43,7 +43,9 @@ public class ShipShootByMouse : ObjectShooting
         Transform newBullet = BulletSpawner.Instance.Spawn(bullet.ToString(), spawnPos, rotation);
         if (newBullet == null) return;
         newBullet.GetComponent<BulletCtrl>().SetShooter(this.transform.parent);
-        newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
         newBullet.gameObject.SetActive(true);
+        newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
+
+        AudioManager.Instance.PlaySound(SoundFXName.playershoot,shipCtrl.transform.position,shipCtrl.transform.rotation);
     }
 }

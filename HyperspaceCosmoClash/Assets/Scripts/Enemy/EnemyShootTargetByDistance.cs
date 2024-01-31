@@ -19,4 +19,9 @@ public class EnemyShootTargetByDistance : ObjectShooting
         this.isShooting = this.distance <= this.shootDistance;
         return this.isShooting;
     }
+    protected override void Shoot()
+    {
+        base.Shoot();
+        AudioManager.Instance.PlaySound(SoundFXName.enemyshoot,transform.parent.position,transform.parent.rotation);
+    }
 }

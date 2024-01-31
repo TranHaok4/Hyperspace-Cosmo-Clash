@@ -1118,7 +1118,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1212,9 +1212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231c7dd241684fe4bbd43ef2a5676eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClipEntries:
-  - name: MenuScreenMusic
-    clip: {fileID: 8300000, guid: 370b9a9e76ee6c545b359dd009255166, type: 3}
+  musicDataSO: {fileID: 11400000, guid: e70d81440512c8e4c94dbddefa662945, type: 2}
+  audioSource: {fileID: 2071282783}
+  currentSceneType: 0
 --- !u!4 &2071282785
 Transform:
   m_ObjectHideFlags: 0

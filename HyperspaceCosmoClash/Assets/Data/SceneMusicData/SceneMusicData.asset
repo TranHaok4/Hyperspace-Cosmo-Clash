@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dcb9f74c16ab14ab38730921dc6013, type: 3}
   m_Name: SceneMusicData
   m_EditorClassIdentifier: 
-  sceneMusicList: []
+  sceneMusicList:
+  - scene: 1
+    musicClips:
+    - {fileID: 8300000, guid: b523622b215ce74429ef8b742153a9a3, type: 3}
+  - scene: 2
+    musicClips:
+    - {fileID: 8300000, guid: e688ba8e89f3d974081169b85eb8f096, type: 3}

@@ -24,7 +24,7 @@ public enum ExplosionVFXName
     MeteoriteExplosionVFX = 3,
 }
 public enum CommonVFXName
-{
+{   
     none=0,
     LevelUPVFX=1,
 }
