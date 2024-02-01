@@ -7,7 +7,7 @@ public class SFXDespawning : DespawningByTime
     protected override void OnEnable()
     {
         base.OnEnable();
-        this.timeDelay = 0.5f;
+        this.timeDelay = 5f;
     }
     public override void DespawnObject()
     {

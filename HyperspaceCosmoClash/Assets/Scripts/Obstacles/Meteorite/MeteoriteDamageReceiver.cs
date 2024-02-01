@@ -21,6 +21,7 @@ public class MeteoriteDamageReceiver : DamageReceiver
     protected override void OnDead()
     {
         CreateExplosionVFX();
+        CreateExplosionSFX();
         meteoriteCtrl.Meteoritedespawn.DespawnObject();
     }
     protected virtual void CreateExplosionVFX()
@@ -31,4 +32,10 @@ public class MeteoriteDamageReceiver : DamageReceiver
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
         fxImpact.gameObject.SetActive(true);
     }
+    protected virtual void CreateExplosionSFX()
+    {
+        AudioManager.Instance.PlaySound(SoundFXName.meteoriteExplosion, meteoriteCtrl.transform.position, meteoriteCtrl.transform.rotation);
+    }
+
+
 }

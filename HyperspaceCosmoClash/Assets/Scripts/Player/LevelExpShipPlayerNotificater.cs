@@ -12,7 +12,7 @@ public class LevelExpShipPlayerNotificater : Notificater
     {
         if (LevelExpShipPlayerNotificater.instance != null) Debug.LogError("Only 1 ExpShipPlayerManager allow to exist");
         LevelExpShipPlayerNotificater.instance = this;
-        Debug.Log("da co ExpShipPlayerManager");
+        //Debug.Log("da co ExpShipPlayerManager");
     }
 
     public UnityAction<int, int> updateExpPlayerShip;

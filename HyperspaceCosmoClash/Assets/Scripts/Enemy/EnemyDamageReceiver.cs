@@ -22,6 +22,7 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         enemyCtrl.Enemydespawn.DespawnObject();
         CreateExplosionVFX();
+        CreateExplosionSFX();
     }
     public override void Deduct(int damage)
     {
@@ -35,5 +36,9 @@ public class EnemyDamageReceiver : DamageReceiver
         Quaternion hitRot = transform.rotation;
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
         fxImpact.gameObject.SetActive(true);
+    }
+    protected virtual void CreateExplosionSFX()
+    {
+        AudioManager.Instance.PlaySound(SoundFXName.enemyExplosion, enemyCtrl.transform.position, enemyCtrl.transform.rotation);
     }
 }

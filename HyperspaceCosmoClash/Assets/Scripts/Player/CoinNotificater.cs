@@ -10,7 +10,7 @@ public class CoinNotificater : Notificater
     {
         if (CoinNotificater.instance != null) Debug.LogError("Only 1 CoinNotificater allow to exist");
         CoinNotificater.instance = this;
-        Debug.Log("da co HPShipPlayerManager");
+        //Debug.Log("da co HPShipPlayerManager");
     }
     public UnityAction<int> updateCoinValue;
 

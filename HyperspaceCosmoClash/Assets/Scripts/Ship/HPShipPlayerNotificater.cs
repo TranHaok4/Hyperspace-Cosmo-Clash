@@ -15,7 +15,7 @@ public class HPShipPlayerNotificater : Notificater
     {
         if (HPShipPlayerNotificater.instance != null) Debug.LogError("Only 1 HPShipPlayerManager allow to exist");
         HPShipPlayerNotificater.instance = this;
-        Debug.Log("da co HPShipPlayerManager");
+        //Debug.Log("da co HPShipPlayerManager");
     }
 
     public void OnUpdateHPPlayerShipData(int hp,int maxhp )

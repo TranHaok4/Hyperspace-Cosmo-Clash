@@ -36,6 +36,8 @@ public class AudioManager : HaroMonoBehaviour
         audioSource.clip = soundeffect.Clip;
         audioSource.volume = soundeffect.Volume;
         newSFX.gameObject.SetActive(true);
+        audioSource.Play();
+        
     }
     protected virtual SoundEffectDataSO GetAudio(SoundFXName name)
     {
@@ -55,4 +57,6 @@ public enum SoundFXName
     none=0,
     playershoot=1,
     enemyshoot=2,
+    enemyExplosion=3,
+    meteoriteExplosion=4,
 }

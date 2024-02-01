@@ -10,7 +10,7 @@ public class PlayShipSkillNotificater : Notificater
     {
         if (PlayShipSkillNotificater.instance != null) Debug.LogError("Only 1 PlayShipSkillNotificater allow to exist");
         PlayShipSkillNotificater.instance = this;
-        Debug.Log("da co PlayShipSkillNotificater");
+        //Debug.Log("da co PlayShipSkillNotificater");
     }
 
     public UnityAction<AbilityState> changeSkillState;
