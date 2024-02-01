@@ -11,7 +11,7 @@ public class ExpItemProfileSO : ItemProfileSO
     public virtual int GetExpValue()
     {
         int kq= (int)Random.Range(minExpValue, maxExpValue);
-        //Debug.Log(kq);
+        //Debug.Log(kq);    
         return kq;
     }
 

@@ -9,8 +9,6 @@ public abstract class Spawner : HaroMonoBehaviour
     [SerializeField] protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
-    [SerializeField] protected int spawnedCount = 0;
-    public int SpawnedCount => spawnedCount;
     protected override void LoadComponents()
     {
         this.LoadPrefabs();
@@ -65,7 +63,6 @@ public abstract class Spawner : HaroMonoBehaviour
         Transform newPrefab = this.GetObjectFromPool(prefab);
         newPrefab.SetPositionAndRotation(spawnPos, rotation);
         newPrefab.parent = this.holder;
-        this.spawnedCount++;
         return newPrefab;
     }
     protected virtual Transform GetObjectFromPool(Transform prefab)
@@ -89,7 +86,6 @@ public abstract class Spawner : HaroMonoBehaviour
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
-        spawnedCount--;
     }
     public virtual Transform RandomPrefab()
     {

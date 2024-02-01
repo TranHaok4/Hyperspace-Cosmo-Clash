@@ -17,7 +17,11 @@ public class ObstaclesVisual : HaroMonoBehaviour
         base.Reset();
         this.ResizeLaser();
     }
-
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        this.ResizeLaser();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();

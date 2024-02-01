@@ -7,7 +7,6 @@ public class EnemySpawner : Spawner
     private static EnemySpawner instance;
     public static EnemySpawner Instance { get => instance; }
 
-    public static string enemyOne = "SpiKami";
 
     protected override void Awake()
     {
@@ -15,4 +14,10 @@ public class EnemySpawner : Spawner
         if (EnemySpawner.instance != null) Debug.LogError("Only 1 EnemySpawner allow to exist");
         EnemySpawner.instance = this;
     }
+}
+public enum EnemyName
+{
+    none=0,
+    SpiKami=1,
+    RdFighter=2,
 }

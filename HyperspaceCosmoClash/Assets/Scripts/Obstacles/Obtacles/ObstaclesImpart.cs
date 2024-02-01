@@ -16,6 +16,11 @@ public class ObstaclesImpart : HaroMonoBehaviour
         base.Reset();
         this.ResizeCollider();
     }
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        this.ResizeCollider();
+    }
 
     protected override void LoadComponents()
     {

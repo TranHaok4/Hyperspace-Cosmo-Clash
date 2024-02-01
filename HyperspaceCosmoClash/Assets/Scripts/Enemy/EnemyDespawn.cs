@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyDespawn : Despawn
 {
@@ -16,9 +17,13 @@ public class EnemyDespawn : Despawn
         this.enemyCtrl = transform.parent.GetComponent<EnemyCtrl>();
         Debug.Log(transform.name + ":LoadEnemyCtrl", gameObject);
     }
+
+    public System.Action OnDespawmObjectCallBack;
     public override void DespawnObject()
     {
         enemyCtrl.EnemyDropitem.Dropping();
         EnemySpawner.Instance.Despawn(transform.parent);
+
+        OnDespawmObjectCallBack?.Invoke();
     }
 }
