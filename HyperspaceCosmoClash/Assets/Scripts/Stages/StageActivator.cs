@@ -24,6 +24,7 @@ public class StageActivator : HaroMonoBehaviour
     {
         if (!collision.gameObject.transform.parent.GetComponent<ShipCtrl>()) return;
         StageSpawnerManager.Instance.SetCurrentStageData(stageData,stageId);
+        ObstacleStageManager.Instance.TurnOnObstacleStage(stageId);
         Destroy(gameObject);
 
     }

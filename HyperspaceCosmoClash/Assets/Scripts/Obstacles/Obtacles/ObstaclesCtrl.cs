@@ -15,6 +15,8 @@ public class ObstaclesCtrl : HaroMonoBehaviour
 
     [SerializeField] protected ObstaclesImpart obstacleImpart;
     public ObstaclesImpart ObstacleImpart { get => obstacleImpart; }
+    [SerializeField] protected ObstaclesLazerControl obstaclesLazerControl;
+    public ObstaclesLazerControl ObstaclesLazercontrol { get => obstaclesLazerControl; }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -22,6 +24,7 @@ public class ObstaclesCtrl : HaroMonoBehaviour
         this.LoadObstaclesDamageSender();
         this.LoadObstacleVisual();
         this.LoadObstaclesImpart();
+        this.LoadObstaclesLazercontrol();
     }
     protected virtual void LoadObstaclePoint()
     {
@@ -46,5 +49,11 @@ public class ObstaclesCtrl : HaroMonoBehaviour
         if (this.obstacleImpart != null) return;
         this.obstacleImpart = GetComponentInChildren<ObstaclesImpart>();
         Debug.Log(transform.name + "LoadObstaclesImpart", gameObject);
+    }
+    protected virtual void LoadObstaclesLazercontrol()
+    {
+        if (this.obstaclesLazerControl != null) return;
+        this.obstaclesLazerControl = GetComponentInChildren<ObstaclesLazerControl>();
+        Debug.Log(transform.name + "LoadObstaclesLazercontrol", gameObject);
     }
 }

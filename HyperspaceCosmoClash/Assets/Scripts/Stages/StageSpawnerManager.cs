@@ -93,6 +93,7 @@ public class StageSpawnerManager : HaroMonoBehaviour
         {
             Debug.Log("ok I'm fine");
             currentSpawnerStageCtrl.gameObject.SetActive(false);
+            ObstacleStageManager.Instance.TurnOffObstacleStage(currentSpawnerStageCtrl.StageID);
         }
         else
         {

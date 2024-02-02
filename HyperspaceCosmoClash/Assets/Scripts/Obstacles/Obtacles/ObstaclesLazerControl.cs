@@ -8,12 +8,13 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
     [SerializeField] protected bool isToogle = false;
 
     [SerializeField] protected ObstaclesCtrl obstacleCtrl;
-    protected ObstaclesVisual obstaclevisual;
-    protected ObstaclesImpart obstaclecollider;
+    [SerializeField] protected ObstaclesVisual obstaclevisual;
+    [SerializeField] protected ObstaclesImpart obstaclecollider;
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadObstacleCtrl();
+        this.LoadObtacleComponent();
     }
     protected virtual void LoadObstacleCtrl()
     {
@@ -25,11 +26,11 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        this.LoadObtacleComponen();
+        this.LoadObtacleComponent();
         if(isToogle) StartCoroutine(ToggleLaserRoutine());
     }
 
-    protected virtual void LoadObtacleComponen()
+    protected virtual void LoadObtacleComponent()
     {
         obstaclevisual = obstacleCtrl.Obstaclevisual;
         obstaclecollider = obstacleCtrl.ObstacleImpart;
@@ -55,13 +56,26 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
     }
     public virtual void TurnOffLazer()
     {
+        Debug.Log(transform.parent.name);
         if (obstaclevisual != null)
         {
+            //Debug.Log(transform.parent.name+":tat visual");
             obstaclevisual.gameObject.SetActive(false);
         }
         if (obstaclecollider != null)
         {
             obstaclecollider.gameObject.SetActive(false);
+        }
+    }
+    public virtual void TurnOnLazer()
+    {
+        if (obstaclevisual != null)
+        {
+            obstaclevisual.gameObject.SetActive(true);
+        }
+        if (obstaclecollider != null)
+        {
+            obstaclecollider.gameObject.SetActive(true);
         }
     }
 }

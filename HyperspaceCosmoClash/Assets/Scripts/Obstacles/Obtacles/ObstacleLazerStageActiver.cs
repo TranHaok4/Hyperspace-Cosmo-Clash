@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleLazerStageActiver : HaroMonoBehaviour
 {
     [SerializeField] protected ObstaclesCtrl obstaclesCtrl;
-    [SerializeField] protected int gatenumber;
+    public ObstaclesCtrl Obstaclesctrl { get => obstaclesCtrl; }
+    [SerializeField] protected int stageID;
+    public int StageID { get => stageID; }
     protected override void LoadComponents()
     {
         base.LoadComponents();

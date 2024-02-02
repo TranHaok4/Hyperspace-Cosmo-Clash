@@ -1408,6 +1408,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 1287425118}
+  obstaclevisual: {fileID: 738522431}
+  obstaclecollider: {fileID: 1833523255}
 --- !u!1 &160934525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1511,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 1740501282}
   obstacleVisual: {fileID: 503579579}
   obstacleImpart: {fileID: 1721744538}
+  obstaclesLazerControl: {fileID: 0}
 --- !u!1 &168555945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f43daea3358b94fb9ffb968d6e29a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleLazerS: []
+  obstacleLazerS:
+  - {fileID: 743367418}
+  - {fileID: 510346041}
 --- !u!1 &269794016
 GameObject:
   m_ObjectHideFlags: 0
@@ -9379,6 +9384,51 @@ MonoBehaviour:
   explosionVFXName: 1
   enemyCtrl: {fileID: 571897023}
   originalMaterial: {fileID: 24914042}
+--- !u!1 &510346039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510346040}
+  - component: {fileID: 510346041}
+  m_Layer: 0
+  m_Name: ObstacleLazerStageActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &510346040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510346039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 534695985}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &510346041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510346039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a821202320209043ab75cf2f7675c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclesCtrl: {fileID: 534695986}
+  stageID: 1
 --- !u!1 &516391633
 GameObject:
   m_ObjectHideFlags: 0
@@ -9854,6 +9904,7 @@ Transform:
   - {fileID: 987519847}
   - {fileID: 984307910}
   - {fileID: 1164895492}
+  - {fileID: 510346040}
   m_Father: {fileID: 256175504}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9873,6 +9924,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 987519846}
   obstacleVisual: {fileID: 1164895493}
   obstacleImpart: {fileID: 984307908}
+  obstaclesLazerControl: {fileID: 830718421}
 --- !u!1 &542414649
 GameObject:
   m_ObjectHideFlags: 0
@@ -32842,6 +32894,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 315708529}
   obstacleVisual: {fileID: 1527979192}
   obstacleImpart: {fileID: 967500502}
+  obstaclesLazerControl: {fileID: 0}
 --- !u!1 &667534469
 GameObject:
   m_ObjectHideFlags: 0
@@ -33242,7 +33295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &738522431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33413,7 +33466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 1287425118}
-  gatenumber: 1
+  stageID: 1
 --- !u!1 &750722472
 GameObject:
   m_ObjectHideFlags: 0
@@ -34098,6 +34151,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 534695986}
+  obstaclevisual: {fileID: 1164895493}
+  obstaclecollider: {fileID: 984307908}
 --- !u!1 &830782916
 GameObject:
   m_ObjectHideFlags: 0
@@ -39766,7 +39821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &984307908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40290,6 +40345,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 1468416111}
+  obstaclevisual: {fileID: 0}
+  obstaclecollider: {fileID: 0}
 --- !u!1 &1045943673
 GameObject:
   m_ObjectHideFlags: 0
@@ -45773,7 +45830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1164895492
 Transform:
   m_ObjectHideFlags: 0
@@ -46133,6 +46190,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 2040188610}
+  obstaclevisual: {fileID: 520169974}
+  obstaclecollider: {fileID: 122188138}
 --- !u!1 &1204519576
 GameObject:
   m_ObjectHideFlags: 0
@@ -46675,6 +46734,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 987357373}
   obstacleVisual: {fileID: 738522431}
   obstacleImpart: {fileID: 1833523255}
+  obstaclesLazerControl: {fileID: 152369932}
 --- !u!4 &1287425119
 Transform:
   m_ObjectHideFlags: 0
@@ -47850,6 +47910,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 1214738269}
   obstacleVisual: {fileID: 1822182501}
   obstacleImpart: {fileID: 1880957529}
+  obstaclesLazerControl: {fileID: 0}
 --- !u!1 &1470588807
 GameObject:
   m_ObjectHideFlags: 0
@@ -49957,7 +50018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1833523254
 Transform:
   m_ObjectHideFlags: 0
@@ -50515,6 +50576,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 164137315}
+  obstaclevisual: {fileID: 0}
+  obstaclecollider: {fileID: 0}
 --- !u!1 &1902396061
 GameObject:
   m_ObjectHideFlags: 0
@@ -50591,6 +50654,8 @@ MonoBehaviour:
   toggledelay: 5
   isToogle: 0
   obstacleCtrl: {fileID: 653140210}
+  obstaclevisual: {fileID: 0}
+  obstaclecollider: {fileID: 0}
 --- !u!1 &1921237942
 GameObject:
   m_ObjectHideFlags: 0
@@ -55992,6 +56057,7 @@ MonoBehaviour:
   obstacleDamageSender: {fileID: 1795717183}
   obstacleVisual: {fileID: 520169974}
   obstacleImpart: {fileID: 122188138}
+  obstaclesLazerControl: {fileID: 0}
 --- !u!1 &2043594403
 GameObject:
   m_ObjectHideFlags: 0
