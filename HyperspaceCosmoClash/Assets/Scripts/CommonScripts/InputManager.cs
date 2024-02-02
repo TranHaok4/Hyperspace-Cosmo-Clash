@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class InputManager : HaroMonoBehaviour
 {
-    private static InputManager instance;
-    public static InputManager Instance { get => instance; }
 
     [SerializeField]protected float horinzontalValue;
     public float HorizontalValue { get => horinzontalValue; }
@@ -20,6 +18,9 @@ public class InputManager : HaroMonoBehaviour
 
     [SerializeField] protected bool onButtonSkill1;
     public bool OnButtonSkill1 { get => onButtonSkill1; }
+
+    private static InputManager instance;
+    public static InputManager Instance { get => instance; }
     protected override void Awake()
     {
         if (InputManager.instance != null) Debug.LogError("only 1 InputManager");

@@ -9,8 +9,8 @@ public class SceneMusicDataSO : ScriptableObject
     [System.Serializable]
     public class SceneMusic
     {
-        public SceneType scene;
-        public List<AudioClip> musicClips;
+        [SerializeField] public SceneType scene;
+        [SerializeField] public List<AudioClip> musicClips;
     }
 
     public List<SceneMusic> sceneMusicList;

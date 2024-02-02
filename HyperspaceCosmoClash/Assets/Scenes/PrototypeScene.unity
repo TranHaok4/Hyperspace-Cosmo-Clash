@@ -325,6 +325,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 212441611}
   spawnpoints: {fileID: 20152861}
+  maxNumberSpawner: 0
+  currentNumberSpawner: 0
+  numberLimitAtOnceTime: 4
+  numberCurrentOnceTime: 0
 --- !u!114 &20152864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,10 +341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e5d3c67f08e4b479a6ef6d1def7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 20152863}
+  spawnerStageCtrl: {fileID: 0}
   randomDelay: 1
   randomTimer: 0
-  randomLimit: 4
   isSpawning: 1
 --- !u!1 &20811895
 GameObject:
@@ -396,7 +399,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &24637376
 Transform:
   m_ObjectHideFlags: 0
@@ -429,6 +432,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 212441611}
   spawnpoints: {fileID: 24637379}
+  maxNumberSpawner: 0
+  currentNumberSpawner: 0
+  numberLimitAtOnceTime: 4
+  numberCurrentOnceTime: 0
 --- !u!114 &24637378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,10 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e5d3c67f08e4b479a6ef6d1def7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 24637377}
+  spawnerStageCtrl: {fileID: 0}
   randomDelay: 1
   randomTimer: 0
-  randomLimit: 4
   isSpawning: 0
 --- !u!114 &24637379
 MonoBehaviour:
@@ -1400,6 +1406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 1287425118}
 --- !u!1 &160934525
 GameObject:
@@ -2204,7 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92bab806dae5b7940825e70704a11fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disLimit: 15
+  disLimit: 16
   distance: 0
   mainCam: {fileID: 519420032}
 --- !u!4 &237065290
@@ -2274,6 +2281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256175504}
+  - component: {fileID: 256175505}
   m_Layer: 0
   m_Name: ObstacleHolder
   m_TagString: Untagged
@@ -2288,7 +2296,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256175503}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.5913594, y: 0.6826429, z: -3.1381893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2298,9 +2306,22 @@ Transform:
   - {fileID: 653140209}
   - {fileID: 164137314}
   - {fileID: 1468416110}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 362251253}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256175505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256175503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f43daea3358b94fb9ffb968d6e29a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleLazerS: []
 --- !u!1 &269794016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,6 +2914,7 @@ Transform:
   - {fileID: 2061086032}
   - {fileID: 110053895}
   - {fileID: 1875798306}
+  - {fileID: 256175504}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9684,7 +9706,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &523829286
 Transform:
   m_ObjectHideFlags: 0
@@ -9717,6 +9739,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 212441611}
   spawnpoints: {fileID: 523829289}
+  maxNumberSpawner: 0
+  currentNumberSpawner: 0
+  numberLimitAtOnceTime: 4
+  numberCurrentOnceTime: 0
 --- !u!114 &523829288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9729,10 +9755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e5d3c67f08e4b479a6ef6d1def7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 523829287}
+  spawnerStageCtrl: {fileID: 0}
   randomDelay: 1
   randomTimer: 0
-  randomLimit: 4
   isSpawning: 0
 --- !u!114 &523829289
 MonoBehaviour:
@@ -33344,6 +33369,51 @@ Transform:
   m_Father: {fileID: 1287425119}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &743367416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743367417}
+  - component: {fileID: 743367418}
+  m_Layer: 0
+  m_Name: ObstacleLazerStageActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &743367417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743367416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1287425119}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743367418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743367416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a821202320209043ab75cf2f7675c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclesCtrl: {fileID: 1287425118}
+  gatenumber: 1
 --- !u!1 &750722472
 GameObject:
   m_ObjectHideFlags: 0
@@ -33738,7 +33808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &800042073
 Transform:
   m_ObjectHideFlags: 0
@@ -34026,6 +34096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 534695986}
 --- !u!1 &830782916
 GameObject:
@@ -39734,7 +39805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.869412, y: 0.3}
+  m_Size: {x: 6.0827627, y: 0.3}
   m_EdgeRadius: 0
 --- !u!4 &984307910
 Transform:
@@ -39743,8 +39814,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984307907}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6170394, w: 0.7869323}
-  m_LocalPosition: {x: 0.6999998, y: 2.85, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.082480535, w: 0.9965927}
+  m_LocalPosition: {x: 3, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534695985}
@@ -40217,6 +40288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 1468416111}
 --- !u!1 &1045943673
 GameObject:
@@ -46059,6 +46131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 2040188610}
 --- !u!1 &1204519576
 GameObject:
@@ -46496,6 +46569,79 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67f31bdefca1d4f44a47730ba60e8a53, type: 2}
   - {fileID: 11400000, guid: 8846b971e88df5e4eabb7c27ac89448b, type: 2}
   - {fileID: 11400000, guid: 518d8caa1066d2a4e8d38b8ba41b482c, type: 2}
+--- !u!1 &1250634846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250634847}
+  - component: {fileID: 1250634849}
+  - component: {fileID: 1250634848}
+  m_Layer: 0
+  m_Name: StageActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1250634847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250634846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1400175910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1250634848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250634846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8475f70b33ebb442853bc1805315cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider2d: {fileID: 1250634849}
+  stageData: {fileID: 11400000, guid: a9d70748ad6582445b5bcb0808f02d1c, type: 2}
+  stageId: 1
+--- !u!61 &1250634849
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250634846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8}
+  m_EdgeRadius: 0
 --- !u!1 &1287425117
 GameObject:
   m_ObjectHideFlags: 0
@@ -46545,6 +46691,7 @@ Transform:
   - {fileID: 987357374}
   - {fileID: 1833523254}
   - {fileID: 738522433}
+  - {fileID: 743367417}
   m_Father: {fileID: 256175504}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47368,6 +47515,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392050988}
   m_CullTransparentMesh: 1
+--- !u!1 &1400175909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400175910}
+  m_Layer: 0
+  m_Name: StageActivatorHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1400175910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400175909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1250634847}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416854285
 GameObject:
   m_ObjectHideFlags: 0
@@ -48185,15 +48363,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1588564760}
   - component: {fileID: 1588564763}
-  - component: {fileID: 1588564762}
   - component: {fileID: 1588564761}
+  - component: {fileID: 1588564762}
   m_Layer: 0
   m_Name: EnemySpawnPoints:Stage1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1588564760
 Transform:
   m_ObjectHideFlags: 0
@@ -48221,11 +48399,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588564759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 238938794d3275c41a83c3225ff7f312, type: 3}
+  m_Script: {fileID: 11500000, guid: 43da950e52860ca43a9749066c2fb80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 212441611}
   spawnpoints: {fileID: 1588564763}
+  maxNumberSpawner: 10
+  currentNumberSpawner: 0
+  numberLimitAtOnceTime: 4
+  numberCurrentOnceTime: 0
+  enemyNames: 01000000
+  stageId: 1
 --- !u!114 &1588564762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48235,14 +48419,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588564759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5e5d3c67f08e4b479a6ef6d1def7ca9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2758d5f9fc0796246b4b682931cdf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 1588564761}
+  spawnerStageCtrl: {fileID: 1588564761}
   randomDelay: 1
   randomTimer: 0
-  randomLimit: 4
-  isSpawning: 0
+  isSpawning: 1
 --- !u!114 &1588564763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48258,6 +48441,8 @@ MonoBehaviour:
   points:
   - {fileID: 1028257550}
   - {fileID: 1416854286}
+  - {fileID: 1385054936}
+  - {fileID: 1885885207}
 --- !u!1 &1607434588
 GameObject:
   m_ObjectHideFlags: 0
@@ -49930,6 +50115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875798306}
+  - component: {fileID: 1875798307}
   m_Layer: 0
   m_Name: SpawnPointHolder
   m_TagString: Untagged
@@ -49955,6 +50141,25 @@ Transform:
   m_Father: {fileID: 362251253}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875798307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875798305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d3e1a8c41074445bf5ce0e83a9c66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDespawnConditions:
+  - name: 1
+    number: 10
+  currentStageData: {fileID: 0}
+  currentSpawnerStageCtrl: {fileID: 0}
+  spawnerStageCtrls:
+  - {fileID: 1588564761}
 --- !u!1 &1880116613
 GameObject:
   m_ObjectHideFlags: 0
@@ -50308,6 +50513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 164137315}
 --- !u!1 &1902396061
 GameObject:
@@ -50383,6 +50589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggledelay: 5
+  isToogle: 0
   obstacleCtrl: {fileID: 653140210}
 --- !u!1 &1921237942
 GameObject:
@@ -56466,6 +56673,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 826267161}
   spawnpoints: {fileID: 2134719106}
+  maxNumberSpawner: 0
+  currentNumberSpawner: 0
+  numberLimitAtOnceTime: 4
+  numberCurrentOnceTime: 0
 --- !u!114 &2134719105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56478,10 +56689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e5d3c67f08e4b479a6ef6d1def7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerCtrl: {fileID: 2134719104}
+  spawnerStageCtrl: {fileID: 0}
   randomDelay: 1
   randomTimer: 0
-  randomLimit: 6
   isSpawning: 0
 --- !u!114 &2134719106
 MonoBehaviour:

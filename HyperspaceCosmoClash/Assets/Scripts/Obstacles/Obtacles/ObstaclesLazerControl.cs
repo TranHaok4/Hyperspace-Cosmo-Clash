@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstaclesLazerControl : HaroMonoBehaviour
 {
     [SerializeField] protected float toggledelay = 5f;
+    [SerializeField] protected bool isToogle = false;
 
     [SerializeField] protected ObstaclesCtrl obstacleCtrl;
     protected ObstaclesVisual obstaclevisual;
@@ -25,7 +26,7 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
     {
         base.Start();
         this.LoadObtacleComponen();
-        StartCoroutine(ToggleLaserRoutine());
+        if(isToogle) StartCoroutine(ToggleLaserRoutine());
     }
 
     protected virtual void LoadObtacleComponen()
@@ -41,7 +42,7 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
             ToggleLaser();
         }
     }
-    private void ToggleLaser()
+    protected void ToggleLaser()
     {
         if (obstaclevisual != null)
         {
@@ -52,5 +53,15 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
             obstaclecollider.gameObject.SetActive(!obstaclecollider.gameObject.activeSelf);
         }
     }
-
+    public virtual void TurnOffLazer()
+    {
+        if (obstaclevisual != null)
+        {
+            obstaclevisual.gameObject.SetActive(false);
+        }
+        if (obstaclecollider != null)
+        {
+            obstaclecollider.gameObject.SetActive(false);
+        }
+    }
 }

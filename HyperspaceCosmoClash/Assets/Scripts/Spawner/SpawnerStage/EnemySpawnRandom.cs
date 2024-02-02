@@ -19,7 +19,7 @@ public class EnemySpawnRandom : SpawnRandom
         Vector3 pos = randPoint.position;
         Quaternion rot = randPoint.rotation;
 
-        string  enemy_name = this.spawnerStageCtrl.GetComponent<EnemySpawnerStageCtrl>().GetRandomEnemy();
+        EnemyName  enemy_name = this.spawnerStageCtrl.GetComponent<EnemySpawnerStageCtrl>().GetRandomEnemy();
         this.spawnerStageCtrl.GetComponent<EnemySpawnerStageCtrl>().Spawn(enemy_name, pos, rot);
     }
 
