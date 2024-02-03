@@ -21,24 +21,24 @@ public class EnemyDamageReceiver : DamageReceiver
     protected override void OnDead()
     {
         enemyCtrl.Enemydespawn.DespawnObject();
-        CreateExplosionVFX();
-        CreateExplosionSFX();
+        //CreateExplosionVFX();
+        //CreateExplosionSFX();
     }
     public override void Deduct(int damage)
     {
         this.enemyCtrl.EnemyVFXeffect.StartVFX();
         base.Deduct(damage);
     }
-    protected virtual void CreateExplosionVFX()
-    {
-        string fxName = enemyCtrl.EnemyVFXeffect.ExplosionVFXname.ToString(); ;
-        Vector3 hitPos = transform.position;
-        Quaternion hitRot = transform.rotation;
-        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
-        fxImpact.gameObject.SetActive(true);
-    }
-    protected virtual void CreateExplosionSFX()
-    {
-        AudioManager.Instance.PlaySound(SoundFXName.enemyExplosion, enemyCtrl.transform.position, enemyCtrl.transform.rotation);
-    }
+    //protected virtual void CreateExplosionVFX()
+    //{
+    //    string fxName = enemyCtrl.EnemyVFXeffect.ExplosionVFXname.ToString(); ;
+    //    Vector3 hitPos = transform.position;
+    //    Quaternion hitRot = transform.rotation;
+    //    Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+    //    fxImpact.gameObject.SetActive(true);
+    //}
+    //protected virtual void CreateExplosionSFX()
+    //{
+    //    AudioManager.Instance.PlaySound(SoundFXName.enemyExplosion, enemyCtrl.transform.position, enemyCtrl.transform.rotation);
+    //}
 }

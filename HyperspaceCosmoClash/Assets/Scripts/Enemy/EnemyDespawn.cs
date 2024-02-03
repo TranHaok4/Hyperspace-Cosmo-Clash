@@ -23,7 +23,20 @@ public class EnemyDespawn : Despawn
     {
         enemyCtrl.EnemyDropitem.Dropping();
         EnemySpawner.Instance.Despawn(transform.parent);
-
+        CreateExplosionVFX();
+        CreateExplosionSFX();
         OnDespawmObjectCallBack?.Invoke();
+    }
+    protected virtual void CreateExplosionVFX()
+    {
+        string fxName = enemyCtrl.EnemyVFXeffect.ExplosionVFXname.ToString(); ;
+        Vector3 hitPos = transform.position;
+        Quaternion hitRot = transform.rotation;
+        Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
+        fxImpact.gameObject.SetActive(true);
+    }
+    protected virtual void CreateExplosionSFX()
+    {
+        AudioManager.Instance.PlaySound(SoundFXName.enemyExplosion, enemyCtrl.transform.position, enemyCtrl.transform.rotation);
     }
 }
