@@ -24,7 +24,7 @@ public class EnemyShootTargetByDistance : ObjectShooting
     }
     protected override void Shoot()
     {
-        shootingBehaviour.Shoot(transform.parent, bullet);
+        shootingBehaviour.Shoot(this, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.enemyshoot,transform.parent.position,transform.parent.rotation);
     }
 }

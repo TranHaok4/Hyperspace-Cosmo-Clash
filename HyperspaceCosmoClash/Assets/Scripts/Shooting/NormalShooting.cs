@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NormalShooting", menuName = "ScriptableObject/ShootingBehaviour/NormalShooting")]
 public class NormalShooting : ShootingBehaviour
 {
-    public override void Shoot(Transform shooterTransform, TypeBullet typeBullet)
+    public override void Shoot(MonoBehaviour caller, Transform shooterTransform, TypeBullet typeBullet)
     {
         Vector3 spawnPos = shooterTransform.position;
         Quaternion rotation = shooterTransform.rotation;
