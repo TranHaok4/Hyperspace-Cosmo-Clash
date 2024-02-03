@@ -1,14 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class ObjectShooting : HaroMonoBehaviour
 {
     [SerializeField] protected TypeBullet bullet;
-
     [SerializeField] protected bool isShooting = false;
     [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;
+
+
+    // ổ đây tôi muốn có một giá trị mà dev có thể chọn một kiểu bắn đạn như là enum
+    //nếu chọn normal shoot thì ko có gì thay đổi
+    // nếu chọn rapid shoot thì sẽ có thêm thông số về số lượng đạn bắn ra 
 
     protected void Update()
     {
@@ -26,17 +30,9 @@ public abstract class ObjectShooting : HaroMonoBehaviour
         if (!this.isShooting) return;
         if (this.shootTimer <= this.shootDelay) return;
         this.shootTimer = 0;
-        this.Shoot();
+        this.Shoot();//ở đây sẽ áp dụng loại shoot được chọn
     }
-    protected virtual void Shoot()
-    {
-        Vector3 spawnPos = transform.position;
-        Quaternion rotation = transform.parent.rotation;
-        Transform newBullet = BulletSpawner.Instance.Spawn(bullet.ToString(), spawnPos, rotation);
-        if (newBullet == null) return;
-        newBullet.GetComponent<BulletCtrl>().SetShooter(this.transform.parent);
-        newBullet.gameObject.SetActive(true);
-    }
+    protected abstract void Shoot();
     protected abstract bool IsShooting();
 }
 

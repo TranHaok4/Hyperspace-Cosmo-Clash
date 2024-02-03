@@ -14,6 +14,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
     [SerializeField] protected List<ObstacleLazerStageActiver> obstacleLazerS;
     protected override void LoadComponents()
     {
+        Debug.Log("haha");
         base.LoadComponents();
         this.LoadObstacleLazerStageActiver();
     }

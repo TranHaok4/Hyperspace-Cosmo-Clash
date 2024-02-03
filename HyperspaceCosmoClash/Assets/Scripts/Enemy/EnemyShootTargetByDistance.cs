@@ -8,6 +8,9 @@ public class EnemyShootTargetByDistance : ObjectShooting
     [SerializeField] protected Transform target;
     [SerializeField] protected float distance = Mathf.Infinity;
     [SerializeField] protected float shootDistance = 3f;
+
+    [Header("Shooting type")]
+    [SerializeField] protected ShootingBehaviour shootingBehaviour;
     public virtual void SetTarget(Transform _target)
     {
         this.target = _target;
@@ -21,7 +24,7 @@ public class EnemyShootTargetByDistance : ObjectShooting
     }
     protected override void Shoot()
     {
-        base.Shoot();
+        shootingBehaviour.Shoot(transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.enemyshoot,transform.parent.position,transform.parent.rotation);
     }
 }

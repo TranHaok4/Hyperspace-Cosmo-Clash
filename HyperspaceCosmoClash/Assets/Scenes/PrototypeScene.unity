@@ -2920,6 +2920,7 @@ Transform:
   - {fileID: 110053895}
   - {fileID: 1875798306}
   - {fileID: 256175504}
+  - {fileID: 1400175910}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9882,7 +9883,7 @@ GameObject:
   - component: {fileID: 534695985}
   - component: {fileID: 534695986}
   m_Layer: 0
-  m_Name: ObstacleLazer (1)
+  m_Name: ObstacleLazer (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33295,7 +33296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &738522431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39821,7 +39822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &984307908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45830,7 +45831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1164895492
 Transform:
   m_ObjectHideFlags: 0
@@ -46712,7 +46713,7 @@ GameObject:
   - component: {fileID: 1287425119}
   - component: {fileID: 1287425118}
   m_Layer: 0
-  m_Name: ObstacleLazer
+  m_Name: ObstacleLazer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47598,13 +47599,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400175909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1250634847}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 362251253}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416854285
 GameObject:
@@ -50018,7 +50019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1833523254
 Transform:
   m_ObjectHideFlags: 0
@@ -50178,7 +50179,7 @@ GameObject:
   - component: {fileID: 1875798306}
   - component: {fileID: 1875798307}
   m_Layer: 0
-  m_Name: SpawnPointHolder
+  m_Name: SpawnStagesHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

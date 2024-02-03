@@ -31,13 +31,9 @@ public class ShipShootByMouse : ObjectShooting
     {
         shootDelay -= value;
     }
-    protected override void Shooting()
-    {
-        this.shootTimer += Time.fixedDeltaTime;
-        if (!this.isShooting) return;
-        if (this.shootTimer <= this.shootDelay) return;
-        this.shootTimer = 0;
 
+    protected override void Shoot()
+    {
         Vector3 spawnPos = transform.position;
         Quaternion rotation = transform.parent.rotation;
         Transform newBullet = BulletSpawner.Instance.Spawn(bullet.ToString(), spawnPos, rotation);
@@ -46,6 +42,6 @@ public class ShipShootByMouse : ObjectShooting
         newBullet.gameObject.SetActive(true);
         newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
 
-        AudioManager.Instance.PlaySound(SoundFXName.playershoot,shipCtrl.transform.position,shipCtrl.transform.rotation);
+        AudioManager.Instance.PlaySound(SoundFXName.playershoot, shipCtrl.transform.position, shipCtrl.transform.rotation);
     }
 }

@@ -80,8 +80,8 @@ public class StageSpawnerManager : HaroMonoBehaviour
             {
                 if(currentStageData.Conditions[i].name==_name)
                 {
-                    Debug.Log(currentStageData.Conditions[i].numberEnemy);
-                    Debug.Log(_number);
+                    //Debug.Log(currentStageData.Conditions[i].numberEnemy);
+                    //Debug.Log(_number);
                     if(currentStageData.Conditions[i].numberEnemy!=_number)
                     {
                         flag = false;

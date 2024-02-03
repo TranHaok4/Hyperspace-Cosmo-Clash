@@ -56,7 +56,7 @@ public class ObstaclesLazerControl : HaroMonoBehaviour
     }
     public virtual void TurnOffLazer()
     {
-        Debug.Log(transform.parent.name);
+        //Debug.Log(transform.parent.name);
         if (obstaclevisual != null)
         {
             //Debug.Log(transform.parent.name+":tat visual");
