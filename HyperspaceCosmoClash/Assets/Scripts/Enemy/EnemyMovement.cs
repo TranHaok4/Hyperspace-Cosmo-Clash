@@ -18,7 +18,7 @@ public class EnemyMovement : ObjecMovement
         this.distance = Vector3.Distance(transform.position, this.targetPosition);
         if (this.distance < this.minDistance) return;
 
-        Vector3 newpos = Vector3.Lerp(transform.position, targetPosition, this.speed);
+        Vector3 newpos = Vector3.Lerp(transform.position, targetPosition, this.speed*Time.fixedDeltaTime);
         transform.parent.position = newpos;
     }
 }

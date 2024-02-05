@@ -21,7 +21,7 @@ public class EnemyDespawn : Despawn
     public System.Action OnDespawmObjectCallBack;
     public override void DespawnObject()
     {
-        enemyCtrl.EnemyDropitem.Dropping();
+        enemyCtrl.EnemyDropitem?.Dropping();
         EnemySpawner.Instance.Despawn(transform.parent);
         CreateExplosionVFX();
         CreateExplosionSFX();
@@ -29,7 +29,8 @@ public class EnemyDespawn : Despawn
     }
     protected virtual void CreateExplosionVFX()
     {
-        string fxName = enemyCtrl.EnemyVFXeffect.ExplosionVFXname.ToString(); ;
+        string fxName = enemyCtrl.EnemyVFXeffect?.ExplosionVFXname.ToString(); ;
+        if (fxName == null) return;
         Vector3 hitPos = transform.position;
         Quaternion hitRot = transform.rotation;
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);

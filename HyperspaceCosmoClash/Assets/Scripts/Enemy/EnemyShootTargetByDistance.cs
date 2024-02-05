@@ -8,6 +8,10 @@ public class EnemyShootTargetByDistance : ObjectShooting
     [SerializeField] protected Transform target;
     [SerializeField] protected float distance = Mathf.Infinity;
     [SerializeField] protected float shootDistance = 3f;
+    [SerializeField] protected bool isRandomShootDelay = false;
+    [SerializeField] protected float minRandomDelay = 0.3f;
+    [SerializeField] protected float maxRandomDelay = 1f;
+
 
     [Header("Shooting type")]
     [SerializeField] protected ShootingBehaviour shootingBehaviour;
@@ -26,5 +30,9 @@ public class EnemyShootTargetByDistance : ObjectShooting
     {
         shootingBehaviour.Shoot(this, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.enemyshoot,transform.parent.position,transform.parent.rotation);
+        if(isRandomShootDelay)
+        {
+            shootDelay = Random.Range(minRandomDelay, maxRandomDelay);
+        }
     }
 }

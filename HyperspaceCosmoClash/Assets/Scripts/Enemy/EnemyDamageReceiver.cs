@@ -20,13 +20,13 @@ public class EnemyDamageReceiver : DamageReceiver
     }
     protected override void OnDead()
     {
-        enemyCtrl.Enemydespawn.DespawnObject();
+        enemyCtrl.Enemydespawn?.DespawnObject();
         //CreateExplosionVFX();
         //CreateExplosionSFX();
     }
     public override void Deduct(int damage)
     {
-        this.enemyCtrl.EnemyVFXeffect.StartVFX();
+        this.enemyCtrl?.EnemyVFXeffect?.StartVFX();
         base.Deduct(damage);
     }
     //protected virtual void CreateExplosionVFX()
