@@ -4,13 +4,13 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "BossCreateShield", menuName = "ScriptableObject/BossAbilities/BossCreateShield")]
 
-public class BossCreateShieldSO : BossAbilityDataSO
+public class BossCreateShielAbilitydSO : BossAbilityDataSO
 {
     [SerializeField] protected float timeDelayActive;
     [SerializeField] float lastActivationTime = 0;
 
     [SerializeField] protected BossShieldCtrl bossShield;
-    [SerializeField] protected bool condition = false;
+    [SerializeField] protected bool condition = true;
     protected override bool ActivationCondition(GameObject owner)
     {
         //Debug.Log(Time.time-lastActivationTime);
@@ -39,7 +39,7 @@ public class BossCreateShieldSO : BossAbilityDataSO
         Debug.Log("Kich hoat skill Shield");
         Debug.Log(owner.transform.name);
         Transform newshield = owner.GetComponentInChildren<BossShieldCtrl>()?.transform;
-        if (newshield==null)
+        if (newshield == null)
         {
             Debug.Log("haha");
             newshield = Instantiate(bossShield.gameObject.transform, owner.transform);
