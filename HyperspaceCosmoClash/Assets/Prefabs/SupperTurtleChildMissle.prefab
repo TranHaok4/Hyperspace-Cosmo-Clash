@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2291474865873707032}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2291474864118717835
 CircleCollider2D:
@@ -213,7 +213,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 243261419907595196, guid: bbe0d68b6e7978448acf53a9b63c6dec, type: 3}
+  m_Sprite: {fileID: -3134456421363625984, guid: bbe0d68b6e7978448acf53a9b63c6dec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -476,54 +476,6 @@ MonoBehaviour:
   hpMax: 3
   isDead: 0
   enemyCtrl: {fileID: 2291474865873707033}
---- !u!1 &2291474865747379260
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2291474865747379261}
-  - component: {fileID: 2291474865747379262}
-  m_Layer: 8
-  m_Name: EnemyVFXEffect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2291474865747379261
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2291474865747379260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2291474865873707032}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2291474865747379262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2291474865747379260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9feb8831202acb429affdbde538a941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vfxMaterial: {fileID: 2100000, guid: eefed93e4530cb9428a9199354dded36, type: 2}
-  duration: 0.5
-  explosionVFXName: 1
-  enemyCtrl: {fileID: 2291474865873707033}
-  originalMaterial: {fileID: 0}
 --- !u!1 &2291474865873707039
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +511,6 @@ Transform:
   - {fileID: 2291474865715478870}
   - {fileID: 2291474864807229605}
   - {fileID: 2291474864147824970}
-  - {fileID: 2291474865747379261}
   - {fileID: 2291474864118717833}
   m_Father: {fileID: 0}
   m_RootOrder: 0

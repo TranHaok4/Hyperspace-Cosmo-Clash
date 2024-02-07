@@ -32,9 +32,10 @@ public class EnemySelfDamageSender : DamageSender
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("da va cham");
-        if (collision.gameObject.transform.parent.GetComponent<ShipCtrl>() == null) return;
+        if (collision.gameObject.transform.GetComponent<ShipDamageReceiver>() == null) return;
         SendDamage(collision.gameObject.transform);
         this.enemyCtrl.Enemydespawn.DespawnObject();
+        Debug.Log("Da bi huy diet");
     }
 }
     

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnPoints : HaroMonoBehaviour
 {
     [SerializeField] protected List<Transform> points;
+    public List<Transform> Points { get => points; }
 
     protected override void LoadComponents()
     {

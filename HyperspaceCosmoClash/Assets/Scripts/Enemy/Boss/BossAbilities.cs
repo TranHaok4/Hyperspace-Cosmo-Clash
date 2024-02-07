@@ -17,9 +17,9 @@ public class BossAbilities : HaroMonoBehaviour
         this.bossCtrl = transform.parent.GetComponent<BossCtrl>();
         Debug.Log(transform.name + "LoadBossCtrl", gameObject);
     }
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        Debug.Log("haha");
         foreach(BossAbilityDataSO ability in abilites)
         {
             if (ability != null)

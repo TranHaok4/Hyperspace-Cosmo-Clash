@@ -14,7 +14,6 @@ public class ObstacleStageManager : HaroMonoBehaviour
     [SerializeField] protected List<ObstacleLazerStageActiver> obstacleLazerS;
     protected override void LoadComponents()
     {
-        Debug.Log("haha");
         base.LoadComponents();
         this.LoadObstacleLazerStageActiver();
     }
@@ -33,7 +32,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
         foreach(ObstacleLazerStageActiver obj in obstacleLazerS)
         {
             Debug.Log(obj.transform.parent.name);
-            obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer();
+            obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOnLazer();
         }
         Debug.Log(transform.name + "LoadObstacleLazerStageActiver", gameObject);
     }
@@ -51,6 +50,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
     {
         foreach (ObstacleLazerStageActiver obj in obstacleLazerS)
         {
+            Debug.Log(stageid + ":" + obj.StageID);
             if (obj.StageID == stageid)
             {
                 obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer();

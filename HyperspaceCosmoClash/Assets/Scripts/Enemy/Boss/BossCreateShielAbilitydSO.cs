@@ -23,7 +23,7 @@ public class BossCreateShielAbilitydSO : BossAbilityDataSO
 
     public override IEnumerator Activate(GameObject owner)
     {
-        lastActivationTime = 0;
+        lastActivationTime = Time.time;
         condition = true;
         while (true)
         {

@@ -15,10 +15,11 @@ public class EnemyMovement : ObjecMovement
 
     protected virtual void Moving()
     {
-        this.distance = Vector3.Distance(transform.position, this.targetPosition);
+        this.distance = Vector3.Distance(transform.parent.position, this.targetPosition);
         if (this.distance < this.minDistance) return;
 
-        Vector3 newpos = Vector3.Lerp(transform.position, targetPosition, this.speed*Time.fixedDeltaTime);
+        Vector3 newpos = Vector3.Lerp(transform.parent.position, targetPosition, this.speed*Time.deltaTime);
         transform.parent.position = newpos;
+        //Debug.Log(transform.parent.position);
     }
 }

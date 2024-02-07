@@ -15,6 +15,19 @@ public class EnemyCtrl : HaroMonoBehaviour
 
     [SerializeField] protected EnemyDropItem enemyDropItem;
     public EnemyDropItem EnemyDropitem { get => enemyDropItem; }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        //Debug.Log(transform.position+" "+Time.time);
+    }
+    //private void Update()
+    //{
+    //    if (transform.name != "SuperTurtle")
+    //    {
+    //        Debug.Log(transform.position+" "+Time.time);
+    //    }
+    //}
     protected override void LoadComponents()    
     {
         base.LoadComponents();

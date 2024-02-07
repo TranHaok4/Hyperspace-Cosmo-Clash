@@ -22,7 +22,7 @@ public class UIPlayerShipLevelText : BaseUIComponent
     }
     protected virtual void UpdateLevel(int levernumber)
     {
-        Debug.Log(levernumber);
+        //Debug.Log(levernumber);
         levelNumberText.text = levernumber.ToString();
     }
 

@@ -64,9 +64,9 @@ public class ObjectDropItem : HaroMonoBehaviour
             return ItemName.none.ToString() ;
         }
         int tmpindex = Random.Range(0, itemdropIndex.Count - 1);
-        Debug.Log("tmpindex:"+tmpindex);
+        //Debug.Log("tmpindex:"+tmpindex);
         int randomIndexItem = itemdropIndex[tmpindex];
-        Debug.Log("randomIndexItem:"+randomIndexItem);
+        //Debug.Log("randomIndexItem:"+randomIndexItem);
         return itemDropList[randomIndexItem].Itemname.ToString();
     }
 }

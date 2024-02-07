@@ -20,4 +20,6 @@ public enum EnemyName
     none=0,
     SpiKami=1,
     RdFighter=2,
+    RdHoperTurret=3,
+    SuperTurtle=4,
 }

@@ -16,6 +16,11 @@ public class StageSpawnerManager : HaroMonoBehaviour
     {
         [SerializeField] public EnemyName name;
         [SerializeField] public int number;
+        public EnemyDespawnCondition(EnemyName name, int number)
+        {
+            this.name = name;
+            this.number = number;
+        }
     }
     [SerializeField] protected List<EnemyDespawnCondition> enemyDespawnConditions;
     [SerializeField] protected StageDataSO currentStageData;
@@ -45,9 +50,10 @@ public class StageSpawnerManager : HaroMonoBehaviour
     }
     protected virtual void ResetData()
     {
-        for(int i=0;i<enemyDespawnConditions.Count;i++)
+        enemyDespawnConditions.Clear();
+        for(int i=0;i<currentStageData.Conditions.Count;i++)
         {
-            enemyDespawnConditions[i].number = 0;
+            enemyDespawnConditions.Add(new EnemyDespawnCondition(currentStageData.Conditions[i].name, 0));
         }
     }
     public virtual void SetCurrentStageData(StageDataSO data,int stageid)
@@ -62,11 +68,12 @@ public class StageSpawnerManager : HaroMonoBehaviour
                 break;
             }
         }
-        currentSpawnerStageCtrl.gameObject.SetActive(true);
+        currentSpawnerStageCtrl?.gameObject.SetActive(true);
         this.ResetData();
     }
     public virtual void CheckCondition(EnemyName enemyname)
     {
+        Debug.Log("zo day roi nha");
         bool flag = true;
         for(int i=0;i<enemyDespawnConditions.Count;i++)
         {
@@ -75,14 +82,15 @@ public class StageSpawnerManager : HaroMonoBehaviour
             {
                 enemyDespawnConditions[i].number++;
             }
+            Debug.Log(_name.ToString()+" "+ enemyname.ToString());
             int _number = enemyDespawnConditions[i].number;
             for(int j=0;j<currentStageData.Conditions.Count;j++)
             {
-                if(currentStageData.Conditions[i].name==_name)
+                if(currentStageData.Conditions[j].name==_name)
                 {
-                    //Debug.Log(currentStageData.Conditions[i].numberEnemy);
-                    //Debug.Log(_number);
-                    if(currentStageData.Conditions[i].numberEnemy!=_number)
+                    Debug.Log(currentStageData.Conditions[j].numberEnemy+" "+_number);
+
+                    if(currentStageData.Conditions[j].numberEnemy >_number)
                     {
                         flag = false;
                     }
@@ -92,7 +100,7 @@ public class StageSpawnerManager : HaroMonoBehaviour
         if(flag==true)  
         {
             Debug.Log("ok I'm fine");
-            currentSpawnerStageCtrl.gameObject.SetActive(false);
+            currentSpawnerStageCtrl.gameObject.SetActive(false);    
             ObstacleStageManager.Instance.TurnOffObstacleStage(currentSpawnerStageCtrl.StageID);
         }
         else

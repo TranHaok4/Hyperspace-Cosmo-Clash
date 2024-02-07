@@ -15,8 +15,8 @@ public class EnemyMoveForward : EnemyMovement
 
     protected override void FixedUpdate()
     {
-        base.FixedUpdate();
         this.GetMoveTargetPos();
+        base.FixedUpdate();
 
     }
     protected virtual void LoadMoveTarget()

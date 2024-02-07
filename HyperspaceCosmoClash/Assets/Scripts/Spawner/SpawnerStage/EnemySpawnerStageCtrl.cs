@@ -13,6 +13,7 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
         int rand = UnityEngine.Random.Range(0, this.enemyNames.Count);
         return enemyNames[rand];
     }
+
     public virtual void Spawn(EnemyName name,Vector3 pos,Quaternion rot)
     {
         if (currentNumberSpawner >= maxNumberSpawner || numberCurrentOnceTime>=numberLimitAtOnceTime) return;

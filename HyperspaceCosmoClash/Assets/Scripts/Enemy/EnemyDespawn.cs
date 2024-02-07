@@ -21,6 +21,7 @@ public class EnemyDespawn : Despawn
     public System.Action OnDespawmObjectCallBack;
     public override void DespawnObject()
     {
+        Debug.Log("Despawn");
         enemyCtrl.EnemyDropitem?.Dropping();
         EnemySpawner.Instance.Despawn(transform.parent);
         CreateExplosionVFX();
