@@ -16,6 +16,11 @@ public class EnemyCtrl : HaroMonoBehaviour
     [SerializeField] protected EnemyDropItem enemyDropItem;
     public EnemyDropItem EnemyDropitem { get => enemyDropItem; }
 
+    [SerializeField] protected EnemyDamageReceiver enemyDamageReceiver;
+    public EnemyDamageReceiver EnemyDamagereceiver { get => enemyDamageReceiver; }
+    [SerializeField] protected EnemyMovement enemyMovement;
+    public EnemyMovement Enemymovement { get => enemyMovement; }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -35,6 +40,8 @@ public class EnemyCtrl : HaroMonoBehaviour
         this.LoadModel();
         this.LoadEnemyVFXEffect();
         this.LoadEnemyDropItem();
+        this.LoadEnemyDamageReceiver();
+        this.LoadEnemyMovement();
     }
     protected virtual void LoadEnemyDespawn()
     {
@@ -60,6 +67,18 @@ public class EnemyCtrl : HaroMonoBehaviour
         if (this.enemyDropItem != null) return;
         this.enemyDropItem = transform.GetComponentInChildren<EnemyDropItem>();
         Debug.Log(transform.name + ":LoadEnemyDropItem", gameObject);
+    }
+    protected virtual void LoadEnemyDamageReceiver()
+    {
+        if (this.enemyDamageReceiver != null) return;
+        this.enemyDamageReceiver = GetComponentInChildren<EnemyDamageReceiver>();
+        Debug.Log(transform.name +"LoadEnemyDamageReceiver",gameObject);
+    }
+    protected virtual void LoadEnemyMovement()
+    {
+        if (this.enemyMovement != null) return;
+        this.enemyMovement = GetComponentInChildren<EnemyMovement>();
+        Debug.Log(transform.name + "LoadEnemyMovement", gameObject);
     }
 
 }

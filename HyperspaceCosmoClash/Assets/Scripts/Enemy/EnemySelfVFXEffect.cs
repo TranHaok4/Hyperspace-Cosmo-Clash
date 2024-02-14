@@ -21,6 +21,7 @@ public class EnemySelfVFXEffect : ObjectSelfVFXEffect
     {
         base.OnEnable();
         this.enemyCtrl.Model.material = originalMaterial;
+        this.StartCoroutine(BeSpawnCoroutine());
     }
     protected virtual void LoadEnemyCtrl()
     {
@@ -34,5 +35,25 @@ public class EnemySelfVFXEffect : ObjectSelfVFXEffect
         this.enemyCtrl.Model.material = vfxMaterial;
         yield return new WaitForSeconds(duration);
         this.enemyCtrl.Model.material = originalMaterial;
+    }
+    protected virtual IEnumerator BeSpawnCoroutine()
+    {
+        StartSpawned();
+        yield return new WaitForSeconds(0.7f);
+        EndSpawned();
+    }
+    protected virtual void StartSpawned()
+    {
+        enemyCtrl.Model?.gameObject.SetActive(false);
+        enemyCtrl.EnemyDamagereceiver?.gameObject.SetActive(false);
+        enemyCtrl.Enemymovement?.gameObject.SetActive(false);
+        Transform newprefab=VFXSpawner.Instance.Spawn(spawnVFXName.ToString(), transform.position, transform.rotation);
+        newprefab.gameObject.SetActive(true);
+    }
+    protected virtual void EndSpawned()
+    {
+        enemyCtrl.Model?.gameObject.SetActive(true);
+        enemyCtrl.EnemyDamagereceiver?.gameObject.SetActive(true);
+        enemyCtrl.Enemymovement?.gameObject.SetActive(true);
     }
 }

@@ -35,7 +35,7 @@ public class EnemySelfDamageSender : DamageSender
         if (collision.gameObject.transform.GetComponent<ShipDamageReceiver>() == null) return;
         SendDamage(collision.gameObject.transform);
         this.enemyCtrl.Enemydespawn.DespawnObject();
-        Debug.Log("Da bi huy diet");
+        //Debug.Log("Da bi huy diet");
     }
 }
     

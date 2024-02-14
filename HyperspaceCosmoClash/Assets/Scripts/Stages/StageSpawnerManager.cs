@@ -99,13 +99,13 @@ public class StageSpawnerManager : HaroMonoBehaviour
         }
         if(flag==true)  
         {
-            Debug.Log("ok I'm fine");
+            //Debug.Log("ok I'm fine");
             currentSpawnerStageCtrl.gameObject.SetActive(false);    
             ObstacleStageManager.Instance.TurnOffObstacleStage(currentSpawnerStageCtrl.StageID);
         }
         else
         {
-            Debug.Log("no it don't reach ");
+            //Debug.Log("no it don't reach ");
         }
     }
 

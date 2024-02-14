@@ -27,4 +27,10 @@ public enum CommonVFXName
 {   
     none=0,
     LevelUPVFX=1,
+
+}
+public enum SpawnVFXName
+{
+    none=0,
+    SpawnVFX = 1,
 }
