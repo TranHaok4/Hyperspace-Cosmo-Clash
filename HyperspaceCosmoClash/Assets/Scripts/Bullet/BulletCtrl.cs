@@ -13,6 +13,12 @@ public class BulletCtrl : HaroMonoBehaviour
     [SerializeField] protected Transform shooter;
     public Transform Shooter { get => shooter; }
 
+    [SerializeField] protected TypeBullet bulletName;
+
+    private void OnValidate()
+    {
+        transform.name = bulletName.ToString();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -38,3 +44,11 @@ public class BulletCtrl : HaroMonoBehaviour
 
 }
 
+public enum TypeBullet
+{
+    none = 0,
+    PlayerBullet = 1,
+    RedBulletNormalEnemyBullet = 2,
+    CircleRedEnemyBullet=3,
+    SuperTurleBullet=4,
+}

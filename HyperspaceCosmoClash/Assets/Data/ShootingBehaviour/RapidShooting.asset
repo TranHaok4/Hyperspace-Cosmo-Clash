@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RapidShooting
   m_EditorClassIdentifier: 
   numberBullet: 5
-  timeBetweenShot: 0.12
+  timeBetweenShot: 0.18

@@ -36,9 +36,3 @@ public abstract class ObjectShooting : HaroMonoBehaviour
     protected abstract bool IsShooting();
 }
 
-public enum TypeBullet
-{
-    none=0,
-    PlayerBullet=1,
-    EnemyBullet=2,
-}
