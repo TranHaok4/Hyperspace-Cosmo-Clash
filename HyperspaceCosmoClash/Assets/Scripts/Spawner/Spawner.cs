@@ -54,6 +54,7 @@ public abstract class Spawner : HaroMonoBehaviour
     {
         foreach (Transform prefab in prefabs)
         {
+            //Debug.Log(prefab.name + "===" + prefabName);
             if (prefab.name == prefabName) return prefab;
         }
         return null;//TO-DO

@@ -30,7 +30,7 @@ public class EnemyDespawn : Despawn
     }
     protected virtual void CreateExplosionVFX()
     {
-        string fxName = enemyCtrl.EnemyVFXeffect?.ExplosionVFXname.ToString(); ;
+        string fxName = enemyCtrl.EnemyVFXeffect?.ExplosionVFXname.GetName().ToString(); ;
         if (fxName == null) return;
         Vector3 hitPos = transform.position;
         Quaternion hitRot = transform.rotation;

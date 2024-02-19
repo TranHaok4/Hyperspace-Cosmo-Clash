@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &546664953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546664954}
+  - component: {fileID: 546664955}
+  m_Layer: 8
+  m_Name: BossShieldVFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &546664954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546664953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2660120329368175107}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &546664955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546664953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af66b92033dc1ca48af8bd5251f813f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxMaterial: {fileID: 0}
+  duration: 0
+  explosionVFXName:
+    vfxname: 0
+  shieldimpactVFXName:
+    vfxname: 1
 --- !u!1 &1335808551
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335808552}
   - component: {fileID: 1335808554}
-  - component: {fileID: 1335808553}
+  - component: {fileID: 6858773955386620444}
   m_Layer: 8
   m_Name: BossShieldDamageReceiver
   m_TagString: Untagged
@@ -42,13 +91,13 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6
---- !u!114 &1335808553
+--- !u!114 &6858773955386620444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,14 +106,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335808551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d3cdf39af7e3c459cdb7b3ec782b7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 91368985203b9d043a06ba869e1a3646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dmgcollider: {fileID: 1335808554}
   hp: 3
-  hpMax: 10
+  hpMax: 100
   isDead: 0
   enemyCtrl: {fileID: 8843492372721026346}
+  bossShieldCtrl: {fileID: 8843492372721026346}
 --- !u!1 &2060176008
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +126,7 @@ GameObject:
   - component: {fileID: 2060176009}
   - component: {fileID: 2060176010}
   m_Layer: 8
-  m_Name: BossShieldDamageDespawn
+  m_Name: BossShieldDespawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5554,6 +5604,7 @@ Transform:
   - {fileID: 2660120327518384824}
   - {fileID: 1335808552}
   - {fileID: 2060176009}
+  - {fileID: 546664954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5573,3 +5624,6 @@ MonoBehaviour:
   model: {fileID: 2660120328878855386}
   enemyVFXEffect: {fileID: 0}
   enemyDropItem: {fileID: 0}
+  enemyDamageReceiver: {fileID: 0}
+  enemyMovement: {fileID: 0}
+  bossShieldVFX: {fileID: 546664955}

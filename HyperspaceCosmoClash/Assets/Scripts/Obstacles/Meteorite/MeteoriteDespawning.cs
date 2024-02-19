@@ -18,14 +18,14 @@ public class MeteoriteDespawning : DespawningByDistance
     }
     public override void DespawnObject()
     {
-        CreateExplosionVFX();
-        CreateExplosionSFX();
+        //CreateExplosionVFX();
+        //CreateExplosionSFX();
         MeteoriteSpawner.Instance.Despawn(transform.parent);
     }
 
     protected virtual void CreateExplosionVFX()
     {
-        string fxName = meteoriteCtrl.MeteoriteVFXEffect.ExplosionVFXname.ToString(); ;
+        string fxName = meteoriteCtrl.MeteoriteVFXEffect.ExplosionVFXname.GetName().ToString(); ;
         Vector3 hitPos = transform.position;
         Quaternion hitRot = transform.rotation;
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);

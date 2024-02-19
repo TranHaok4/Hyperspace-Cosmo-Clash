@@ -9,7 +9,6 @@ public abstract class ObjectSelfVFXEffect : HaroMonoBehaviour
     [SerializeField] protected float duration;
     [SerializeField] protected Coroutine vfxRoutine;
     [SerializeField] protected ExplosionVFXName explosionVFXName;
-    [SerializeField] protected SpawnVFXName spawnVFXName;
     public ExplosionVFXName ExplosionVFXname { get => explosionVFXName; }
 
     public virtual void StartVFX()

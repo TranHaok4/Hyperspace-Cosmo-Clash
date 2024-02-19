@@ -28,7 +28,7 @@ public class ShipSelfVFXEffect : ObjectSelfVFXEffect
 
     protected virtual void CreateLevelUpVFX(int temp)
     {
-        string fxName = levelUpVFX.ToString() ;
+        string fxName = levelUpVFX.GetName().ToString() ;
         Vector3 hitPos = transform.position;
         Quaternion hitRot = transform.rotation;
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
