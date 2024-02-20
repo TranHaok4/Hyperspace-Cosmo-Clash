@@ -14,6 +14,27 @@ TextureImporter:
   - first:
       213: -7258735533416252098
     second: Retro Impact Effect D_3
+  - first:
+      213: -2051066851721124855
+    second: Retro Impact Effect D_4
+  - first:
+      213: 7741458016187699956
+    second: Retro Impact Effect D_5
+  - first:
+      213: 6870960346612248597
+    second: Retro Impact Effect D_6
+  - first:
+      213: 2762865510801007798
+    second: Retro Impact Effect D_7
+  - first:
+      213: -8537938435560675672
+    second: Retro Impact Effect D_8
+  - first:
+      213: 2623076183100097331
+    second: Retro Impact Effect D_9
+  - first:
+      213: -5106074597437714093
+    second: Retro Impact Effect D_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -206,6 +227,153 @@ TextureImporter:
       bones: []
       spriteID: e3df734ad7ac34b90800000000000000
       internalID: -7258735533416252098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904659cb0952983e0800000000000000
+      internalID: -2051066851721124855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2d77abc0f2f6b60800000000000000
+      internalID: 7741458016187699956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_6
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5103e95080e8a5f50800000000000000
+      internalID: 6870960346612248597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4e8753b8ba75620800000000000000
+      internalID: 2762865510801007798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a660429a36238980800000000000000
+      internalID: -8537938435560675672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 206
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333087014e9076420800000000000000
+      internalID: 2623076183100097331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Retro Impact Effect D_10
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 207
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351541fe4349329b0800000000000000
+      internalID: -5106074597437714093
       vertices: []
       indices: 
       edges: []

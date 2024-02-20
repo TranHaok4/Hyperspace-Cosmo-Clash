@@ -44,10 +44,10 @@ public class BossSpawnChildAbilitySO : BossAbilityDataSO
     {
         for(int i=1;i<=numberChildSpawn;i++)
         {
-            float randomx = owner.transform.position.x + Random.Range(-3, 3);
-            float randomy = owner.transform.position.y + Random.Range(-3, 3);
+            float randomx = owner.transform.position.x + Random.Range(-5, 5);
+            float randomy = owner.transform.position.y + Random.Range(-5, 5);
             //Debug.Log(randomx + " " + randomy);
-            Transform newprefab =EnemySpawner.Instance.Spawn(childObject.name, owner.transform.position, owner.transform.rotation);
+            Transform newprefab =EnemySpawner.Instance.Spawn(childObject.name,new Vector3(randomx,randomy,0), owner.transform.rotation);
             newprefab.gameObject.SetActive(true);   
             //Debug.Log(newprefab.transform.position);
             EnemyDespawn newprefabDespawn=newprefab.GetComponent<EnemyCtrl>().Enemydespawn;

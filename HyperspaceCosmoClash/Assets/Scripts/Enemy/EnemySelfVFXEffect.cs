@@ -6,7 +6,7 @@ public class EnemySelfVFXEffect : ObjectSelfVFXEffect
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
     [SerializeField] protected Material originalMaterial;
-    [Header("SpawnVFXName")][SerializeField] protected SpawnVFXName spawnVFXName;
+    [SerializeField] protected SpawnVFXName spawnVFXName;
 
     protected override void LoadComponents()
     {
@@ -48,8 +48,22 @@ public class EnemySelfVFXEffect : ObjectSelfVFXEffect
         enemyCtrl.Model?.gameObject.SetActive(false);
         enemyCtrl.EnemyDamagereceiver?.gameObject.SetActive(false);
         enemyCtrl.Enemymovement?.gameObject.SetActive(false);
-        Transform newprefab=VFXSpawner.Instance.Spawn(spawnVFXName.GetName().ToString(), transform.position, transform.rotation);
-        newprefab.gameObject.SetActive(true);
+        if(VFXSpawner.Instance!=null)
+        {
+            Transform newprefab = VFXSpawner.Instance.Spawn(spawnVFXName.GetName(), transform.position, transform.rotation);
+            newprefab.gameObject.SetActive(true);
+        }
+        //Transform newprefab =VFXSpawner.Instance.Spawn(spawnVFXName.GetName(), transform.position, transform.rotation);
+        //if(newprefab!=null)
+        //{
+        //    Debug.Log("HAHA SPAWN");
+
+        //    newprefab.gameObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    Debug.Log("HAHA");
+        //}
     }
     protected virtual void EndSpawned()
     {

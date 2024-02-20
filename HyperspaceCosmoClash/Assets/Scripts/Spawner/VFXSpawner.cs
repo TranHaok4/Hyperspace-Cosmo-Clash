@@ -82,7 +82,7 @@ public class BulletImpactVFXName : VFXName
     {
         none = 0,
         RedBulletImpact1VFX = 1,
-        GreenBulletImpact1VFX=2,
+        GreenBulletImpact1VFX=2,w
     }
 }
 [System.Serializable]

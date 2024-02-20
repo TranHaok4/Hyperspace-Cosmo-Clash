@@ -8,7 +8,7 @@ public class FixedAsteriod : HaroMonoBehaviour
     {
         if(collision.gameObject.layer==LayerMask.NameToLayer("EnemyBullet") || collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
         {
-            Debug.Log(collision.name);
+            //Debug.Log(collision.name);
             BulletCtrl bulletOBJ = collision.gameObject.transform.parent.GetComponent<BulletCtrl>();
             if(bulletOBJ != null)
             {
