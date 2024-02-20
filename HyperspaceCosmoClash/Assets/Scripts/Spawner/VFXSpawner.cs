@@ -81,7 +81,8 @@ public class BulletImpactVFXName : VFXName
     public enum BulletImpactVFXNameEnum
     {
         none = 0,
-        BulletImpact1VFX = 1,
+        RedBulletImpact1VFX = 1,
+        GreenBulletImpact1VFX=2,
     }
 }
 [System.Serializable]
