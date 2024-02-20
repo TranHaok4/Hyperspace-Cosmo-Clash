@@ -59732,7 +59732,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3028559098995421251, guid: 7cf67941ffe4cd942bd1d3487a89f6b7, type: 3}
-  m_Color: {r: 0.9811321, g: 0.87953836, b: 0.34617302, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -65060,6 +65060,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799093556}
     m_Modifications:
+    - target: {fileID: 2291474864118717835, guid: d5240913bfea51047bc291484abfb538, type: 3}
+      propertyPath: m_Radius
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291474864118717835, guid: d5240913bfea51047bc291484abfb538, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2291474864384110239, guid: d5240913bfea51047bc291484abfb538, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -65110,11 +65118,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2291474865873707032, guid: d5240913bfea51047bc291484abfb538, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 114
+      value: 111.2
       objectReference: {fileID: 0}
     - target: {fileID: 2291474865873707032, guid: d5240913bfea51047bc291484abfb538, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: -1.43
       objectReference: {fileID: 0}
     - target: {fileID: 2291474865873707032, guid: d5240913bfea51047bc291484abfb538, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65180,6 +65188,10 @@ PrefabInstance:
     - target: {fileID: 2660120329368175104, guid: 75c7f5179bcdde2408c10f1fe17737d2, type: 3}
       propertyPath: m_Name
       value: BossShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660120329368175104, guid: 75c7f5179bcdde2408c10f1fe17737d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2660120329368175107, guid: 75c7f5179bcdde2408c10f1fe17737d2, type: 3}
       propertyPath: m_RootOrder
