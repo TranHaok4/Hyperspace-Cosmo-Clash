@@ -1,5 +1,8 @@
 using UnityEngine;
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
 using UnityEditor;
+#endif
+
 
 //[CustomPropertyDrawer(typeof(VFXName), true)]
 //public class VFXNameDrawer : PropertyDrawer
@@ -13,6 +16,8 @@ using UnityEditor;
 //        EditorGUI.EndProperty();
 //    }
 //}
+
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
 
 [CustomEditor(typeof(VFXCtrl))]
 public class VFXCtrlEditor : Editor
@@ -49,3 +54,4 @@ public class VFXCtrlEditor : Editor
         }
     }
 }
+#endif

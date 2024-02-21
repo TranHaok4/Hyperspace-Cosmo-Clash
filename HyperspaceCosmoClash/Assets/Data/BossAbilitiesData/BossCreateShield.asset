@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BossCreateShield
   m_EditorClassIdentifier: 
   abilityName: 1
-  timeDelayActive: 10
-  lastActivationTime: 3.8799999
+  timeDelayActive: 15
+  lastActivationTime: 23.08
   bossShield: {fileID: 8843492372721026346, guid: 75c7f5179bcdde2408c10f1fe17737d2, type: 3}
   condition: 1

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BossSpawnChild
   m_EditorClassIdentifier: 
   abilityName: 2
-  timeDelayActive: 5
-  lastActivationTime: 9.060288
+  timeDelayActive: 10
+  lastActivationTime: 30.58
   childObject: {fileID: 2291474865873707033, guid: d5240913bfea51047bc291484abfb538, type: 3}
   numberChildSpawn: 5
-  numberChillDespawn: 4
-  condition: 0
+  numberChillDespawn: 0
+  condition: 1

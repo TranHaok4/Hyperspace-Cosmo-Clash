@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgcollider: {fileID: 1335808554}
   hp: 3
-  hpMax: 100
+  hpMax: 25
   isDead: 0
   enemyCtrl: {fileID: 8843492372721026346}
   bossShieldCtrl: {fileID: 8843492372721026346}
