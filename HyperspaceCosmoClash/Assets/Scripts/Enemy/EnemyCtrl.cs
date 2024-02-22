@@ -21,6 +21,9 @@ public class EnemyCtrl : HaroMonoBehaviour
     [SerializeField] protected EnemyMovement enemyMovement;
     public EnemyMovement Enemymovement { get => enemyMovement; }
 
+    [SerializeField] protected HPBarType hpBarType;
+    public HPBarType HPBartype { get => hpBarType; }
+
     protected override void OnEnable()
     {
         base.OnEnable();

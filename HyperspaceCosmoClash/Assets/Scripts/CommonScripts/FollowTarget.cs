@@ -14,7 +14,10 @@ public class FollowTarget : HaroMonoBehaviour
     protected virtual void Following()
     {
         if (this.target == null) return;
-         
         transform.position = Vector3.Lerp(this.transform.position, target.position, Time.fixedDeltaTime * speed);
+    }
+    public virtual void SetTarget(Transform _target)
+    {
+        target = _target;
     }
 }

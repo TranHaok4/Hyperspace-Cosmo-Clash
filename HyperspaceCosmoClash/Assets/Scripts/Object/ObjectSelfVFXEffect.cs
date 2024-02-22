@@ -19,7 +19,7 @@ public abstract class ObjectSelfVFXEffect : HaroMonoBehaviour
         {
             StopCoroutine(vfxRoutine);
         }
-        vfxRoutine = StartCoroutine(VFXCoroutine());
+        vfxRoutine = StartCoroutine(VFXCoroutine());    
     }
     protected abstract IEnumerator VFXCoroutine();
 }
