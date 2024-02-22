@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class UIPlayerShipHPBar : BaseUIComponent
 {
-    protected override void Awake()
-    {
-    }
+
 
     [SerializeField] protected Slider shipHPbar;
     protected override void LoadComponents()
