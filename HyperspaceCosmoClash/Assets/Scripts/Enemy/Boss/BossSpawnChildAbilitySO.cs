@@ -53,10 +53,7 @@ public class BossSpawnChildAbilitySO : BossAbilityDataSO
             EnemyDespawn newprefabDespawn=newprefab.GetComponent<EnemyCtrl>().Enemydespawn;
             if(newprefabDespawn!=null)
             {
-                newprefabDespawn.OnDespawmObjectCallBack = () =>
-                {
-                    CheckCondition();
-                };
+                newprefabDespawn.OnDespawmObjectCallBack += CheckCondition;
             }
             yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
         }

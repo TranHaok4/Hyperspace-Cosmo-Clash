@@ -2905,6 +2905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 571897023}
+  isDespawnObjectCallBackRegistered: 0
 --- !u!1 &245349683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,7 +3033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269794016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 17.18, y: 11.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989204649}
@@ -3134,6 +3135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 924089505}
+  isDespawnObjectCallBackRegistered: 0
 --- !u!4 &272504691
 Transform:
   m_ObjectHideFlags: 0
@@ -3413,9 +3415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275883213e3312c44ae70417a1b474ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCtrl: {fileID: 0}
   followTarget: {fileID: 0}
   hpBarType: 2
+  hpSlider: {fileID: 0}
 --- !u!1 &339201698
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,6 +4820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 1225213594}
+  isDespawnObjectCallBackRegistered: 0
 --- !u!4 &436841836
 Transform:
   m_ObjectHideFlags: 0
@@ -11196,7 +11199,7 @@ MonoBehaviour:
   enemyVFXEffect: {fileID: 2012653497}
   enemyDropItem: {fileID: 160934527}
   enemyDamageReceiver: {fileID: 1939448468}
-  enemyMovement: {fileID: 0}
+  enemyMovement: {fileID: 982643142}
   hpBarType: 1
 --- !u!21 &572660867
 Material:
@@ -35349,7 +35352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cc25d556cb8cf4983860094a99df18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 25
   direction: {x: 1, y: 0, z: 0}
 --- !u!1 &778966397
 GameObject:
@@ -40888,9 +40891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275883213e3312c44ae70417a1b474ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCtrl: {fileID: 0}
   followTarget: {fileID: 878388790}
   hpBarType: 1
+  hpSlider: {fileID: 1186855296}
 --- !u!1 &878455370
 GameObject:
   m_ObjectHideFlags: 0
@@ -41300,6 +41303,7 @@ Transform:
   - {fileID: 272504691}
   - {fileID: 124553915}
   - {fileID: 788974440}
+  - {fileID: 1015330660}
   m_Father: {fileID: 1799093556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42259,8 +42263,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436530450}
-  m_Father: {fileID: 1985337697}
-  m_RootOrder: 0
+  m_Father: {fileID: 924089504}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1015330661
 MonoBehaviour:
@@ -51229,7 +51233,7 @@ GameObject:
   - component: {fileID: 1437067698}
   - component: {fileID: 1437067699}
   m_Layer: 0
-  m_Name: HPBarSpawner
+  m_Name: EnemyHPBarSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58152,6 +58156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 145490697}
+  isDespawnObjectCallBackRegistered: 0
 --- !u!1 &1759048447
 GameObject:
   m_ObjectHideFlags: 0
@@ -60534,8 +60539,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1015330660}
+  m_Children: []
   m_Father: {fileID: 924089504}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61681,7 +61685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2134719103
 Transform:
   m_ObjectHideFlags: 0

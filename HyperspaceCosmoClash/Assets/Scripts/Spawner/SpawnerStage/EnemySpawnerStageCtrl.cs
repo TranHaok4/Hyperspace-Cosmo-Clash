@@ -13,29 +13,34 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
         int rand = UnityEngine.Random.Range(0, this.enemyNames.Count);
         return enemyNames[rand];
     }
-
-    public virtual void Spawn(EnemyName name,Vector3 pos,Quaternion rot)
+    public virtual void Spawn(EnemyName name, Vector3 pos, Quaternion rot)
     {
-        if (currentNumberSpawner >= maxNumberSpawner || numberCurrentOnceTime>=numberLimitAtOnceTime) return;
+        if (currentNumberSpawner >= maxNumberSpawner || numberCurrentOnceTime >= numberLimitAtOnceTime) return;
+        //Debug.Log(currentNumberSpawner + " " + numberCurrentOnceTime);
         currentNumberSpawner++;
         numberCurrentOnceTime++;
 
-        Transform obj =spawner.Spawn(name.ToString(), pos, rot);
+        Transform obj = spawner.Spawn(name.ToString(), pos, rot);
         obj.gameObject.SetActive(true);
         EnemyDespawn enemyDespawn = obj.gameObject.GetComponent<EnemyCtrl>().Enemydespawn;
         if (enemyDespawn != null)
         {
-            enemyDespawn.OnDespawmObjectCallBack = () =>
-              {
-                  ChangeEnemyNumber(name);
-              };
+            if(enemyDespawn.isDespawnObjectCallBackRegistered==false)
+            {
+                enemyDespawn.OnDespawmObjectCallBack += () => ChangeEnemyNumber(name, enemyDespawn);
+                enemyDespawn.isDespawnObjectCallBackRegistered = true;
+            }
         }
-        else Debug.LogWarning("Not found EnemyDespawn");
+        else
+        {
+            Debug.LogWarning("Not found EnemyDespawn");
+        }
     }
 
-    protected virtual void ChangeEnemyNumber(EnemyName name)
+    protected virtual void ChangeEnemyNumber(EnemyName name, EnemyDespawn enemyDespawn)
     {
         numberCurrentOnceTime--;
+        Debug.Log("Change despawn:" + currentNumberSpawner + " " + numberCurrentOnceTime);
         StageSpawnerManager.Instance.CheckCondition(name);
     }
 }

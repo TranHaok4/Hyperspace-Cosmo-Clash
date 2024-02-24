@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyDamageReceiver : DamageReceiver
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
 
+    public UnityAction<int, int> updateEnemyHP;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        if (updateEnemyHP != null) updateEnemyHP(hp, hpMax);
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -28,6 +36,8 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         this.enemyCtrl?.EnemyVFXeffect?.StartVFX();
         base.Deduct(damage);
+        if (updateEnemyHP != null) updateEnemyHP(hp, hpMax);
+
     }
     //protected virtual void CreateExplosionVFX()
     //{

@@ -73,7 +73,6 @@ public class StageSpawnerManager : HaroMonoBehaviour
     }
     public virtual void CheckCondition(EnemyName enemyname)
     {
-        Debug.Log("zo day roi nha");
         bool flag = true;
         for(int i=0;i<enemyDespawnConditions.Count;i++)
         {
@@ -82,13 +81,13 @@ public class StageSpawnerManager : HaroMonoBehaviour
             {
                 enemyDespawnConditions[i].number++;
             }
-            Debug.Log(_name.ToString()+" "+ enemyname.ToString());
+            //Debug.Log(_name.ToString()+" "+ enemyname.ToString());
             int _number = enemyDespawnConditions[i].number;
             for(int j=0;j<currentStageData.Conditions.Count;j++)
             {
                 if(currentStageData.Conditions[j].name==_name)
                 {
-                    Debug.Log(currentStageData.Conditions[j].numberEnemy+" "+_number);
+                    //Debug.Log(currentStageData.Conditions[j].numberEnemy+" "+_number);
 
                     if(currentStageData.Conditions[j].numberEnemy >_number)
                     {

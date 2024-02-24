@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class EnemyDespawn : Despawn
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -18,7 +19,9 @@ public class EnemyDespawn : Despawn
         Debug.Log(transform.name + ":LoadEnemyCtrl", gameObject);
     }
 
-    public System.Action OnDespawmObjectCallBack;
+    public event System.Action OnDespawmObjectCallBack;
+    [SerializeField] public bool isDespawnObjectCallBackRegistered=false;
+
     public override void DespawnObject()
     {
         //Debug.Log("Despawn");
@@ -27,6 +30,7 @@ public class EnemyDespawn : Despawn
         CreateExplosionVFX();
         CreateExplosionSFX();
         OnDespawmObjectCallBack?.Invoke();
+        Debug.Log("+");
     }
     protected virtual void CreateExplosionVFX()
     {

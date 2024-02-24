@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EnemyHPBarCtrl : HaroMonoBehaviour
 {
-    [SerializeField] protected EnemyCtrl enemyCtrl;
+    //[SerializeField] protected EnemyCtrl enemyCtrl;
     [SerializeField] protected FollowTarget followTarget;
     [SerializeField] protected HPBarType hpBarType;
+    [SerializeField] protected Slider hpSlider;
 
     private void OnValidate()
     {
@@ -16,6 +17,14 @@ public class EnemyHPBarCtrl : HaroMonoBehaviour
     {
         base.LoadComponents();
         this.LoadFollowTarget();
+        this.LoadHpSlider();
+
+    }
+    protected virtual void LoadHpSlider()
+    {
+        if (this.hpSlider != null) return;
+        this.hpSlider = GetComponentInChildren<Slider>();
+        Debug.Log(transform.name + "LoadHpSlider", gameObject);
     }
     protected virtual void LoadFollowTarget()
     {
@@ -23,12 +32,42 @@ public class EnemyHPBarCtrl : HaroMonoBehaviour
         this.followTarget = GetComponent<FollowTarget>();
         Debug.Log(transform.name+"LoadFollowTarget", gameObject);
     }
+    protected virtual void ChangeHPBar(int hp,int maxhp)
+    {
+        hpSlider.value = (float)hp / maxhp;
+        //if(hp<=0)
+        //{
+        //    DespawnHPBar();
+        //}
+    }
+    //protected virtual void DespawnHPBar()
+    //{
+    //    //Debug.Log("da bi despawn");
+
+    //    HPBarSpawner.Instance.Despawn(this.transform);
+    //}
     public virtual void SetEnemyCtrl(EnemyCtrl enemy_Ctrl)
     {
-        enemyCtrl = enemy_Ctrl;
-        if(followTarget!=null)
+        //enemyCtrl = enemy_Ctrl;
+        enemy_Ctrl.EnemyDamagereceiver.updateEnemyHP += ChangeHPBar;
+        EnemyDespawn newenemydespawn = enemy_Ctrl.Enemydespawn;
+        if (newenemydespawn != null)
         {
-            followTarget.SetTarget(enemyCtrl.transform);
+            newenemydespawn.OnDespawmObjectCallBack += DespawnHPBar;
+        }
+        else
+        {
+            Debug.LogWarning("EnemyDespawn is not set for this enemy.");
+        }
+        if (followTarget!=null)
+        {
+            followTarget.SetTarget(enemy_Ctrl.transform);
+        }
+
+        void DespawnHPBar()
+        {
+            HPBarSpawner.Instance.Despawn(this.transform);
+            newenemydespawn.OnDespawmObjectCallBack -= DespawnHPBar;
         }
     }
 }

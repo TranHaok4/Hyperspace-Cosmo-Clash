@@ -49,10 +49,7 @@ public class BossCreateShielAbilitydSO : BossAbilityDataSO
         EnemyDespawn shieldDespawn = newshield.gameObject.GetComponent<EnemyCtrl>().Enemydespawn;
         if (shieldDespawn != null)
         {
-            shieldDespawn.OnDespawmObjectCallBack = () =>
-            {
-                ResetSkill();
-            };
+            shieldDespawn.OnDespawmObjectCallBack += ResetSkill;
         }
 
     }
