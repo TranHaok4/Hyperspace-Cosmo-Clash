@@ -12,7 +12,7 @@ public class EnemyDamageReceiver : DamageReceiver
     protected override void OnEnable()
     {
         base.OnEnable();
-        if (updateEnemyHP != null) updateEnemyHP(hp, hpMax);
+        if (updateEnemyHP != null) updateEnemyHP(hpMax, hpMax);
     }
     protected override void LoadComponents()
     {

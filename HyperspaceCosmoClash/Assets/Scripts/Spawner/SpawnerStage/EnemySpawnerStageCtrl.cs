@@ -25,22 +25,20 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
         EnemyDespawn enemyDespawn = obj.gameObject.GetComponent<EnemyCtrl>().Enemydespawn;
         if (enemyDespawn != null)
         {
-            if(enemyDespawn.isDespawnObjectCallBackRegistered==false)
-            {
-                enemyDespawn.OnDespawmObjectCallBack += () => ChangeEnemyNumber(name, enemyDespawn);
-                enemyDespawn.isDespawnObjectCallBackRegistered = true;
-            }
+            enemyDespawn.OnDespawmObjectCallBack += ChangeEnemyNumber;
         }
         else
         {
             Debug.LogWarning("Not found EnemyDespawn");
         }
-    }
 
-    protected virtual void ChangeEnemyNumber(EnemyName name, EnemyDespawn enemyDespawn)
-    {
+        void ChangeEnemyNumber()
+        {
         numberCurrentOnceTime--;
         Debug.Log("Change despawn:" + currentNumberSpawner + " " + numberCurrentOnceTime);
         StageSpawnerManager.Instance.CheckCondition(name);
+        enemyDespawn.OnDespawmObjectCallBack -= ChangeEnemyNumber;
+        }
     }
+
 }

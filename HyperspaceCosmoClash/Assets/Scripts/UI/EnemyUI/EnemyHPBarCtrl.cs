@@ -35,10 +35,21 @@ public class EnemyHPBarCtrl : HaroMonoBehaviour
     protected virtual void ChangeHPBar(int hp,int maxhp)
     {
         hpSlider.value = (float)hp / maxhp;
-        //if(hp<=0)
-        //{
-        //    DespawnHPBar();
-        //}
+        if (hp == maxhp && hpBarType!=HPBarType.BossHPBar) this.hpSlider.gameObject.SetActive(false);
+        Debug.Log(this.gameObject.activeSelf);
+        if(hpBarType!=HPBarType.BossHPBar && this.gameObject.activeSelf!=false && hp!=maxhp)
+        {
+            StartCoroutine(TurnOnfHPAfterTime());
+        }
+
+    }
+    protected IEnumerator TurnOnfHPAfterTime()
+    {
+        this.hpSlider.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        this.hpSlider.gameObject.SetActive(false);
+        Debug.Log("change");
+
     }
     //protected virtual void DespawnHPBar()
     //{
