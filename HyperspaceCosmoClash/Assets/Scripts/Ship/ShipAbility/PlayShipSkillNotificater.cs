@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+/// <summary>
+/// Notificater class for playing ship skill notifications.
+/// </summary>
 public class PlayShipSkillNotificater : Notificater
 {
     private static PlayShipSkillNotificater instance;
+
+    /// <summary>
+    /// Gets the singleton instance of the PlayShipSkillNotificater.
+    /// </summary>
     public static PlayShipSkillNotificater Instance { get => instance; }
+
     protected override void Awake()
     {
-        if (PlayShipSkillNotificater.instance != null) Debug.LogError("Only 1 PlayShipSkillNotificater allow to exist");
+        if (PlayShipSkillNotificater.instance != null) Debug.LogError("Only 1 PlayShipSkillNotificater allowed to exist");
         PlayShipSkillNotificater.instance = this;
         //Debug.Log("da co PlayShipSkillNotificater");
     }
@@ -16,6 +24,10 @@ public class PlayShipSkillNotificater : Notificater
     public UnityAction<AbilityState> changeSkillState;
     public UnityAction<float> changeSkillCoolDown;
 
+    /// <summary>
+    /// Invokes the changeSkillState event with the specified state.
+    /// </summary>
+    /// <param name="state">The new ability state.</param>
     public void OnChangeSkillState(AbilityState state)
     {
         if (changeSkillState != null)
@@ -24,9 +36,14 @@ public class PlayShipSkillNotificater : Notificater
         }
         else
         {
-
+            // Handle the case when changeSkillState is null
         }
     }
+
+    /// <summary>
+    /// Invokes the changeSkillCoolDown event with the specified time.
+    /// </summary>
+    /// <param name="time">The new cooldown time.</param>
     public void OnChangeSkillCoolDown(float time)
     {
         if (changeSkillCoolDown != null)
@@ -35,9 +52,10 @@ public class PlayShipSkillNotificater : Notificater
         }
         else
         {
-
+            // Handle the case when changeSkillCoolDown is null
         }
     }
+
     IEnumerator WaitforOnchangeSkillState(AbilityState state)
     {
         while(changeSkillState==null)
@@ -46,6 +64,7 @@ public class PlayShipSkillNotificater : Notificater
         }
         changeSkillState(state);
     }
+
     IEnumerator WaitOnChangeSkillCoolDown(float time)
     {
         while (changeSkillCoolDown == null)

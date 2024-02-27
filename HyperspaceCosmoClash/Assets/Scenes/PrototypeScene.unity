@@ -3033,7 +3033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269794016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.18, y: 11.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989204649}
@@ -3417,7 +3417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
   hpBarType: 2
-  hpSlider: {fileID: 0}
+  hpSlider: {fileID: 1941529974}
 --- !u!1 &339201698
 GameObject:
   m_ObjectHideFlags: 0
@@ -48969,7 +48969,7 @@ GameObject:
   - component: {fileID: 1211175292}
   - component: {fileID: 1211175291}
   m_Layer: 8
-  m_Name: BossDamageReceiver
+  m_Name: EnemyDamageReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48998,12 +48998,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211175289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac5bbdd684dd9a44b22282052599869, type: 3}
+  m_Script: {fileID: 11500000, guid: 48d3cdf39af7e3c459cdb7b3ec782b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dmgcollider: {fileID: 1211175292}
   hp: 3
-  hpMax: 50
+  hpMax: 200
   isDead: 0
   enemyCtrl: {fileID: 1225213594}
 --- !u!58 &1211175292
@@ -49370,7 +49370,7 @@ MonoBehaviour:
   model: {fileID: 885642212}
   enemyVFXEffect: {fileID: 1112603341}
   enemyDropItem: {fileID: 1096601434}
-  enemyDamageReceiver: {fileID: 0}
+  enemyDamageReceiver: {fileID: 1211175291}
   enemyMovement: {fileID: 765998468}
   hpBarType: 2
 --- !u!4 &1225213595
@@ -52190,7 +52190,7 @@ MonoBehaviour:
   spawnpoints: {fileID: 1588564763}
   maxNumberSpawner: 10
   currentNumberSpawner: 0
-  numberLimitAtOnceTime: 4
+  numberLimitAtOnceTime: 1
   numberCurrentOnceTime: 0
   enemyNames: 01000000
   stageId: 1

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the collection and notification of coin value changes.
+/// </summary>
 public class CoinManager : HaroMonoBehaviour
 {
     private static CoinManager instance;

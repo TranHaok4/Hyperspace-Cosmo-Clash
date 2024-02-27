@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents the abilities of a boss enemy.
+/// </summary>
 public class BossAbilities : HaroMonoBehaviour
 {
     [SerializeField] protected BossCtrl bossCtrl;
@@ -19,7 +22,7 @@ public class BossAbilities : HaroMonoBehaviour
     }
     protected override void OnEnable()
     {
-        Debug.Log("haha");
+        //Debug.Log("haha");
         foreach(BossAbilityDataSO ability in abilites)
         {
             if (ability != null)

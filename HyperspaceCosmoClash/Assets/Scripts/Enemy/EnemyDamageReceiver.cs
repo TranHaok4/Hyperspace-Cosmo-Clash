@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Represents a damage receiver for enemy objects.
+/// </summary>
 public class EnemyDamageReceiver : DamageReceiver
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
 
+    /// <summary>
+    /// Event that is triggered when the enemy's HP is updated.
+    /// </summary>
+    /// <param name="currentHP">The current HP of the enemy.</param>
+    /// <param name="maxHP">The maximum HP of the enemy.</param>
     public UnityAction<int, int> updateEnemyHP;
 
     protected override void OnEnable()
@@ -32,6 +40,10 @@ public class EnemyDamageReceiver : DamageReceiver
         //CreateExplosionVFX();
         //CreateExplosionSFX();
     }
+    /// <summary>
+    /// Deducts the specified amount of damage from the enemy's health points.
+    /// </summary>
+    /// <param name="damage">The amount of damage to deduct.</param>
     public override void Deduct(int damage)
     {
         this.enemyCtrl?.EnemyVFXeffect?.StartVFX();

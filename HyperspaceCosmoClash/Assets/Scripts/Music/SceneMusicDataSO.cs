@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ScriptableObject that holds the data for scene-specific music.
+/// </summary>
 [CreateAssetMenu(fileName = "SceneMusicData", menuName = "ScriptableObject/Audio/SceneMusicData", order = 1)]
 
 public class SceneMusicDataSO : ScriptableObject

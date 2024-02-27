@@ -36,7 +36,7 @@ public class EnemyHPBarCtrl : HaroMonoBehaviour
     {
         hpSlider.value = (float)hp / maxhp;
         if (hp == maxhp && hpBarType!=HPBarType.BossHPBar) this.hpSlider.gameObject.SetActive(false);
-        Debug.Log(this.gameObject.activeSelf);
+        //Debug.Log(this.gameObject.activeSelf);
         if(hpBarType!=HPBarType.BossHPBar && this.gameObject.activeSelf!=false && hp!=maxhp)
         {
             StartCoroutine(TurnOnfHPAfterTime());

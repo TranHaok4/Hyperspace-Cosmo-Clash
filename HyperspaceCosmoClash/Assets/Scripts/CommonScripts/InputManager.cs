@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Manages player input and provides access to input values.
+/// </summary>
 public class InputManager : HaroMonoBehaviour
 {
 
@@ -36,6 +39,9 @@ public class InputManager : HaroMonoBehaviour
         this.GetMove4Direction();
         this.GetMousePos();
     }
+    /// <summary>
+    /// Event that is triggered when the movement state changes.
+    /// </summary>
     public event UnityAction<bool> OnMovementChange;
 
     protected void GetMove4Direction()

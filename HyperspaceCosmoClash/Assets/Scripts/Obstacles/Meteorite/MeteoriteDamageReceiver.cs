@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a damage receiver for meteorite objects.
+/// </summary>
 public class MeteoriteDamageReceiver : DamageReceiver
 {
     [SerializeField] protected MeteoriteCtrl meteoriteCtrl;

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns meteorites in the game.
+/// </summary>
 public class MeteoriteSpawner : Spawner
 {
     private static MeteoriteSpawner instance;

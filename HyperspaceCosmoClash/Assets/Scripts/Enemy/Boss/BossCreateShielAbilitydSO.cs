@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ScriptableObject class that represents a boss ability to create a shield.
+/// </summary>
 [CreateAssetMenu(fileName = "BossCreateShield", menuName = "ScriptableObject/BossAbilities/BossCreateShield")]
 
 public class BossCreateShielAbilitydSO : BossAbilityDataSO
@@ -21,6 +24,11 @@ public class BossCreateShielAbilitydSO : BossAbilityDataSO
         return false;
     }
 
+    /// <summary>
+    /// Activates the boss shield ability.
+    /// </summary>
+    /// <param name="owner">The GameObject that owns the ability.</param>
+    /// <returns>An IEnumerator used for coroutine execution.</returns>
     public override IEnumerator Activate(GameObject owner)
     {
         lastActivationTime = Time.time;

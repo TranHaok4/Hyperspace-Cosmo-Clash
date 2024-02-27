@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the behavior and functionality of a ship in the game.
+/// </summary>
 public class ShipCtrl : HaroMonoBehaviour
 {
     [SerializeField] protected ShipDespawn shipDespawn;

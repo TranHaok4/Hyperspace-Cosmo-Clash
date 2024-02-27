@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the game music in different scenes.
+/// </summary>
 public class GameMusicManager : HaroMonoBehaviour
 {
     [SerializeField] protected SceneMusicDataSO musicDataSO;

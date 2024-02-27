@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// Manages the level and experience of the player's ship.
+/// </summary>
 public class PlayerLevelManager : HaroMonoBehaviour
 {
     private static PlayerLevelManager instance;
@@ -25,6 +28,12 @@ public class PlayerLevelManager : HaroMonoBehaviour
         NotifyChangeInPlayerShipLevel();
     }
 
+    /// <summary>
+    /// Adds the specified amount of experience points to the player's current experience.
+    /// If the current experience exceeds the required experience for the current level,
+    /// the player's level is increased and the appropriate callbacks are invoked.
+    /// </summary>
+    /// <param name="value">The amount of experience points to add.</param>
     public virtual void AddExp(int value)
     {
         currentExp += value;

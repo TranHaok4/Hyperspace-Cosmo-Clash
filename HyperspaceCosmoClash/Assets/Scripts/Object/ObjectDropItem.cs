@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents an object that can drop items in the game.
+/// </summary>
 public class ObjectDropItem : HaroMonoBehaviour
 {
     [SerializeField] protected List<ItemProfileSO> itemDropList;
@@ -34,6 +37,9 @@ public class ObjectDropItem : HaroMonoBehaviour
         base.Reset();
     }
 
+    /// <summary>
+    /// Performs the dropping action for the object.
+    /// </summary>
     public virtual void Dropping()
     {
         DropItem();

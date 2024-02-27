@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the behavior of an enemy in the game.
+/// </summary>
 public class EnemyCtrl : HaroMonoBehaviour
 {
     [SerializeField] protected EnemyDespawn enemydespawn;

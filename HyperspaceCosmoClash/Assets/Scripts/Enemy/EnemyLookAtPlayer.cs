@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is responsible for making an enemy object look at the player.
+/// It inherits from the ObjectLookAtTarget class.
+/// </summary>
 public class EnemyLookAtPlayer : ObjectLookAtTarget
 {
     [Header("Look At Player")]

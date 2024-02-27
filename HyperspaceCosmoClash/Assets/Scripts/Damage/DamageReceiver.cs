@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Abstract base class for objects that can receive damage.
+/// </summary>
 [RequireComponent(typeof(CircleCollider2D))]
 public abstract class DamageReceiver : HaroMonoBehaviour
 {
@@ -10,7 +13,6 @@ public abstract class DamageReceiver : HaroMonoBehaviour
     [SerializeField] protected int hp = 1;
     [SerializeField] protected int hpMax = 3;
     [SerializeField] protected bool isDead = false;
-
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -40,6 +42,10 @@ public abstract class DamageReceiver : HaroMonoBehaviour
 
         Debug.Log(transform.name + "LoadCollider", gameObject);
     }
+    /// <summary>
+    /// Deducts the specified amount of damage from the health points (hp) of the damage receiver.
+    /// </summary>
+    /// <param name="damage">The amount of damage to deduct.</param>
     public virtual void Deduct(int damage)
     {
         if (this.isDead) return;

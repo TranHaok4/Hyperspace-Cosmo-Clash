@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Represents an enemy despawn behavior.
+/// </summary>
 public class EnemyDespawn : Despawn
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
@@ -19,9 +22,15 @@ public class EnemyDespawn : Despawn
         Debug.Log(transform.name + ":LoadEnemyCtrl", gameObject);
     }
 
+    /// <summary>
+    /// Event that is triggered when the object is despawned.
+    /// </summary>
     public event System.Action OnDespawmObjectCallBack;
     [SerializeField] public bool isDespawnObjectCallBackRegistered=false;
 
+    /// <summary>
+    /// Despawns the enemy object.
+    /// </summary>
     public override void DespawnObject()
     {
         //Debug.Log("Despawn");
@@ -30,7 +39,7 @@ public class EnemyDespawn : Despawn
         CreateExplosionVFX();
         CreateExplosionSFX();
         OnDespawmObjectCallBack?.Invoke();
-        Debug.Log("+");
+        //Debug.Log("+");
     }
     protected virtual void CreateExplosionVFX()
     {

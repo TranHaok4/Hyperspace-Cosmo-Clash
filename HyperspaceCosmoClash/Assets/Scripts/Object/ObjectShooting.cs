@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Base class for objects that can shoot bullets.
+/// </summary>
 public abstract class ObjectShooting : HaroMonoBehaviour
 {
     [SerializeField] protected TypeBullet bullet;
@@ -9,30 +12,37 @@ public abstract class ObjectShooting : HaroMonoBehaviour
     [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;
 
-
-    // ổ đây tôi muốn có một giá trị mà dev có thể chọn một kiểu bắn đạn như là enum
-    //nếu chọn normal shoot thì ko có gì thay đổi
-    // nếu chọn rapid shoot thì sẽ có thêm thông số về số lượng đạn bắn ra 
-
     protected void Update()
     {
         this.IsShooting();
     }
+
     protected void FixedUpdate()
     {
         this.Shooting();
     }
-    
 
+    /// <summary>
+    /// Performs the shooting logic.
+    /// </summary>
     protected virtual void Shooting()
     {
         this.shootTimer += Time.fixedDeltaTime;
         if (!this.isShooting) return;
         if (this.shootTimer <= this.shootDelay) return;
         this.shootTimer = 0;
-        this.Shoot();//ở đây sẽ áp dụng loại shoot được chọn
+        this.Shoot(); // Apply the selected shoot type here
     }
+
+    /// <summary>
+    /// Abstract method for shooting.
+    /// </summary>
     protected abstract void Shoot();
+
+    /// <summary>
+    /// Abstract method for checking if the object is shooting.
+    /// </summary>
+    /// <returns>True if the object is shooting, false otherwise.</returns>
     protected abstract bool IsShooting();
 }
 

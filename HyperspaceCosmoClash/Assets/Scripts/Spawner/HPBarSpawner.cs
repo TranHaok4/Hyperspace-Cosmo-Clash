@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns HP bars in the game.
+/// </summary>
 public class HPBarSpawner : Spawner
 {
     private static HPBarSpawner instance;
@@ -16,6 +19,9 @@ public class HPBarSpawner : Spawner
     }
 }
 
+/// <summary>
+/// Represents the type of HP bar.
+/// </summary>
 public enum HPBarType
 {
     none=0,

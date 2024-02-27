@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Base class for spawning game objects.
+/// </summary>
 public abstract class Spawner : HaroMonoBehaviour
 {
     [Header("Spawner")]
@@ -40,6 +43,13 @@ public abstract class Spawner : HaroMonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawns a game object based on the provided prefab name, position, and rotation.
+    /// </summary>
+    /// <param name="prefabName">The name of the prefab to spawn.</param>
+    /// <param name="spawnPos">The position to spawn the prefab at.</param>
+    /// <param name="rotation">The rotation of the spawned prefab.</param>
+    /// <returns>The spawned game object's Transform component.</returns>
     public virtual Transform Spawn(string prefabName,Vector3 spawnPos, Quaternion rotation)
     {
         Transform prefab = this.GetPrefabByName(prefabName);
@@ -59,6 +69,13 @@ public abstract class Spawner : HaroMonoBehaviour
         }
         return null;//TO-DO
     }
+    /// <summary>
+    /// Spawns a new instance of the specified prefab at the given position and rotation.
+    /// </summary>
+    /// <param name="prefab">The prefab to spawn.</param>
+    /// <param name="spawnPos">The position to spawn the prefab at.</param>
+    /// <param name="rotation">The rotation to apply to the spawned prefab.</param>
+    /// <returns>The spawned prefab as a Transform.</returns>
     public virtual Transform Spawn(Transform prefab,Vector3 spawnPos,Quaternion rotation)
     {
         Transform newPrefab = this.GetObjectFromPool(prefab);
@@ -83,11 +100,19 @@ public abstract class Spawner : HaroMonoBehaviour
     }
 
 
+    /// <summary>
+    /// Despawns the specified object by adding it back to the object pool and deactivating it.
+    /// </summary>
+    /// <param name="obj">The object to despawn.</param>
     public virtual void Despawn(Transform obj)
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
     }
+    /// <summary>
+    /// Returns a random prefab from the list of prefabs.
+    /// </summary>
+    /// <returns>The randomly selected prefab.</returns>
     public virtual Transform RandomPrefab()
     {
         int rand = UnityEngine.Random.Range(0, this.prefabs.Count);

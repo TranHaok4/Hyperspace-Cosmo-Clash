@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns bullets in the game.
+/// </summary>
 public class BulletSpawner : Spawner
 {
     private static BulletSpawner instance;

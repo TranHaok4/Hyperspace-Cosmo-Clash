@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ScriptableObject class that represents a boss ability to spawn child enemies.
+/// </summary>
 [CreateAssetMenu(fileName = "BossSpawnChild", menuName = "ScriptableObject/BossAbilities/BossSpawnChild")]
-
 public class BossSpawnChildAbilitySO : BossAbilityDataSO
 {
     [SerializeField] protected float timeDelayActive;
@@ -13,6 +15,7 @@ public class BossSpawnChildAbilitySO : BossAbilityDataSO
     [SerializeField] protected int numberChildSpawn;
     [SerializeField] protected int numberChillDespawn;
     [SerializeField] protected bool condition = true;
+
     protected override bool ActivationCondition(GameObject owner)
     {
         if (Time.time - lastActivationTime >= timeDelayActive && condition)
@@ -21,6 +24,12 @@ public class BossSpawnChildAbilitySO : BossAbilityDataSO
         }
         return false;
     }
+
+    /// <summary>
+    /// Coroutine that activates the boss ability.
+    /// </summary>
+    /// <param name="owner">The GameObject that owns the boss ability.</param>
+    /// <returns>An IEnumerator used for coroutine execution.</returns>
     public override IEnumerator Activate(GameObject owner)
     {
         lastActivationTime = Time.time;
@@ -31,6 +40,7 @@ public class BossSpawnChildAbilitySO : BossAbilityDataSO
             DoActivate(owner);
         }
     }
+
     protected override void DoActivate(GameObject owner)
     {
         Debug.Log("kich hoat skill spawn");

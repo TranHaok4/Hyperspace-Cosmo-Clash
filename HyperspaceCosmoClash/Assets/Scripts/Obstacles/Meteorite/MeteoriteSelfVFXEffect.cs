@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a visual effects effect for a meteorite object.
+/// </summary>
 public class MeteoriteSelfVFXEffect : ObjectSelfVFXEffect
 {
     [SerializeField] protected MeteoriteCtrl meteoriteCtrl;

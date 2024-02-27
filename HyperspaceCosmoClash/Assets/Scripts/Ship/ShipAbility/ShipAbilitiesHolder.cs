@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a class that holds ship abilities.
+/// </summary>
 public class ShipAbilitiesHolder : HaroMonoBehaviour
 {
     [SerializeField] BaseAbility abilityIndex1;

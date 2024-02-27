@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a component responsible for receiving damage to the boss shield.
+/// </summary>
 public class BossShieldDamageReceiver : EnemyDamageReceiver
 {
     [SerializeField] protected BossShieldCtrl bossShieldCtrl;

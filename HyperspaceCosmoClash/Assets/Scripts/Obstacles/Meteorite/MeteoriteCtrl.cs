@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the behavior of a meteorite in the game.
+/// </summary>
 public class MeteoriteCtrl : HaroMonoBehaviour
 {
     [SerializeField] protected MeteoriteDespawning meteoriteDespawn;

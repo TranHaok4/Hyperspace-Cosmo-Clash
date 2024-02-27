@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns visual effects in the game.
+/// </summary>
 public class VFXSpawner : Spawner
 {
     private static VFXSpawner instance;

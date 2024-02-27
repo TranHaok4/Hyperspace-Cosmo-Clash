@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Base class for ship abilities.
+/// </summary>
 public abstract class BaseAbility : HaroMonoBehaviour
 {
     [SerializeField] protected AbilityStatSO abilityStats;
@@ -47,6 +50,9 @@ public abstract class BaseAbility : HaroMonoBehaviour
         PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(delaytimer);
     }
 
+    /// <summary>
+    /// Updates the cooldown timer for the ship ability.
+    /// </summary>
     public void CoolDowning()
     {
         delaytimer -= Time.deltaTime;
@@ -58,6 +64,10 @@ public abstract class BaseAbility : HaroMonoBehaviour
         }
         NotifySkillCoolDown();
     }
+    /// <summary>
+    /// Checks if the ability is ready to be used.
+    /// </summary>
+    /// <returns>True if the ability is ready, false otherwise.</returns>
     public virtual bool CheckAbilityisReady()
     {
         return abilitystate == AbilityState.Ready;
