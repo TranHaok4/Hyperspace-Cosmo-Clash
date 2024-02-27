@@ -60,9 +60,11 @@ public class InputManager : HaroMonoBehaviour
     {
         this.mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
+    public UnityAction<int> OnFiringChange;
     protected void GetMouseDown()
     {
         this.onFiring = Input.GetAxis("Fire1");
+        OnFiringChange(this.onFiring>0?1:0);
     }
     protected void GetOnButtonSkill1()
     {
