@@ -53,7 +53,7 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
         void ChangeEnemyNumber()
         {
             numberCurrentOnceTime--;
-            Debug.Log("Change despawn:" + currentNumberSpawner + " " + numberCurrentOnceTime);
+            //Debug.Log("Change despawn:" + currentNumberSpawner + " " + numberCurrentOnceTime);
             StageSpawnerManager.Instance.CheckCondition(name);
             enemyDespawn.OnDespawmObjectCallBack -= ChangeEnemyNumber;
         }

@@ -41,7 +41,7 @@ public class GameMusicManager : HaroMonoBehaviour
     }
     protected void PlayMusicForScene(SceneType sceneType)
     {
-        if (currentSceneType != sceneType)
+        //if (currentSceneType != sceneType)
         {
             currentSceneType = sceneType;
             var musicList = musicDataSO.sceneMusicList.Find(sceneMusic => sceneMusic.scene == sceneType)?.musicClips;
@@ -72,7 +72,18 @@ public class GameMusicManager : HaroMonoBehaviour
     protected override void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        PlayMusicForScene(GetSceneTypeFromName(SceneManager.GetActiveScene().name));
+        PlayMusicForInstanceScene();
+    }
+
+    public virtual void PlayAnotherMusic(AudioClip musicClip)
+    {
+        audioSource.clip = musicClip;
+        audioSource.Play();
+    }
+    public virtual void PlayMusicForInstanceScene()
+    {
+        Debug.Log("PlayMusicForInstanceScene");
+        PlayMusicForScene(GetSceneTypeFromName(SceneManager.GetActiveScene().name));  
     }
 
     void OnDestroy()

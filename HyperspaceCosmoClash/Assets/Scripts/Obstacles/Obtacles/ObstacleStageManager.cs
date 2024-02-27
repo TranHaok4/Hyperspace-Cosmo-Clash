@@ -50,7 +50,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
     {
         foreach (ObstacleLazerStageActiver obj in obstacleLazerS)
         {
-            Debug.Log(stageid + ":" + obj.StageID);
+            //Debug.Log(stageid + ":" + obj.StageID);
             if (obj.StageID == stageid)
             {
                 obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer();
