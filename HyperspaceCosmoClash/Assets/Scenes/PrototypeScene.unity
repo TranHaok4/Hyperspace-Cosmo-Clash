@@ -3034,7 +3034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269794016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.3, y: -2.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989204649}
@@ -10357,7 +10357,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464520825}
-  - component: {fileID: 464520826}
   m_Layer: 0
   m_Name: BossStateNotificater
   m_TagString: Untagged
@@ -10379,18 +10378,6 @@ Transform:
   m_Father: {fileID: 1343543506}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &464520826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464520824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bb9278e5a46b3f42860502a604a5b1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &472165241
 GameObject:
   m_ObjectHideFlags: 0
@@ -49677,7 +49664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgcollider: {fileID: 1211175292}
   hp: 3
-  hpMax: 200
+  hpMax: 100
   isDead: 0
   enemyCtrl: {fileID: 1225213594}
 --- !u!58 &1211175292
@@ -50070,6 +50057,7 @@ Transform:
   - {fileID: 70233929}
   - {fileID: 1716461126}
   - {fileID: 1032103895}
+  - {fileID: 1843335406}
   m_Father: {fileID: 1799093556}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53283,7 +53271,7 @@ MonoBehaviour:
   spawnpoints: {fileID: 1588564763}
   maxNumberSpawner: 10
   currentNumberSpawner: 0
-  numberLimitAtOnceTime: 1
+  numberLimitAtOnceTime: 5
   numberCurrentOnceTime: 0
   enemyNames: 01000000
   stageId: 1
@@ -60392,6 +60380,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position1: {fileID: 1880116614}
   position2: {fileID: 2124032567}
+--- !u!1 &1843335405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843335406}
+  - component: {fileID: 1843335407}
+  m_Layer: 8
+  m_Name: BossMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843335406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843335405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1225213595}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843335407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843335405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954d4e8234b608c4b948cc099ae6a060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAudioClip: {fileID: 8300000, guid: 6aac2eb9eaa5e1b4d9152d2758086c76, type: 3}
+  bossCtrl: {fileID: 1225213594}
 --- !u!1 &1847667455
 GameObject:
   m_ObjectHideFlags: 0
@@ -61328,9 +61361,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1941529972}
   - component: {fileID: 1941529974}
-  - component: {fileID: 1941529973}
   m_Layer: 5
-  m_Name: BossHPbar
+  m_Name: BossHPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61358,19 +61390,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 29}
   m_SizeDelta: {x: 370, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1941529973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941529971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b2a4421334f264f94460b8a3528bc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HpBar: {fileID: 0}
 --- !u!114 &1941529974
 MonoBehaviour:
   m_ObjectHideFlags: 0

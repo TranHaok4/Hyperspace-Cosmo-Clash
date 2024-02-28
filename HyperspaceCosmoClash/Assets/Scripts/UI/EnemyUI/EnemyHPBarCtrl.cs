@@ -77,8 +77,9 @@ public class EnemyHPBarCtrl : HaroMonoBehaviour
 
         void DespawnHPBar()
         {
-            HPBarSpawner.Instance.Despawn(this.transform);
             newenemydespawn.OnDespawmObjectCallBack -= DespawnHPBar;
+            enemy_Ctrl.EnemyDamagereceiver.updateEnemyHP -= ChangeHPBar;
+            HPBarSpawner.Instance.Despawn(this.transform);
         }
     }
 }
