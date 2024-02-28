@@ -8,6 +8,7 @@ using UnityEngine;
 public class ObjectLookAtTarget : HaroMonoBehaviour
 {
     [SerializeField] protected Vector3 targetPosition;
+    public Vector3 TargetPosition { get => targetPosition; }
     [SerializeField] protected float rotSpeed = 3f;
 
     /// <summary>

@@ -7,9 +7,12 @@ using UnityEngine;
 /// </summary>
 public class EnemyMoveForward : EnemyMovement
 {
+    [SerializeField] protected EnemyCtrl enemyCtrl;
+
     [Header("EnemyMoveForward")]
     [SerializeField] protected Transform moveTarget;
 
+    [SerializeField] protected float maxDistance = 5f;
     /// <summary>
     /// Loads the required components for the enemy movement.
     /// </summary>
@@ -17,6 +20,7 @@ public class EnemyMoveForward : EnemyMovement
     {
         base.LoadComponents();
         this.LoadMoveTarget();
+        this.LoadEnemyCtrl();
     }
 
     /// <summary>
@@ -38,6 +42,12 @@ public class EnemyMoveForward : EnemyMovement
         Debug.Log(transform.name + ":LoadMoveTarget", gameObject);
     }
 
+    protected virtual void LoadEnemyCtrl()
+    {
+        if (this.enemyCtrl != null) return;
+        this.enemyCtrl = transform.parent.GetComponent<EnemyCtrl>();
+        Debug.Log(transform.name + ":LoadEnemyCtrl", gameObject);
+    }
     /// <summary>
     /// Retrieves the position of the move target and sets it as the enemy's target position.
     /// </summary>
@@ -46,4 +56,21 @@ public class EnemyMoveForward : EnemyMovement
         this.targetPosition = moveTarget.position;
         this.targetPosition.z = 0;
     }
+
+    protected override void Moving()
+    {
+        if(CheckDistance())
+        {
+            base.Moving();
+        }
+    }
+    protected virtual bool CheckDistance()
+    {
+        if(Vector3.Distance(transform.position, enemyCtrl.EnemyLookatplayer.TargetPosition) > maxDistance)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
