@@ -8,6 +8,9 @@ using UnityEngine;
 public class ShipShootByMouse : ObjectShooting
 {
     [SerializeField] protected ShipCtrl shipCtrl;
+    [Header("Shooting type")]
+    [SerializeField] protected ShootingBehaviour shootingBehaviour;
+
 
     /// <summary>
     /// Loads the required components for shooting and the ship control.
@@ -61,6 +64,7 @@ public class ShipShootByMouse : ObjectShooting
     /// </summary>
     protected override void Shoot()
     {
+        /*
         Vector3 spawnPos = transform.position;
         Quaternion rotation = transform.parent.rotation;
         Transform newBullet = BulletSpawner.Instance.Spawn(bullet.ToString(), spawnPos, rotation);
@@ -68,7 +72,8 @@ public class ShipShootByMouse : ObjectShooting
         newBullet.GetComponent<BulletCtrl>().SetShooter(this.transform.parent);
         newBullet.gameObject.SetActive(true);
         newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
-
+        */
+        shootingBehaviour.Shoot(this, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.playershoot, shipCtrl.transform.position, shipCtrl.transform.rotation);
     }
 }

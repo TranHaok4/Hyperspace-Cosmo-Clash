@@ -12,7 +12,7 @@ public class EnemyMoveForward : EnemyMovement
     [Header("EnemyMoveForward")]
     [SerializeField] protected Transform moveTarget;
 
-    [SerializeField] protected float maxDistance = 5f;
+    [SerializeField] protected float maxDistanceToTarget = 5f;
     /// <summary>
     /// Loads the required components for the enemy movement.
     /// </summary>
@@ -66,7 +66,7 @@ public class EnemyMoveForward : EnemyMovement
     }
     protected virtual bool CheckDistance()
     {
-        if(Vector3.Distance(transform.position, enemyCtrl.EnemyLookatplayer.TargetPosition) > maxDistance)
+        if(Vector3.Distance(transform.position, enemyCtrl.EnemyLookatplayer.TargetPosition) > maxDistanceToTarget)
         {
             return true;
         }

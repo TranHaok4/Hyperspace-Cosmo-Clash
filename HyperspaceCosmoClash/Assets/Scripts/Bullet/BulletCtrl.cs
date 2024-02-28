@@ -57,8 +57,10 @@ public class BulletCtrl : HaroMonoBehaviour
 public enum TypeBullet
 {
     none = 0,
-    PlayerBullet = 1,
+    RedPlayerBullet = 1,
     RedBulletNormalEnemyBullet = 2,
     CircleRedEnemyBullet=3,
     SuperTurleBullet=4,
+    GreenPlayerBullet = 5,
+
 }

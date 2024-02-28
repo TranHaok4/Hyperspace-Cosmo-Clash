@@ -17,6 +17,7 @@ public class ShipMovement : ObjecMovement
         base.LoadComponents();
         this.LoadShipCtrl();
     }
+    
 
     /// <summary>
     /// Loads the ShipCtrl component if it is not already loaded.
