@@ -50,6 +50,6 @@ public class MeteoriteSelfDamageSender : DamageSender
     {
         if (collision.gameObject.transform.parent.GetComponent<ShipCtrl>() == null) return;
         SendDamage(collision.gameObject.transform);
-        this.meteoriteCtrl.Meteoritedespawn.DespawnObject();
+        this.meteoriteCtrl.MeteoritedamageReceiver.Deduct(10000000);
     }
 }
