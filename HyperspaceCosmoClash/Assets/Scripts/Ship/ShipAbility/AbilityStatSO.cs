@@ -7,7 +7,8 @@ using UnityEngine;
 /// </summary>
 public abstract class AbilityStatSO : ScriptableObject
 {
-
+    [SerializeField] protected Sprite skillIcon;
+    public Sprite SkillIcon { get => skillIcon; }
 
     [SerializeField] protected float coolDownDelay;
     public float CoolDownDelay { get => coolDownDelay; }

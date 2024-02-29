@@ -14,6 +14,7 @@ public class ShipAbilitiesHolder : HaroMonoBehaviour
     {
         base.Start();
         abilityIndex1.ResetSkill();
+        PlayShipSkillNotificater.Instance.skillIcon=abilityIndex1.SkillIcon;
     }
     protected override void LoadComponents()
     {

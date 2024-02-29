@@ -7,8 +7,12 @@ public class UICoolDownIcon : BaseUIComponent
 {
     [SerializeField] protected Image skillIcon;
 
+    protected override void Start()
+    {
+        base.Start();
+        this.skillIcon.sprite = PlayShipSkillNotificater.Instance.skillIcon;
 
-
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();

@@ -24,6 +24,7 @@ public class PlayShipSkillNotificater : Notificater
     public UnityAction<AbilityState> changeSkillState;
     public UnityAction<float> changeSkillCoolDown;
 
+    public Sprite skillIcon;
     /// <summary>
     /// Invokes the changeSkillState event with the specified state.
     /// </summary>
