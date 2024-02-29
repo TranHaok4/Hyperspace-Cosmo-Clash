@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f02046d6bc4be840a63c7a364c8d450, type: 3}
-  m_Name: ShipDash
+  m_Script: {fileID: 11500000, guid: f4356bb182dc1f84588552ddefa9dc6f, type: 3}
+  m_Name: ShipDashAbilitySO
   m_EditorClassIdentifier: 
-  coolDownTimer: 5
-  skillName: ShipDash
+  coolDownDelay: 0
+  coolDownTimer: 0
+  skillName: 
+  dashSpeed: 0
+  dashDuration: 0.3
+  dashTimer: 0

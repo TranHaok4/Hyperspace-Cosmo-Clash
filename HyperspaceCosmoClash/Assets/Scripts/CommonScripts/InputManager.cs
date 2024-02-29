@@ -66,9 +66,11 @@ public class InputManager : HaroMonoBehaviour
         this.onFiring = Input.GetAxis("Fire1");
         OnFiringChange(this.onFiring>0?1:0);
     }
+    public UnityAction<int> OnButtonSkill1Change;
     protected void GetOnButtonSkill1()
     {
         this.onButtonSkill1=Input.GetKeyDown(KeyCode.Mouse1)?true:false;
+        OnButtonSkill1Change(this.onButtonSkill1?1:0);
         /*
         if (onButtonSkill1)
         {

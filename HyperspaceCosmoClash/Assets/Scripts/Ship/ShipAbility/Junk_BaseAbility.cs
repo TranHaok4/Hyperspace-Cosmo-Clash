@@ -73,8 +73,3 @@ public abstract class BaseAbility : HaroMonoBehaviour
         return abilitystate == AbilityState.Ready;
     }
 }
-public enum AbilityState
-{
-    Ready = 0,
-    CoolDown = 1,
-}

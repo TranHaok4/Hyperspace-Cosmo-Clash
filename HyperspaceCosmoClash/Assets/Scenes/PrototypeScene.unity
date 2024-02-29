@@ -3377,7 +3377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipmoveSpeed: 4
   shipDamage: 2
-  shipShootSpeed: 0.25
+  shipShootSpeed: 0.5
   shipHealth: 10000
 --- !u!1 &272504689
 GameObject:
@@ -57851,7 +57851,7 @@ MonoBehaviour:
   distance: 0
   mainCam: {fileID: 519420032}
   bulletImpactVFXName:
-    vfxname: 1
+    vfxname: 2
 --- !u!4 &1459219603
 Transform:
   m_ObjectHideFlags: 0
@@ -59142,7 +59142,7 @@ MonoBehaviour:
   delaytimer: 0
   shipCtrl: {fileID: 269794018}
   abilitystate: 0
-  dashSpeed: 10
+  dashSpeed: 12
   dashDuration: 0.35
   dashTimer: 0
 --- !u!1 &1615269689
@@ -59510,7 +59510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: 5
   isShooting: 0
-  shootDelay: 0.25
+  shootDelay: 0.5
   shootTimer: 0
   shipCtrl: {fileID: 269794018}
   shootingBehaviour: {fileID: 11400000, guid: 0432f0444f77bdd4090b0b7620f388e7, type: 2}
