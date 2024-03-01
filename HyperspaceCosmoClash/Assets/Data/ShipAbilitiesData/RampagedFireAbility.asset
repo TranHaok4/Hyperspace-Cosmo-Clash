@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ee3b358673f3242a1d88849dc6257a, type: 3}
+  m_Name: RampagedFireAbility
+  m_EditorClassIdentifier: 
+  skillIcon: {fileID: 21300000, guid: da39b2c803d0db54baf84f46e5cd1536, type: 3}
+  coolDownDelay: 3
+  coolDownTimer: -0.0039775
+  abilityState: 0
+  skillName: 
+  rampageFireCount: 1
+  numberofBulleteachWave: 50
+  rampageFireRange: 5

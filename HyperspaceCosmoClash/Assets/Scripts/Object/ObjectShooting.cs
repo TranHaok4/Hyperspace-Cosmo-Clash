@@ -8,6 +8,7 @@ using UnityEngine;
 public abstract class ObjectShooting : HaroMonoBehaviour
 {
     [SerializeField] protected TypeBullet bullet;
+    public TypeBullet Bullet { get => bullet; }
     [SerializeField] protected bool isShooting = false;
     [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;

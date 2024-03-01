@@ -3096,7 +3096,7 @@ GameObject:
   - component: {fileID: 269794018}
   - component: {fileID: 269794019}
   - component: {fileID: 269794020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -11618,7 +11618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591310682}
   - component: {fileID: 591310683}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35327,13 +35327,13 @@ GameObject:
   - component: {fileID: 750722476}
   - component: {fileID: 750722475}
   - component: {fileID: 750722474}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipItemLooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &750722473
 Transform:
   m_ObjectHideFlags: 0
@@ -41827,7 +41827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925593064}
   - component: {fileID: 925593065}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipAbilitiesHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41861,7 +41861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipCtrl: {fileID: 269794018}
-  abilityIndex1: {fileID: 11400000, guid: 79341ae621c95554f911a3196412020f, type: 2}
+  abilityIndex1: {fileID: 11400000, guid: c574939a91d277046b67038ae11dfa2a, type: 2}
 --- !u!1 &940610742
 GameObject:
   m_ObjectHideFlags: 0
@@ -42346,10 +42346,10 @@ MonoBehaviour:
   speed: 1
   targetPosition: {x: 0, y: 0, z: 0}
   distance: 1
-  minDistance: 1
-  enemyCtrl: {fileID: 0}
+  minDistance: 0
+  enemyCtrl: {fileID: 571897023}
   moveTarget: {fileID: 1095650954}
-  maxDistanceToTarget: 5
+  maxDistanceToTarget: 0
 --- !u!1 &982791537
 GameObject:
   m_ObjectHideFlags: 0
@@ -43482,7 +43482,7 @@ GameObject:
   - component: {fileID: 1087906655}
   - component: {fileID: 1087906657}
   - component: {fileID: 1087906656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipDamageReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49768,7 +49768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206922561}
   - component: {fileID: 1206922562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipDespawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50330,7 +50330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242210659}
   - component: {fileID: 1242210660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipEnhanceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54060,7 +54060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667055303}
   - component: {fileID: 1667055304}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipShootByMouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59788,7 +59788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783823432}
   - component: {fileID: 1783823433}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipVFXEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62242,7 +62242,7 @@ GameObject:
   - component: {fileID: 1989204649}
   - component: {fileID: 1989204650}
   - component: {fileID: 1989204651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62661,13 +62661,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2048261631}
   - component: {fileID: 2048261632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipLookAtMouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2048261631
 Transform:
   m_ObjectHideFlags: 0
@@ -63448,7 +63448,7 @@ GameObject:
   - component: {fileID: 2146252622}
   - component: {fileID: 2146252624}
   - component: {fileID: 2146252623}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
