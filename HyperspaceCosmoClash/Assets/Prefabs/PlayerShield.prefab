@@ -1,5 +1,113 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2723566155729003374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364221126085634217}
+  - component: {fileID: 836038568774679657}
+  - component: {fileID: 5267883881588342656}
+  m_Layer: 10
+  m_Name: ShipShieldDamageReceiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364221126085634217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723566155729003374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6829578350471364072}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836038568774679657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723566155729003374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04de7461f0795b04b98360181b4680d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgcollider: {fileID: 0}
+  hp: 1
+  hpMax: 3
+  isDead: 0
+  shipShieldCtrl: {fileID: 0}
+--- !u!58 &5267883881588342656
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723566155729003374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.8
+--- !u!1 &4526926058121236380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5982930363215993685}
+  - component: {fileID: 3136792097507434780}
+  m_Layer: 10
+  m_Name: ShipShieldDespawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5982930363215993685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526926058121236380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6829578350471364072}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3136792097507434780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526926058121236380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3578d0e3e47f94eb5b052449796c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6829578349608838403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +120,7 @@ GameObject:
   - component: {fileID: 6829578349608838401}
   - component: {fileID: 6829578349608838431}
   - component: {fileID: 6829578349608838430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6829578349990161200}
   - component: {fileID: 6829578349990161201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pngwing.com
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5391,7 +5499,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829578350471364072}
-  m_Layer: 0
+  - component: {fileID: 6638053898816712600}
+  m_Layer: 10
   m_Name: PlayerShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5410,9 +5519,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6829578350844267859}
+  - {fileID: 364221126085634217}
+  - {fileID: 5982930363215993685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.04}
+--- !u!114 &6638053898816712600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829578350471364075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa099e2e3f67a540918ac5d6c0056e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipShieldDamageReceiver: {fileID: 836038568774679657}
+  shipShieldDespawn: {fileID: 3136792097507434780}
 --- !u!1 &6829578350844267858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,7 +5547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829578350844267859}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2c2f3ed0b6a4a4897ee75b5b402aa2, type: 3}
   m_Name: CreateShieldAbilitySO
   m_EditorClassIdentifier: 
-  coolDownDelay: 0
+  skillIcon: {fileID: 21300000, guid: aed32d1ccd85bbc419d397117eae925b, type: 3}
+  coolDownDelay: 5
   coolDownTimer: 0
   abilityState: 0
   skillName: 
-  shieldPrefab: {fileID: 0}
+  shieldPrefab: {fileID: 6829578350471364072, guid: 843b8a3426640b642a06710d75c090bb, type: 3}

@@ -35,7 +35,7 @@ public abstract class AbilityStatSO : ScriptableObject
 
     public abstract void ActiveSkill(ShipCtrl shipCtrl);
 
-    protected IEnumerator Cooldowning()
+    protected virtual IEnumerator Cooldowning()
     {
         coolDownTimer = coolDownDelay;
         abilityState = AbilityState.CoolDown;
@@ -49,11 +49,11 @@ public abstract class AbilityStatSO : ScriptableObject
         abilityState = AbilityState.Ready;
         NotifySkillState();
     }
-    private void NotifySkillCoolDown()
+    protected void NotifySkillCoolDown()
     {
             PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(CoolDownTimer);
     }
-    private void NotifySkillState()
+    protected void NotifySkillState()
     {
         PlayShipSkillNotificater.Instance.OnChangeSkillState(Abilitystate);
     }
