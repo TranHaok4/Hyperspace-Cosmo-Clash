@@ -14,7 +14,18 @@ public class PlayerNormalShooting : NormalShooting
         if (newBullet == null) return;
         newBullet.GetComponent<BulletCtrl>().SetShooter(shooterTransform);
         newBullet.gameObject.SetActive(true);
-        newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(caller.GetComponent<ShipCtrl>().ShipStat.ShipDamage);
-        
+        if (newBullet != null && caller != null)
+        {
+            BulletCtrl bulletCtrl = newBullet.GetComponent<BulletCtrl>();
+            if (bulletCtrl != null)
+            {
+                ShipCtrl shipCtrl = caller.GetComponent<ShipCtrl>();
+                if (shipCtrl != null)
+                {
+
+                    bulletCtrl.BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
+                }
+            }
+        }
     }
 }

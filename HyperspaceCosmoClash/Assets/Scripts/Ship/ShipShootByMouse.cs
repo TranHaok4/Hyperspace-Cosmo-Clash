@@ -73,7 +73,7 @@ public class ShipShootByMouse : ObjectShooting
         newBullet.gameObject.SetActive(true);
         newBullet.GetComponent<BulletCtrl>().BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
         */
-        shootingBehaviour.Shoot(this, transform.parent, bullet);
+        shootingBehaviour.Shoot(shipCtrl, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.playershoot, shipCtrl.transform.position, shipCtrl.transform.rotation);
     }
 }

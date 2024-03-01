@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4356bb182dc1f84588552ddefa9dc6f, type: 3}
   m_Name: ShipDashAbilitySO
   m_EditorClassIdentifier: 
+  skillIcon: {fileID: 0}
   coolDownDelay: 0
   coolDownTimer: 0
+  abilityState: 0
   skillName: 
   dashSpeed: 0
   dashDuration: 0.3
