@@ -39,9 +39,9 @@ public class EnemySpawner : Spawner
     {
         EnemyCtrl newEnemyCtrl = newprefab.GetComponent<EnemyCtrl>();
         string nameHPbar = newEnemyCtrl.HPBartype.ToString();
-        Transform newHPbar = HPBarSpawner.Instance.Spawn(nameHPbar, newprefab.position, Quaternion.identity);
-        newHPbar.GetComponent<EnemyHPBarCtrl>().SetEnemyCtrl(newEnemyCtrl);
-        newHPbar.gameObject.SetActive(true);
+        Transform newHPbar = HPBarSpawner.Instance?.Spawn(nameHPbar, newprefab.position, Quaternion.identity);
+        newHPbar?.GetComponent<EnemyHPBarCtrl>().SetEnemyCtrl(newEnemyCtrl);
+        newHPbar?.gameObject.SetActive(true);
     }
 }
 /// <summary>

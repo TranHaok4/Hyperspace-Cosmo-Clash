@@ -67,7 +67,8 @@ public class BulletImpart : HaroMonoBehaviour
     /// <param name="other">The other collider involved in the collision.</param>
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.parent == this.bulletCtrl.Shooter) return;
+        //Debug.Log("BulletImpart: OnTriggerEnter2D: " + other.gameObject.name, gameObject);
+        if (other.transform.parent == this.bulletCtrl.Shooter ) return;
         this.bulletCtrl.BulletDamagesender.SendDamage(other.transform);
     }
 }

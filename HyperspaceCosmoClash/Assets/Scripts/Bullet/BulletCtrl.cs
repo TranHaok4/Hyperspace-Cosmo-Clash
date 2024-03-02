@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class BulletCtrl : HaroMonoBehaviour
 {
+    [SerializeField] protected bool isChangeName=true;
+
     [SerializeField] protected BulletDespawning bulletDespawn;
     public BulletDespawning BulletDespawn { get => bulletDespawn; }
 
@@ -20,6 +22,7 @@ public class BulletCtrl : HaroMonoBehaviour
 
     private void OnValidate()
     {
+        if(isChangeName==false) return;
         transform.name = bulletName.ToString();
     }
     protected override void LoadComponents()

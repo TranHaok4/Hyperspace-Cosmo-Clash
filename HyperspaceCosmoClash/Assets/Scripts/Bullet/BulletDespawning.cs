@@ -14,6 +14,7 @@ public class BulletDespawning : DespawningByDistance
     /// </summary>
     public override void DespawnObject()
     {
+        //Debug.LogWarning("BulletDespawning: DespawnObject: " + transform.parent.name, transform.parent.gameObject);
         BulletSpawner.Instance.Despawn(transform.parent);
         CreateImpactVFX();
     }
