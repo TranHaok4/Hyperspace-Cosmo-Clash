@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents the visual model of a ship in the game.
+/// </summary>
 public class ShipModelVisual : HaroMonoBehaviour
 {
     [SerializeField] protected ParticleSystem trailVFX;

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a visual effects effect for an enemy object.
+/// </summary>
 public class EnemySelfVFXEffect : ObjectSelfVFXEffect
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;

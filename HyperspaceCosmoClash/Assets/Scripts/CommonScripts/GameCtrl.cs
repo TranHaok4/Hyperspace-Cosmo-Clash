@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The GameCtrl class controls the overall game flow and manages important game components.
+/// </summary>
 public class GameCtrl : HaroMonoBehaviour
 {
     private static GameCtrl instance;

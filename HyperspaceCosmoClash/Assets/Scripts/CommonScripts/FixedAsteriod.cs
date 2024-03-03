@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a fixed asteroid in the game.
+/// </summary>
 public class FixedAsteriod : HaroMonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)

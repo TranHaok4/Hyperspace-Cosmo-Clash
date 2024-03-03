@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the random spawning of objects in the game.
+/// </summary>
 public class SpawnRandom : HaroMonoBehaviour
 {
     [Header("Spawner Random")]

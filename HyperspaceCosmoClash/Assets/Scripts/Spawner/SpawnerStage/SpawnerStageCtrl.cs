@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the spawning behavior of a stage in the game.
+/// </summary>
 public class SpawnerStageCtrl : HaroMonoBehaviour
 {
     [SerializeField] protected Spawner spawner;

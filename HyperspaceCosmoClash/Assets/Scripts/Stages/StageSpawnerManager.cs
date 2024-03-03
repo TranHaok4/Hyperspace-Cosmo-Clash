@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the spawning and despawning of enemy stages in the game.
+/// </summary>
 public class StageSpawnerManager : HaroMonoBehaviour
 {
     private static StageSpawnerManager instance;
@@ -56,6 +59,11 @@ public class StageSpawnerManager : HaroMonoBehaviour
             enemyDespawnConditions.Add(new EnemyDespawnCondition(currentStageData.Conditions[i].name, 0));
         }
     }
+    /// <summary>
+    /// Sets the current stage data and activates the corresponding enemy spawner stage control.
+    /// </summary>
+    /// <param name="data">The stage data to set.</param>
+    /// <param name="stageid">The ID of the stage.</param>
     public virtual void SetCurrentStageData(StageDataSO data,int stageid)
     {
         currentStageData = data;
@@ -71,6 +79,10 @@ public class StageSpawnerManager : HaroMonoBehaviour
         currentSpawnerStageCtrl?.gameObject.SetActive(true);
         this.ResetData();
     }
+    /// <summary>
+    /// Checks the condition for despawning an enemy based on its name.
+    /// </summary>
+    /// <param name="enemyname">The name of the enemy.</param>
     public virtual void CheckCondition(EnemyName enemyname)
     {
         bool flag = true;

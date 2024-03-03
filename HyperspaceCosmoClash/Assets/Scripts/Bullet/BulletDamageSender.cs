@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a class that sends damage to a damage receiver using a bullet.
+/// </summary>
 public class BulletDamageSender : DamageSender
 {
     [SerializeField] protected BulletCtrl bulletCtrl;
@@ -21,8 +24,13 @@ public class BulletDamageSender : DamageSender
         this.bulletCtrl = transform.parent.GetComponent<BulletCtrl>();
         Debug.Log(transform.name + "LoadBulletCtrl", gameObject);
     }
+    /// <summary>
+    /// Sends damage to a damage receiver.
+    /// </summary>
+    /// <param name="damageReceiver">The damage receiver to send damage to.</param>
     public override void SendDamage(DamageReceiver damageReceiver)
     {
+        //Debug.Log("BulletDamageSender: SendDamage: " + damageReceiver.gameObject.name, gameObject);
         base.SendDamage(damageReceiver);
         //CreateImpactVFX();
         this.DespawnBullet();

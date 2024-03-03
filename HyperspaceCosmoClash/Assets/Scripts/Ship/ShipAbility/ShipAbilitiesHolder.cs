@@ -2,39 +2,78 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents a class that holds ship abilities.
+/// </summary>
 public class ShipAbilitiesHolder : HaroMonoBehaviour
 {
-    [SerializeField] BaseAbility abilityIndex1;
+    [SerializeField] protected ShipCtrl shipCtrl;
+    [SerializeField] AbilityStatSO abilityIndex1;
+    [SerializeField] AbilityStatSO abilityIndex2;
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        PlayShipSkillNotificater.Instance.skillIcon1=abilityIndex1.SkillIcon;
+        PlayShipSkillNotificater.Instance.skillIcon2=abilityIndex2.SkillIcon;
+    }
+    protected override void Start()
+    {
+        base.Start();
+        abilityIndex1.ResetSkill(1);
+        abilityIndex2.ResetSkill(2);
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadAbilityIndex();
+        this.LoadShipCtrl();
     }
-    protected void LoadAbilityIndex()
+    protected virtual void LoadShipCtrl()
     {
-        List<BaseAbility> abilitiesIndex = new List<BaseAbility>();
-        foreach(Transform obj in transform)
-        {
-            abilitiesIndex.Add(obj.GetComponent<BaseAbility>());
-        }
-        abilityIndex1 = abilitiesIndex[0];
+        if (this.shipCtrl != null) return;
+        this.shipCtrl = transform.parent?.GetComponent<ShipCtrl>();
+        Debug.Log(transform.name+":LoadShipCtrl", gameObject);
     }
-    private void Update()
+    protected override void OnEnable()
     {
-        CheckAndUseSkill(InputManager.Instance.OnButtonSkill1);
+        base.OnEnable();
+        InputManager.Instance.OnButtonSkill1Change+=ActiveSkill1;
+        InputManager.Instance.OnButtonSkill2Change+=ActiveSkill2;
     }
-    protected void CheckAndUseSkill(bool buttonskill)
-    {
-        if (!abilityIndex1.CheckAbilityisReady())
-        {
-            abilityIndex1.CoolDowning();
-            return;
-        }
 
-        if (!buttonskill) return;
-
-        abilityIndex1.ActiveSkill();
-        abilityIndex1.StartCoolDown();
+    protected virtual void ActiveSkill1(int isready)
+    {
+        if(isready==0) return;
+        abilityIndex1.ActiveSkill(shipCtrl);
     }
+    protected virtual void ActiveSkill2(int isready)
+    {
+        if(isready==0) return;
+        abilityIndex2.ActiveSkill(shipCtrl);
+    }
+
+    /*
+    protected virtual void Update()
+    {
+        NotifySkillCoolDown();
+        NotifySkillState();
+    }
+    
+
+    private void NotifySkillCoolDown()
+    {
+        PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(abilityIndex1.CoolDownTimer);
+    }
+    private void NotifySkillState()
+    {
+        PlayShipSkillNotificater.Instance.OnChangeSkillState(abilityIndex1.Abilitystate);
+    }
+    */
+}
+
+public enum AbilityState
+{
+    Ready = 0,
+    CoolDown = 1,
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+/// <summary>
+/// Represents a ScriptableObject that holds data for a sound effect.
+/// </summary>
 [CreateAssetMenu(fileName = "SoundEffectData", menuName = "ScriptableObject/Audio/SoundEffectData", order = 1)]
 public class SoundEffectDataSO : ScriptableObject
 {

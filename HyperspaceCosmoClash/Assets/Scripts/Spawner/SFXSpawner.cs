@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawns special effects (SFX) objects in the game.
+/// </summary>
 public class SFXSpawner : Spawner
 {
     private static SFXSpawner instance;

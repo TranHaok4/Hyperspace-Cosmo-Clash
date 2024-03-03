@@ -4,43 +4,52 @@ using UnityEngine;
 
 public class SkillHUD : BaseHUD
 {
-    [SerializeField] protected UICoolDownIcon uiCoolDownIcon;
-    [SerializeField] protected UICoolDownText uiCoolDownText;
-
+    [Header("Skill")]
+    [SerializeField] protected List<UICoolDownIcon> uiCoolDownIcons;
+    [SerializeField] protected List<UICoolDownText> uiCoolDownTexts;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
-        this.LoadCoolDownIcon();
-        this.LoadCoolDownText();
+        this.LoadCoolDownIcons();
+        this.LoadCoolDownTexts();
     }
 
-    protected virtual void LoadCoolDownIcon()
+    protected virtual void LoadCoolDownIcons()
     {
-        if (this.uiCoolDownIcon != null) return;
-        this.uiCoolDownIcon = this.GetComponentInChildren<UICoolDownIcon>();
-        Debug.Log(transform.name + "LoadCoolDownIcon", gameObject);
+        if (this.uiCoolDownIcons != null && this.uiCoolDownIcons.Count > 0) return;
+        this.uiCoolDownIcons = new List<UICoolDownIcon>(this.GetComponentsInChildren<UICoolDownIcon>());
+        Debug.Log(transform.name + "LoadCoolDownIcons", gameObject);
     }
-    protected virtual void LoadCoolDownText()
+    protected virtual void LoadCoolDownTexts()
     {
-        if (this.uiCoolDownText != null) return;
-        this.uiCoolDownText = this.GetComponentInChildren<UICoolDownText>();
-        Debug.Log(transform.name + "LoadCoolDownText", gameObject);
+        if (this.uiCoolDownTexts != null && this.uiCoolDownTexts.Count > 0) return;
+        this.uiCoolDownTexts = new List<UICoolDownText>(this.GetComponentsInChildren<UICoolDownText>());
+        Debug.Log(transform.name + "LoadCoolDownTexts", gameObject);
     }
+
     protected override void Awake()
     {
-        StartCoroutine(WaitForConditionThenExecute());
+        SetUpUILogics();
     }
     protected override IEnumerator WaitForConditionThenExecute()
     {
-        //Debug.Log("0k");
-
-        while (PlayShipSkillNotificater.Instance == null)
+        while(PlayShipSkillNotificater.Instance==null)
         {
             yield return null;
         }
-        uiCoolDownIcon.SetUpUIlogic();
-        uiCoolDownText.SetUpUIlogic();
-
+        //Debug.Log("0k");
+        for (int i = 0; i < this.uiCoolDownIcons.Count; i++)
+        {
+            this.uiCoolDownIcons[i].SetUpUIlogic(i+1);
+        }
+        for (int i = 0; i < this.uiCoolDownTexts.Count; i++)
+        {
+            this.uiCoolDownTexts[i].SetUpUIlogic(i+1);
+        }
+    }
+    protected virtual void SetUpUILogics()
+    {
+        StartCoroutine(WaitForConditionThenExecute());
     }
 }
