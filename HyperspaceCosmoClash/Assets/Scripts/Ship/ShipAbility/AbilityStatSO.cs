@@ -13,6 +13,7 @@ public abstract class AbilityStatSO : ScriptableObject
     [SerializeField] protected float coolDownDelay;
     public float CoolDownDelay { get => coolDownDelay; }
 
+    [SerializeField] protected int skillindex;
 
     /// <summary>
     /// The cooldown timer for the ability.
@@ -25,10 +26,11 @@ public abstract class AbilityStatSO : ScriptableObject
 
     [SerializeField] protected string skillName;
 
-    public virtual void ResetSkill()
+    public virtual void ResetSkill(int _skillindex)
     {
         abilityState = AbilityState.Ready;
         coolDownTimer = 0;
+        skillindex=_skillindex;
         NotifySkillState();
         NotifySkillCoolDown();
     }
@@ -51,11 +53,12 @@ public abstract class AbilityStatSO : ScriptableObject
     }
     protected void NotifySkillCoolDown()
     {
-            PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(CoolDownTimer);
+        //Debug.Log("NotifySkillCoolDown"+skillindex);
+        PlayShipSkillNotificater.Instance.OnChangeSkillCoolDown(CoolDownTimer,skillindex);
     }
     protected void NotifySkillState()
     {
-        PlayShipSkillNotificater.Instance.OnChangeSkillState(Abilitystate);
+        PlayShipSkillNotificater.Instance.OnChangeSkillState(Abilitystate,skillindex);
     }
 
 }

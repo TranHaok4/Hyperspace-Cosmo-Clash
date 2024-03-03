@@ -10,23 +10,24 @@ public class UICoolDownIcon : BaseUIComponent
     protected override void Start()
     {
         base.Start();
-        this.skillIcon.sprite = PlayShipSkillNotificater.Instance.skillIcon;
-
     }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadSkillIcon();
     }
+
     protected virtual void LoadSkillIcon()
     {
         if (this.skillIcon != null) return;
         this.skillIcon = this.GetComponent<Image>();
         Debug.Log(transform.name + ":LoadSkillIcon", gameObject);
     }
+
     protected virtual void UpdateSkillIconColor(AbilityState state)
     {
-        if(state==AbilityState.CoolDown)
+        if (state == AbilityState.CoolDown)
         {
             skillIcon.color = Color.gray;
         }
@@ -35,8 +36,22 @@ public class UICoolDownIcon : BaseUIComponent
             skillIcon.color = Color.white;
         }
     }
+
     public override void SetUpUIlogic()
     {
-        PlayShipSkillNotificater.Instance.changeSkillState += UpdateSkillIconColor;
+        // Add your implementation for SetUpUIlogic here
+    }
+    public virtual void SetUpUIlogic(int index)
+    {
+        if(index==1)
+        {
+            PlayShipSkillNotificater.Instance.changeSkillState1 += UpdateSkillIconColor;
+            this.skillIcon.sprite = PlayShipSkillNotificater.Instance.skillIcon1;
+        }
+        else if(index==2)
+        {
+            PlayShipSkillNotificater.Instance.changeSkillState2 += UpdateSkillIconColor;
+            this.skillIcon.sprite = PlayShipSkillNotificater.Instance.skillIcon2; 
+        }
     }
 }

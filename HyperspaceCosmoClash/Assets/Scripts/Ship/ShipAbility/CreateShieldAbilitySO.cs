@@ -9,9 +9,9 @@ public class CreateShieldAbilitySO : AbilityStatSO
     [SerializeField] protected bool isShieldActive;
 
 
-    public override void ResetSkill()
+    public override void ResetSkill(int _skillindex)
     {
-        base.ResetSkill();
+        base.ResetSkill(_skillindex);
         isShieldActive=false;
     }
     protected virtual void CheckCondition()

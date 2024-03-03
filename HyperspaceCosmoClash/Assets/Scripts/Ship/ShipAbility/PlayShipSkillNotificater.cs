@@ -21,57 +21,77 @@ public class PlayShipSkillNotificater : Notificater
         //Debug.Log("da co PlayShipSkillNotificater");
     }
 
-    public UnityAction<AbilityState> changeSkillState;
-    public UnityAction<float> changeSkillCoolDown;
+    public UnityAction<AbilityState> changeSkillState1;
+    public UnityAction<float> changeSkillCoolDown1;
 
-    public Sprite skillIcon;
+    public UnityAction<AbilityState> changeSkillState2;
+    public UnityAction<float> changeSkillCoolDown2;
+
+    public Sprite skillIcon1;
+    public Sprite skillIcon2;
+
     /// <summary>
     /// Invokes the changeSkillState event with the specified state.
     /// </summary>
     /// <param name="state">The new ability state.</param>
-    public void OnChangeSkillState(AbilityState state)
+    public void OnChangeSkillState(AbilityState state,int skillindex)
     {
-        if (changeSkillState != null)
+        if(skillindex==1)
         {
-            changeSkillState(state);
+            if (changeSkillState1 != null)
+            {
+                changeSkillState1(state);
+            }
         }
-        else
+        else if(skillindex==2)
         {
-            // Handle the case when changeSkillState is null
+            if (changeSkillState2 != null)
+            {
+                changeSkillState2(state);
+            }
         }
+
     }
 
     /// <summary>
     /// Invokes the changeSkillCoolDown event with the specified time.
     /// </summary>
     /// <param name="time">The new cooldown time.</param>
-    public void OnChangeSkillCoolDown(float time)
+    public void OnChangeSkillCoolDown(float time,int skillindex)
     {
-        if (changeSkillCoolDown != null)
+        if(skillindex==1)
         {
-            changeSkillCoolDown(time);
+            if (changeSkillCoolDown1 != null)
+            {
+                //Debug.Log("OnChangeSkillCoolDown1"+time);
+                changeSkillCoolDown1(time);
+            }
         }
-        else
+        else if(skillindex==2)
         {
-            // Handle the case when changeSkillCoolDown is null
+            if (changeSkillCoolDown2 != null)
+            {
+                //Debug.Log("OnChangeSkillCoolDown2"+time);
+                changeSkillCoolDown2(time);
+            }
         }
     }
 
     IEnumerator WaitforOnchangeSkillState(AbilityState state)
     {
-        while(changeSkillState==null)
+        while(changeSkillState1==null)
         {
             yield return null;
         }
-        changeSkillState(state);
+        changeSkillState1(state);
     }
 
     IEnumerator WaitOnChangeSkillCoolDown(float time)
     {
-        while (changeSkillCoolDown == null)
+        while (changeSkillCoolDown1 == null)
         {
             yield return null;
         }
-        changeSkillCoolDown(time);
+        changeSkillCoolDown1(time);
     }
 }

@@ -9,12 +9,20 @@ public class ShipAbilitiesHolder : HaroMonoBehaviour
 {
     [SerializeField] protected ShipCtrl shipCtrl;
     [SerializeField] AbilityStatSO abilityIndex1;
+    [SerializeField] AbilityStatSO abilityIndex2;
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        PlayShipSkillNotificater.Instance.skillIcon1=abilityIndex1.SkillIcon;
+        PlayShipSkillNotificater.Instance.skillIcon2=abilityIndex2.SkillIcon;
+    }
     protected override void Start()
     {
         base.Start();
-        abilityIndex1.ResetSkill();
-        PlayShipSkillNotificater.Instance.skillIcon=abilityIndex1.SkillIcon;
+        abilityIndex1.ResetSkill(1);
+        abilityIndex2.ResetSkill(2);
     }
     protected override void LoadComponents()
     {
@@ -31,12 +39,18 @@ public class ShipAbilitiesHolder : HaroMonoBehaviour
     {
         base.OnEnable();
         InputManager.Instance.OnButtonSkill1Change+=ActiveSkill1;
+        InputManager.Instance.OnButtonSkill2Change+=ActiveSkill2;
     }
 
     protected virtual void ActiveSkill1(int isready)
     {
         if(isready==0) return;
         abilityIndex1.ActiveSkill(shipCtrl);
+    }
+    protected virtual void ActiveSkill2(int isready)
+    {
+        if(isready==0) return;
+        abilityIndex2.ActiveSkill(shipCtrl);
     }
 
     /*

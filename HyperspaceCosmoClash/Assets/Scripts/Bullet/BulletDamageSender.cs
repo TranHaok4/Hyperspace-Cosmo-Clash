@@ -30,7 +30,7 @@ public class BulletDamageSender : DamageSender
     /// <param name="damageReceiver">The damage receiver to send damage to.</param>
     public override void SendDamage(DamageReceiver damageReceiver)
     {
-        Debug.Log("BulletDamageSender: SendDamage: " + damageReceiver.gameObject.name, gameObject);
+        //Debug.Log("BulletDamageSender: SendDamage: " + damageReceiver.gameObject.name, gameObject);
         base.SendDamage(damageReceiver);
         //CreateImpactVFX();
         this.DespawnBullet();

@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public abstract class BaseAbility : HaroMonoBehaviour
 {
+    /*
     [SerializeField] protected AbilityStatSO abilityStats;
 
     [SerializeField] protected float delaytimer = 0;
@@ -72,4 +73,5 @@ public abstract class BaseAbility : HaroMonoBehaviour
     {
         return abilitystate == AbilityState.Ready;
     }
+    */
 }

@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ShipDashAbility : BaseAbility
 {
+    /*
     [SerializeField] protected float dashSpeed;
     [SerializeField] protected float dashDuration = 0.3f;
     [SerializeField] protected float dashTimer = 0f;
@@ -34,4 +35,5 @@ public class ShipDashAbility : BaseAbility
         }
         this.shipCtrl.Shipmovement.SetSpeed(oldShipSpeed);
     }
+    */
 }

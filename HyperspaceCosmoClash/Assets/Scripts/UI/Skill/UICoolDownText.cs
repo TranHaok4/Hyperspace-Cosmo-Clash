@@ -27,6 +27,17 @@ public class UICoolDownText : BaseUIComponent
     }
     public override void SetUpUIlogic()
     {
-        PlayShipSkillNotificater.Instance.changeSkillCoolDown += UpdateSkillcooldownText;
+        // Add your implementation for SetUpUIlogic here
+    }
+    public virtual void SetUpUIlogic(int index)
+    {
+        if(index==1)
+        {
+            PlayShipSkillNotificater.Instance.changeSkillCoolDown1 += UpdateSkillcooldownText;
+        }
+        else if(index==2)
+        {
+            PlayShipSkillNotificater.Instance.changeSkillCoolDown2 += UpdateSkillcooldownText;
+        }
     }
 }
