@@ -16,7 +16,6 @@ public class ShipDamageReceiver : DamageReceiver
     protected override void Awake()
     {
         base.Awake();
-        this.hpMax = shipCtrl.ShipStat.ShipHeath;
     }
 
     /// <summary>
@@ -95,6 +94,6 @@ public class ShipDamageReceiver : DamageReceiver
     /// </summary>
     protected virtual void NotifyHPvalue()
     {
-        HPShipPlayerNotificater.Instance.OnUpdateHPPlayerShipData(hp,hpMax);
+        HPShipPlayerNotificater.Instance?.OnUpdateHPPlayerShipData(hp,hpMax);
     }
 }

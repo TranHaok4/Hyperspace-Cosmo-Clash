@@ -23,7 +23,7 @@ public class PlayerNormalShooting : NormalShooting
                 if (shipCtrl != null)
                 {
 
-                    bulletCtrl.BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
+                    //bulletCtrl.BulletDamagesender.ChangeDamage(shipCtrl.ShipStat.ShipDamage);
                 }
             }
         }

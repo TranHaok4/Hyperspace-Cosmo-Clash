@@ -11,6 +11,11 @@ public class ShipAbilitiesHolder : HaroMonoBehaviour
     [SerializeField] AbilityStatSO abilityIndex1;
     [SerializeField] AbilityStatSO abilityIndex2;
 
+    public virtual void SetSkill(AbilityStatSO ability1, AbilityStatSO ability2)
+    {
+        abilityIndex1 = ability1;
+        abilityIndex2 = ability2;
+    }
 
     protected override void Awake()
     {

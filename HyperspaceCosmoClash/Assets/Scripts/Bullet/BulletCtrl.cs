@@ -54,16 +54,3 @@ public class BulletCtrl : HaroMonoBehaviour
 
 }
 
-/// <summary>
-/// Represents the type of a bullet.
-/// </summary>
-public enum TypeBullet
-{
-    none = 0,
-    RedPlayerBullet = 1,
-    RedBulletNormalEnemyBullet = 2,
-    CircleRedEnemyBullet=3,
-    SuperTurleBullet=4,
-    GreenPlayerBullet = 5,
-
-}

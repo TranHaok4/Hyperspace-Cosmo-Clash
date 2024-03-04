@@ -16,7 +16,7 @@ public class GameMenuHUD : HaroMonoBehaviour
     }
     protected virtual void InitButtonAction()
     {
-        startButton._Button.onClick.AddListener(()=>GameLevelManager.Instance.LoadScene("PrototypeScene"));
+        startButton._Button.onClick.AddListener(()=>GameLevelManager.Instance.LoadScene("ShipSelectionScene"));
         exitButton._Button.onClick.AddListener(GameLevelManager.Instance.ExitGame);
     }
 }

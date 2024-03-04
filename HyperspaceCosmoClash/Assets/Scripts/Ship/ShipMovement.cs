@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,7 +36,6 @@ public class ShipMovement : ObjecMovement
     protected override void Awake()
     {
         base.Awake();
-        this.speed = this.shipCtrl.ShipStat.ShipMoveSpeed;
     }
 
     /// <summary>
@@ -56,5 +56,10 @@ public class ShipMovement : ObjecMovement
 
         Rigidbody2D rb = shipCtrl.RB;
         rb.MovePosition(rb.position + movement);
+    }
+
+    public virtual void SetMoveSpeed(float shipMoveSpeed)
+    {
+        speed=shipMoveSpeed;
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ShipCtrl : HaroMonoBehaviour
 {
+
     [SerializeField] protected ShipDespawn shipDespawn;
     public ShipDespawn Shipdespawn { get => shipDespawn; }
     [SerializeField] protected ShipMovement shipMovement;
@@ -26,6 +27,12 @@ public class ShipCtrl : HaroMonoBehaviour
 
     [SerializeField] protected ShipSelfVFXEffect shipVFXEffect;
     public ShipSelfVFXEffect ShipVFXEffect { get => shipVFXEffect; }
+
+    [SerializeField] protected SpriteRenderer shipModel;
+    public SpriteRenderer ShipModel { get => shipModel; }
+
+    [SerializeField] protected ShipAbilitiesHolder shipAbilitiesHolder;
+    public ShipAbilitiesHolder ShipAbilitiesholder { get => shipAbilitiesHolder; }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -36,6 +43,8 @@ public class ShipCtrl : HaroMonoBehaviour
         this.LoadRigibody2D();
         this.LoadShipStats();
         this.LoadShipVFXEffect();
+        this.LoadShipModel();
+        this.LoadShipAbilitiesHolder();
     }
     protected virtual void LoadRigibody2D()
     {
@@ -81,5 +90,19 @@ public class ShipCtrl : HaroMonoBehaviour
         if (shipVFXEffect != null) return;
         shipVFXEffect = this.GetComponentInChildren<ShipSelfVFXEffect>();
         Debug.Log(transform.name + ":LoadShipVFXEffect", gameObject);
+    }
+
+    protected virtual void LoadShipModel()
+    {
+        if (shipModel != null) return;
+        shipModel = this.GetComponentInChildren<SpriteRenderer>();
+        Debug.Log(transform.name + ":LoadShipModel", gameObject);
+    }
+
+    protected virtual void LoadShipAbilitiesHolder()
+    {
+        if (shipAbilitiesHolder != null) return;
+        shipAbilitiesHolder = this.GetComponentInChildren<ShipAbilitiesHolder>();
+        Debug.Log(transform.name + ":LoadShipAbilitiesHolder", gameObject);
     }
 }

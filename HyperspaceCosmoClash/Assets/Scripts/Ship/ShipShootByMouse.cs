@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ using UnityEngine;
 public class ShipShootByMouse : ObjectShooting
 {
     [SerializeField] protected ShipCtrl shipCtrl;
+
+    [SerializeField] protected int shipDamage;
     [Header("Shooting type")]
     [SerializeField] protected ShootingBehaviour shootingBehaviour;
 
@@ -37,7 +40,6 @@ public class ShipShootByMouse : ObjectShooting
     protected override void Awake()
     {
         base.Awake();
-        this.shootDelay = shipCtrl.ShipStat.ShipShootSpeed;
     }
 
     /// <summary>
@@ -75,5 +77,20 @@ public class ShipShootByMouse : ObjectShooting
         */
         shootingBehaviour.Shoot(shipCtrl, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.playershoot, shipCtrl.transform.position, shipCtrl.transform.rotation);
+    }
+
+    public void SetShipDamage(int damagevalue)
+    {
+        shipDamage=damagevalue;
+    }
+
+    public void SetShootSpeed(float shipShootSpeed)
+    {
+        shootDelay=shipShootSpeed;
+    }
+
+    internal void SetShootBehaviour(ShootingBehaviour shipShootBehaviour)
+    {
+        this.shootingBehaviour=shipShootBehaviour;
     }
 }

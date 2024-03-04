@@ -1657,6 +1657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145490696}
   - component: {fileID: 145490697}
+  - component: {fileID: 145490698}
   m_Layer: 8
   m_Name: RdHoperTurret
   m_TagString: Untagged
@@ -1705,6 +1706,27 @@ MonoBehaviour:
   enemyMovement: {fileID: 0}
   hpBarType: 1
   enemyLookAtPlayer: {fileID: 0}
+--- !u!50 &145490698
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145490695}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &152369929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,6 +3262,7 @@ MonoBehaviour:
   rb: {fileID: 269794019}
   shipStats: {fileID: 269794020}
   shipVFXEffect: {fileID: 1783823433}
+  shipModel: {fileID: 1989204650}
 --- !u!50 &269794019
 Rigidbody2D:
   serializedVersion: 4
@@ -3273,10 +3296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce1f6527a5704f44a8af8d364d8961e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipmoveSpeed: 4
-  shipDamage: 2
-  shipShootSpeed: 0.5
-  shipHealth: 10000
+  shipCtrl: {fileID: 0}
+  shipProfile: {fileID: 0}
 --- !u!1 &272504689
 GameObject:
   m_ObjectHideFlags: 0
@@ -41886,6 +41907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924089504}
   - component: {fileID: 924089505}
+  - component: {fileID: 924089506}
   m_Layer: 8
   m_Name: RdFighter
   m_TagString: Untagged
@@ -41935,6 +41957,27 @@ MonoBehaviour:
   enemyMovement: {fileID: 1015330661}
   hpBarType: 1
   enemyLookAtPlayer: {fileID: 0}
+--- !u!50 &924089506
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924089503}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &925593063
 GameObject:
   m_ObjectHideFlags: 0
@@ -41979,8 +42022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipCtrl: {fileID: 269794018}
-  abilityIndex1: {fileID: 11400000, guid: 79341ae621c95554f911a3196412020f, type: 2}
-  abilityIndex2: {fileID: 11400000, guid: c574939a91d277046b67038ae11dfa2a, type: 2}
+  abilityIndex1: {fileID: 11400000, guid: a98c7dd63a692304cb4ec418dfae4889, type: 2}
+  abilityIndex2: {fileID: 11400000, guid: fc8f8aa724ffad447841cb7bca80b3a2, type: 2}
 --- !u!1 &940610742
 GameObject:
   m_ObjectHideFlags: 0
@@ -44084,7 +44127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9feb8831202acb429affdbde538a941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxMaterial: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 3}
+  vfxMaterial: {fileID: 2100000, guid: eefed93e4530cb9428a9199354dded36, type: 2}
   duration: 0
   explosionVFXName:
     vfxname: 1
@@ -50387,6 +50430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225213595}
   - component: {fileID: 1225213594}
+  - component: {fileID: 1225213596}
   m_Layer: 8
   m_Name: SuperTurtle
   m_TagString: Untagged
@@ -50441,6 +50485,27 @@ Transform:
   m_Father: {fileID: 1799093556}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1225213596
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225213593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1242210658
 GameObject:
   m_ObjectHideFlags: 0
@@ -52543,7 +52608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1437067698
 Transform:
   m_ObjectHideFlags: 0
@@ -54216,12 +54281,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea12199314a841a33e6ffe8a3edd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: 1
+  bullet: 5
   isShooting: 0
   shootDelay: 0.2
   shootTimer: 0
   shipCtrl: {fileID: 269794018}
-  shootingBehaviour: {fileID: 11400000, guid: 8557ce60b4f406b429ef0c2f3a6c177e, type: 2}
+  shipDamage: 0
+  shootingBehaviour: {fileID: 11400000, guid: 0432f0444f77bdd4090b0b7620f388e7, type: 2}
 --- !u!1 &1669682646
 GameObject:
   m_ObjectHideFlags: 0
@@ -62522,7 +62588,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 35b640f40a3e1ff42833969660eb4617, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c341c0a9f0e1ba040aa3148a2cdfb264, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -63331,6 +63397,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeDelay: 0.65
   timer: 0
+--- !u!1 &2095226853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2291474865873707039, guid: d5240913bfea51047bc291484abfb538, type: 3}
+  m_PrefabInstance: {fileID: 2291474865892325100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2095226855
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095226853}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2104828160
 GameObject:
   m_ObjectHideFlags: 0
@@ -68608,6 +68700,10 @@ PrefabInstance:
       propertyPath: originalMaterial
       value: 
       objectReference: {fileID: 572660867}
+    - target: {fileID: 2291474865671669696, guid: d5240913bfea51047bc291484abfb538, type: 3}
+      propertyPath: maxDistanceToTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2291474865873707032, guid: d5240913bfea51047bc291484abfb538, type: 3}
       propertyPath: m_RootOrder
       value: 3

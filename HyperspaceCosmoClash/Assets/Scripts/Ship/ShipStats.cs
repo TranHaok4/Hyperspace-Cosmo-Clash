@@ -7,24 +7,87 @@ using UnityEngine;
 /// </summary>
 public class ShipStats : HaroMonoBehaviour
 {
-    [SerializeField] protected float shipmoveSpeed;
-    public float ShipMoveSpeed { get => shipmoveSpeed; }
-    [SerializeField] protected int shipDamage;
-    public int ShipDamage { get => shipDamage; }
+    [SerializeField] protected ShipCtrl shipCtrl;
 
-    [SerializeField] protected float shipShootSpeed;
-    public float ShipShootSpeed { get => shipShootSpeed; }
+    [SerializeField] protected ShipProfileSO shipProfile;
 
-    [SerializeField] protected int shipHealth;
-    public int ShipHeath { get => shipHealth; }
-
-
-    /// <summary>
-    /// Increases the ship's damage by the specified value.
-    /// </summary>
-    /// <param name="value">The value to increase the ship's damage by.</param>
-    public virtual void IncreaseShipDamage(int value)
+    protected override void Awake()
     {
-        shipDamage += value;
+        base.Awake();
+        if(ShipProfilesManager.Instance!=null)
+        {
+            SetStatsForShip();
+        }
+        else StartCoroutine(WaitForShipProfile());
+    }
+
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        LoadShipCtrl();
+    }
+    
+    protected virtual void LoadShipCtrl()
+    {
+        if (shipCtrl != null) return;
+        shipCtrl = this.transform.GetComponent<ShipCtrl>();
+        Debug.Log(transform.name + ":LoadShipCtrl", gameObject);
+    }
+
+
+    protected virtual void SetStatsForShip()
+    {
+        shipProfile = ShipProfilesManager.Instance.CurrentShipProfile;
+        SetHP();
+        SetDamage();
+        SetMoveSpeed();
+        SetShootSpeed();
+        SetShipModel();
+        SetShootBehaviour();
+        SetShipSkill();
+
+    }
+
+    IEnumerator WaitForShipProfile()
+    {
+        yield return new WaitUntil(() => ShipProfilesManager.Instance != null);
+        SetStatsForShip();
+    }
+
+    public virtual void SetHP()
+    {
+        shipCtrl.ShipDamageReceiver.AddHPmax(shipProfile.ShipHealth);
+    }
+
+    public virtual void SetDamage()
+    {
+        shipCtrl.ShipShooter.SetShipDamage(shipProfile.ShipDamage);
+    }
+
+    public virtual void SetMoveSpeed()
+    {
+        shipCtrl.Shipmovement.SetMoveSpeed(shipProfile.ShipSpeed);
+    }
+
+    public virtual void SetShootSpeed()
+    {
+        shipCtrl.ShipShooter.SetShootSpeed(shipProfile.ShipShootRate);
+    }
+
+    public virtual void SetShipModel()
+    {
+        Debug.Log("Setting ship model");
+        shipCtrl.ShipModel.sprite=shipProfile.ShipSprite;
+    }
+
+    public virtual void SetShootBehaviour()
+    {
+        shipCtrl.ShipShooter.SetShootBehaviour(shipProfile.ShipShootBehaviour);
+        shipCtrl.ShipShooter.SetBulletType(shipProfile.Typebullet);
+    }
+
+    public virtual void SetShipSkill()
+    {
+        shipCtrl.ShipAbilitiesholder.SetSkill(shipProfile.Ability1, shipProfile.Ability2);
     }
 }

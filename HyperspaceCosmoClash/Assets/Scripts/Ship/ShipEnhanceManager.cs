@@ -47,7 +47,7 @@ public class ShipEnhanceManager : HaroMonoBehaviour
                     IncreaseDamageEnhanceSO damageEnhance = enhance as IncreaseDamageEnhanceSO;
                     if (damageEnhance != null)
                     {
-                        damageEnhance.beApplyEnhance += IncreaseShipDamage;
+                        //damageEnhance.beApplyEnhance += IncreaseShipDamage;
                     }
                     break;
             }
@@ -92,6 +92,7 @@ public class ShipEnhanceManager : HaroMonoBehaviour
         this.shipCtrl.ShipShooter.IncreaseShootRate(value);
     }
 
+    /*
     /// <summary>
     /// Increases the ship's damage by the specified value.
     /// </summary>
@@ -100,4 +101,5 @@ public class ShipEnhanceManager : HaroMonoBehaviour
     {
         this.shipCtrl.ShipStat.IncreaseShipDamage(value);
     }
+    */
 }
