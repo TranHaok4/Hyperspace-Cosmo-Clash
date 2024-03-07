@@ -30,6 +30,9 @@ public class EnemyCtrl : HaroMonoBehaviour
     [SerializeField] protected EnemyLookAtPlayer enemyLookAtPlayer;
     public EnemyLookAtPlayer EnemyLookatplayer { get => enemyLookAtPlayer; }
 
+    [SerializeField] protected ObjectShooting objectShooting;
+    public ObjectShooting Objectshooting { get => objectShooting; } 
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -52,6 +55,7 @@ public class EnemyCtrl : HaroMonoBehaviour
         this.LoadEnemyDamageReceiver();
         this.LoadEnemyMovement();
         this.LoadEnemyLookAtPlayer();
+        this.LoadObjectShooting();
     }
     protected virtual void LoadEnemyDespawn()
     {
@@ -98,4 +102,10 @@ public class EnemyCtrl : HaroMonoBehaviour
         Debug.Log(transform.name+"LoadEnemyLookAtPlayer",gameObject);
     }
 
+    protected virtual void LoadObjectShooting()
+    {
+        if (this.objectShooting != null) return;
+        this.objectShooting = GetComponentInChildren<ObjectShooting>();
+        Debug.Log(transform.name + "ObjectShooting", gameObject);
+    }
 }

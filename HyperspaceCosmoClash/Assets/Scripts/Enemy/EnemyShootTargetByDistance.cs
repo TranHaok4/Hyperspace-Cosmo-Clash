@@ -44,6 +44,7 @@ public class EnemyShootTargetByDistance : ObjectShooting
     /// </summary>
     protected override void Shoot()
     {
+        onShootingCallBack?.Invoke();
         shootingBehaviour.Shoot(this, transform.parent, bullet);
         AudioManager.Instance.PlaySound(SoundFXName.enemyshoot,transform.parent.position,transform.parent.rotation);
         if(isRandomShootDelay)

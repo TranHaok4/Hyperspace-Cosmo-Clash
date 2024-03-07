@@ -13,6 +13,8 @@ public abstract class ObjectShooting : HaroMonoBehaviour
     [SerializeField] protected float shootDelay = 0.2f;
     [SerializeField] protected float shootTimer = 0f;
 
+    public System.Action onShootingCallBack;
+
 
     public virtual void SetBulletType(TypeBullet _bullet)
     {

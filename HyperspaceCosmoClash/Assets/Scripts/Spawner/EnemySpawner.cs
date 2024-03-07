@@ -54,4 +54,7 @@ public enum EnemyName
     RdFighter=2,
     RdHoperTurret=3,
     SuperTurtle=4,
+    RedSmg,
+    RedSniper,
+    
 }

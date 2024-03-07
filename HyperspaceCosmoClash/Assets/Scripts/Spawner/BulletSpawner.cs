@@ -31,5 +31,6 @@ public enum TypeBullet
     CircleRedEnemyBullet=3,
     SuperTurleBullet=4,
     GreenPlayerBullet = 5,
+    RedSniperBullet,
 
 }
