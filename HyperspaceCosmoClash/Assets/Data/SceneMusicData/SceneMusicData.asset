@@ -16,6 +16,6 @@ MonoBehaviour:
   - scene: 1
     musicClips:
     - {fileID: 8300000, guid: b523622b215ce74429ef8b742153a9a3, type: 3}
-  - scene: 2
+  - scene: 3
     musicClips:
     - {fileID: 8300000, guid: e688ba8e89f3d974081169b85eb8f096, type: 3}

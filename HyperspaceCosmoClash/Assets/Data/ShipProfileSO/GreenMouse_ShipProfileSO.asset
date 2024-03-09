@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipName: GreenMouse
   shipSprite: {fileID: 21300000, guid: c341c0a9f0e1ba040aa3148a2cdfb264, type: 3}
-  shipHealth: 1200
+  shipHealth: 10
   shipSpeed: 4
   shipShootRate: 0.5
   shipDamage: 1

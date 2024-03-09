@@ -21,6 +21,11 @@ public abstract class ObjectSelfVFXEffect : HaroMonoBehaviour
     /// <summary>
     /// Starts the visual effects.
     /// </summary>
+    
+    protected virtual void Start()
+    {
+        Debug.Log("ObjectSelfVFXEffect:Start", gameObject);
+    }
     public virtual void StartVFX()
     {
         if (!this.gameObject.activeSelf) return;

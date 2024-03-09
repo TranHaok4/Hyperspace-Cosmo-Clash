@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipName: RedRiper
   shipSprite: {fileID: 21300000, guid: 35b640f40a3e1ff42833969660eb4617, type: 3}
-  shipHealth: 1000
+  shipHealth: 10
   shipSpeed: 4
-  shipShootRate: 0.25
+  shipShootRate: 0.21
   shipDamage: 1
   ability1: {fileID: 11400000, guid: 79341ae621c95554f911a3196412020f, type: 2}
   ability2: {fileID: 11400000, guid: c574939a91d277046b67038ae11dfa2a, type: 2}

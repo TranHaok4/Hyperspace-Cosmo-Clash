@@ -65,6 +65,8 @@ public class GameMusicManager : HaroMonoBehaviour
                 return SceneType.GameMenuScene;
             case "PrototypeScene":
                 return SceneType.PrototypeScene;
+            case "Map1":
+                return SceneType.Map1;
             default:
                 return SceneType.GameMenuScene; 
         }

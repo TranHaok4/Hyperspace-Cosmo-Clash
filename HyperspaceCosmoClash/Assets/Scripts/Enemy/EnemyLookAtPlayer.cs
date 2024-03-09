@@ -47,7 +47,10 @@ public class EnemyLookAtPlayer : ObjectLookAtTarget
     protected override void Start()
     {
         base.Start();
-        enemyCtrl.Objectshooting.onShootingCallBack+=TurnOffLineFewSeconds;
+        if(lineRenderer!=null)
+        {
+            enemyCtrl.Objectshooting.onShootingCallBack+=TurnOffLineFewSeconds;
+        }
     }
     protected virtual void Update()
     {

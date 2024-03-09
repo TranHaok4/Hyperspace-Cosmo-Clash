@@ -82,11 +82,12 @@ public class ShipDamageReceiver : DamageReceiver
     /// </summary>
     protected virtual void CreateExplosionVFX()
     {
-        string fxName = shipCtrl.ShipVFXEffect.ExplosionVFXname.ToString(); ;
+        string fxName = shipCtrl.ShipVFXEffect.ExplosionVFXname.GetName(); 
+        Debug.Log(shipCtrl.ShipVFXEffect.ExplosionVFXname.ToString());
         Vector3 hitPos = transform.position;
         Quaternion hitRot = transform.rotation;
         Transform fxImpact = VFXSpawner.Instance.Spawn(fxName, hitPos, hitRot);
-        fxImpact.gameObject.SetActive(true);
+        fxImpact?.gameObject.SetActive(true);
     }
 
     /// <summary>

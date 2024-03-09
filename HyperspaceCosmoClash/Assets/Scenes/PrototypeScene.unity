@@ -205,6 +205,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &14659493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1709,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 0}
   hpBarType: 1
   enemyLookAtPlayer: {fileID: 0}
+  objectShooting: {fileID: 0}
 --- !u!50 &145490698
 Rigidbody2D:
   serializedVersion: 4
@@ -3146,6 +3150,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &256175503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3270,7 @@ MonoBehaviour:
   shipStats: {fileID: 269794020}
   shipVFXEffect: {fileID: 1783823433}
   shipModel: {fileID: 1989204650}
+  shipAbilitiesHolder: {fileID: 0}
 --- !u!50 &269794019
 Rigidbody2D:
   serializedVersion: 4
@@ -3976,6 +3984,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &347150006
 GameObject:
   m_ObjectHideFlags: 0
@@ -11641,6 +11652,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 982643142}
   hpBarType: 1
   enemyLookAtPlayer: {fileID: 0}
+  objectShooting: {fileID: 0}
 --- !u!50 &571897024
 Rigidbody2D:
   serializedVersion: 4
@@ -11789,7 +11801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10907adc7cfc83246ad264f56c53924d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
+  speed: 4
   shipCtrl: {fileID: 269794018}
 --- !u!1 &595000779
 GameObject:
@@ -41310,6 +41322,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &838424957
 GameObject:
   m_ObjectHideFlags: 0
@@ -41957,6 +41972,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 1015330661}
   hpBarType: 1
   enemyLookAtPlayer: {fileID: 0}
+  objectShooting: {fileID: 0}
 --- !u!50 &924089506
 Rigidbody2D:
   serializedVersion: 4
@@ -50458,6 +50474,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 765998468}
   hpBarType: 2
   enemyLookAtPlayer: {fileID: 0}
+  objectShooting: {fileID: 0}
 --- !u!4 &1225213595
 Transform:
   m_ObjectHideFlags: 0
@@ -51676,7 +51693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343543505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.03226471}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 210266588}
@@ -60158,6 +60175,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 2
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &1788831640
 GameObject:
   m_ObjectHideFlags: 0
@@ -61067,6 +61087,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 0.1
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &1852302071
 GameObject:
   m_ObjectHideFlags: 0
@@ -62430,6 +62453,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!21 &1983796332
 Material:
   serializedVersion: 6
@@ -62515,6 +62541,9 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
   player: {fileID: 269794016}
+  isDisplayLine: 0
+  lineRenderer: {fileID: 0}
+  enemyCtrl: {fileID: 0}
 --- !u!1 &1989204648
 GameObject:
   m_ObjectHideFlags: 0
