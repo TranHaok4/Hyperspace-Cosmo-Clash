@@ -28,7 +28,9 @@ public class StageSpawnerManager : HaroMonoBehaviour
     [SerializeField] protected List<EnemyDespawnCondition> enemyDespawnConditions;
     [SerializeField] protected StageDataSO currentStageData;
     [SerializeField] protected EnemySpawnerStageCtrl currentSpawnerStageCtrl;
+    private bool isCurrentStageUnlock=false;
     [SerializeField] List<EnemySpawnerStageCtrl> spawnerStageCtrls;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -67,6 +69,7 @@ public class StageSpawnerManager : HaroMonoBehaviour
     public virtual void SetCurrentStageData(StageDataSO data,int stageid)
     {
         currentStageData = data;
+        isCurrentStageUnlock = false;
         foreach(EnemySpawnerStageCtrl enemySpawnerStage in spawnerStageCtrls)
         {
             
@@ -83,6 +86,7 @@ public class StageSpawnerManager : HaroMonoBehaviour
     /// Checks the condition for despawning an enemy based on its name.
     /// </summary>
     /// <param name="enemyname">The name of the enemy.</param>
+    
     public virtual void CheckCondition(EnemyName enemyname)
     {
         bool flag = true;
@@ -108,11 +112,12 @@ public class StageSpawnerManager : HaroMonoBehaviour
                 }
             }
         }
-        if(flag==true)  
+        if(flag==true && isCurrentStageUnlock==false)  
         {
             //Debug.Log("ok I'm fine");
             currentSpawnerStageCtrl.gameObject.SetActive(false);    
             ObstacleStageManager.Instance.TurnOffObstacleStage(currentSpawnerStageCtrl.StageID);
+            isCurrentStageUnlock = true;
         }
         else
         {

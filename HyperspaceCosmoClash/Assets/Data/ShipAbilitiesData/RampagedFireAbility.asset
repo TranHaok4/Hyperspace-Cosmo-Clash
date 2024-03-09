@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: RampagedFireAbility
   m_EditorClassIdentifier: 
   skillIcon: {fileID: 21300000, guid: da39b2c803d0db54baf84f46e5cd1536, type: 3}
-  coolDownDelay: 3
-  coolDownTimer: 0
+  coolDownDelay: 5
+  skillindex: 2
+  coolDownTimer: -0.002727287
   abilityState: 0
   skillName: 
   rampageFireCount: 3

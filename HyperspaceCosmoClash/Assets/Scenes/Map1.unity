@@ -3388,6 +3388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f43daea3358b94fb9ffb968d6e29a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 519420031}
   obstacleLazerS:
   - {fileID: 22974217}
   - {fileID: 1870937256}
@@ -5260,7 +5261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &435236219
 RectTransform:
   m_ObjectHideFlags: 0

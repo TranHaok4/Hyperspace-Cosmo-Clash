@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleStageManager : HaroMonoBehaviour
 {
+    [SerializeField] protected Camera mainCamera;
     private static ObstacleStageManager instance;
     public static ObstacleStageManager Instance { get => instance; }
     protected override void Awake()
@@ -53,8 +54,39 @@ public class ObstacleStageManager : HaroMonoBehaviour
             //Debug.Log(stageid + ":" + obj.StageID);
             if (obj.StageID == stageid)
             {
-                obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer();
+                StartCoroutine(MoveCameraAndTurnOffLazer(obj));
             }
         }
+    }
+    IEnumerator MoveCameraAndTurnOffLazer(ObstacleLazerStageActiver obj)
+    {
+        Vector3 originalCameraPosition = mainCamera.transform.position;
+        Vector3 targetPosition=obj.transform.position;
+        targetPosition=new Vector3(targetPosition.x,targetPosition.y,-10f);
+
+        Time.timeScale = 0f;
+
+        float timeElapsed = 0f;
+        float duration = 2f; 
+
+        while (timeElapsed < duration) {
+            float t = timeElapsed / duration;
+            mainCamera.transform.position = Vector3.Lerp(originalCameraPosition, targetPosition, t);
+            timeElapsed += Time.unscaledDeltaTime; 
+            yield return null;
+        }
+
+        obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer(); 
+        
+        timeElapsed = 0;
+        while (timeElapsed < duration) {
+            float t = timeElapsed / duration;
+            mainCamera.transform.position = Vector3.Lerp(targetPosition, originalCameraPosition, t);
+            timeElapsed += Time.unscaledDeltaTime; 
+            yield return null;
+        }
+        
+
+        Time.timeScale = 1f; 
     }
 }
