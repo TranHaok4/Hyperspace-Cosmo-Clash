@@ -56,5 +56,6 @@ public enum EnemyName
     SuperTurtle=4,
     RedSmg,
     RedSniper,
-    
+    OrangeSpread,
+    OrangeMissle,
 }

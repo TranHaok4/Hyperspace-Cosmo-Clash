@@ -12,6 +12,11 @@ public class ParentFly : HaroMonoBehaviour
 
     void Update()
     {
+        Fly();
+    }
+
+    protected virtual void Fly()
+    {
         transform.parent.Translate(this.direction * this.moveSpeed * Time.deltaTime);
     }
 }
