@@ -18,6 +18,8 @@ public class EnemySpawnRandom : SpawnRandom
     /// <summary>
     /// Spawns enemies randomly.
     /// </summary>
+    
+    
     protected override void Spawning()
     {
         if (!isSpawning) return;
@@ -33,4 +35,5 @@ public class EnemySpawnRandom : SpawnRandom
         EnemyName enemy_name = this.spawnerStageCtrl.GetComponent<EnemySpawnerStageCtrl>().GetRandomEnemy();
         this.spawnerStageCtrl.GetComponent<EnemySpawnerStageCtrl>().Spawn(enemy_name, pos, rot);
     }
+    
 }

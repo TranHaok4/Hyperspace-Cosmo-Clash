@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e09359fa84a1a4bb1dbf66d9d53c42, type: 3}
   m_Name: Map1_GateData 6
   m_EditorClassIdentifier: 
+  stageid: 6
   conditions:
+  - name: 3
+    numberEnemy: 2
   - name: 1
     numberEnemy: 8
   - name: 7
     numberEnemy: 4
-  - name: 3
-    numberEnemy: 2

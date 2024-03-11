@@ -483,7 +483,6 @@ Transform:
   - {fileID: 1220689666}
   - {fileID: 168555946}
   - {fileID: 1331609090}
-  - {fileID: 1437067698}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -531,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 2001601717}
-  stageID: 1
+  stageData: {fileID: 11400000, guid: 10ea0c08097355945bb98f5a74637e0a, type: 2}
 --- !u!21 &24914042
 Material:
   serializedVersion: 6
@@ -729,7 +728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 39507694}
   stageData: {fileID: 11400000, guid: 68a15201991d7aa439a514b293d3bd4e, type: 2}
-  stageId: 2
 --- !u!61 &39507694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1148,7 +1146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 88601469}
   stageData: {fileID: 11400000, guid: f0529428fc322c7439ad4f1fd06b5fcc, type: 2}
-  stageId: 7
 --- !u!61 &88601469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1890,7 +1887,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 133449515}
   stageData: {fileID: 11400000, guid: 10ea0c08097355945bb98f5a74637e0a, type: 2}
-  stageId: 1
 --- !u!61 &133449515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3367,8 +3363,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 22, y: -7, z: 0}
-  - {x: 28, y: -6, z: 0}
+  - {x: 4.7986403, y: 69.44264, z: 0}
+  - {x: 6.4286404, y: 75.60264, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3808,6 +3804,7 @@ MonoBehaviour:
   - {fileID: 1870937256}
   - {fileID: 1428868465}
   - {fileID: 1598488849}
+  - {fileID: 1200295569}
 --- !u!1 &269384258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269794016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.4, y: 44.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989204649}
@@ -4735,7 +4732,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.180344, y: 0.3}
+  m_Size: {x: 5.7974133, y: 0.3}
   m_EdgeRadius: 0
 --- !u!4 &343615398
 Transform:
@@ -4744,8 +4741,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343615395}
-  m_LocalRotation: {x: -0, y: -0, z: 0.22975287, w: 0.973249}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.13048361, w: 0.9914505}
+  m_LocalPosition: {x: -2.2000008, y: -3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1163406401}
@@ -5384,7 +5381,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 0.3}
+  m_Size: {x: 7.040742, y: 0.3}
   m_EdgeRadius: 0
 --- !u!4 &398803762
 Transform:
@@ -5393,8 +5390,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398803759}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710737, w: 0.7071063}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.4812091, w: 0.87660587}
+  m_LocalPosition: {x: 1.6000023, y: 0.020000458, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 412002271}
@@ -64061,7 +64058,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 815204076}
   stageData: {fileID: 11400000, guid: 78fccbc1cc0088e4392974f282469e9e, type: 2}
-  stageId: 4
 --- !u!61 &815204076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72371,8 +72367,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 100.00001, y: -2, z: 0}
-  - {x: 100, y: -7, z: 0}
+  - {x: 42.018642, y: 43.432644, z: 0}
+  - {x: 45.798645, y: 49.372646, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -78616,7 +78612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 2011256190}
-  stageID: 5
+  stageData: {fileID: 11400000, guid: f46706ea30f896849b5a153a1befb748, type: 2}
 --- !u!1 &1203338679
 GameObject:
   m_ObjectHideFlags: 0
@@ -79037,6 +79033,7 @@ Transform:
   m_Children:
   - {fileID: 1759048448}
   - {fileID: 1729730014}
+  - {fileID: 1437067698}
   m_Father: {fileID: 20811896}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80133,8 +80130,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 100.00001, y: -2, z: 0}
-  - {x: 100, y: -7, z: 0}
+  - {x: 50.018642, y: 41.132645, z: 0}
+  - {x: 59.308643, y: 41.682644, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -81830,7 +81827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 1163406402}
-  stageID: 3
+  stageData: {fileID: 11400000, guid: d5a58ab0a7714d242b86f2794403f8d7, type: 2}
 --- !u!1 &1436555376
 GameObject:
   m_ObjectHideFlags: 0
@@ -81887,14 +81884,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437067697}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 653777276}
   - {fileID: 2075620680}
-  m_Father: {fileID: 20811896}
-  m_RootOrder: 6
+  m_Father: {fileID: 1220689666}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1437067699
 MonoBehaviour:
@@ -83110,7 +83107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 1535396634}
   stageData: {fileID: 11400000, guid: d5a58ab0a7714d242b86f2794403f8d7, type: 2}
-  stageId: 3
 --- !u!61 &1535396634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83650,7 +83646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 412002272}
-  stageID: 2
+  stageData: {fileID: 11400000, guid: 68a15201991d7aa439a514b293d3bd4e, type: 2}
 --- !u!1 &1607434588
 GameObject:
   m_ObjectHideFlags: 0
@@ -84198,7 +84194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4466028b2c19e48afccac92e17cc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: 1
+  bullet: 2
   isShooting: 0
   shootDelay: 3
   shootTimer: 0
@@ -89907,7 +89903,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 0.3}
+  m_Size: {x: 9.306268, y: 0.3}
   m_EdgeRadius: 0
 --- !u!4 &1715168934
 Transform:
@@ -89916,8 +89912,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715168931}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710737, w: 0.7071063}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.029562859, w: 0.9995629}
+  m_LocalPosition: {x: 4.3549995, y: -2.6749992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2011256189}
@@ -91948,7 +91944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesCtrl: {fileID: 150769902}
-  stageID: 2
+  stageData: {fileID: 11400000, guid: 68a15201991d7aa439a514b293d3bd4e, type: 2}
 --- !u!1 &1875798305
 GameObject:
   m_ObjectHideFlags: 0
@@ -92324,8 +92320,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 53, y: -6, z: 0}
-  - {x: 63.000004, y: -1, z: 0}
+  - {x: -24.49136, y: 60.682644, z: 0}
+  - {x: -18.89136, y: 59.182644, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -93393,7 +93389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 1971226603}
   stageData: {fileID: 11400000, guid: 56375702737f8fb40827ac5986ee0521, type: 2}
-  stageId: 5
 --- !u!61 &1971226603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94177,7 +94172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.0827627, y: 0.3}
+  m_Size: {x: 6.3720055, y: 0.3}
   m_EdgeRadius: 0
 --- !u!4 &2038165884
 Transform:
@@ -94186,8 +94181,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038165881}
-  m_LocalRotation: {x: -0, y: -0, z: 0.082480535, w: 0.9965927}
-  m_LocalPosition: {x: 3, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.60999733, w: 0.79240346}
+  m_LocalPosition: {x: 0.81500006, y: 3.0800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 150769901}
@@ -94676,7 +94671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider2d: {fileID: 2071618129}
   stageData: {fileID: 11400000, guid: f46706ea30f896849b5a153a1befb748, type: 2}
-  stageId: 6
 --- !u!61 &2071618129
 BoxCollider2D:
   m_ObjectHideFlags: 0

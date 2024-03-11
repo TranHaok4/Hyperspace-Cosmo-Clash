@@ -8,23 +8,45 @@ using UnityEngine;
 public class EnemySpawnerStageCtrl : SpawnerStageCtrl
 {
     [SerializeField] protected List<EnemyName> enemyNames;
-    [SerializeField] protected int stageId;
+    [SerializeField] protected StageDataSO stageData;
+    [SerializeField] protected List<EnemySpawnCondition> enemySpawnConditions;
 
-    /// <summary>
-    /// Gets the ID of the stage.
-    /// </summary>
-    public int StageID { get => stageId; }
+    public int StageID { get => stageData.StageID; }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        enemySpawnConditions.Clear();
+        for(int i=0;i<stageData.Conditions.Count;i++)
+        {
+            enemySpawnConditions.Add(new EnemySpawnCondition(stageData.Conditions[i].name, stageData.Conditions[i].numberEnemy));
+        }
+        Debug.Log("EnemySpawnerStageCtrl OnEnable", gameObject);
+    }
     /// <summary>
     /// Gets a random enemy from the list of enemy names.
     /// </summary>
     /// <returns>A random enemy name.</returns>
+    
+    
+    
     public virtual EnemyName GetRandomEnemy()
     {
         int rand = UnityEngine.Random.Range(0, this.enemyNames.Count);
         return enemyNames[rand];
     }
-
+    
+    [System.Serializable]
+    protected class EnemySpawnCondition
+    {
+        [SerializeField] public EnemyName name;
+        [SerializeField] public int number;
+        public EnemySpawnCondition(EnemyName name, int number)
+        {
+            this.name = name;
+            this.number = number;
+        }
+    }
     /// <summary>
     /// Spawns an enemy at the specified position and rotation.
     /// </summary>
@@ -33,8 +55,13 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
     /// <param name="rot">The rotation of the spawned enemy.</param>
     public virtual void Spawn(EnemyName name, Vector3 pos, Quaternion rot)
     {
+        
+        
         if (currentNumberSpawner >= maxNumberSpawner || numberCurrentOnceTime >= numberLimitAtOnceTime) return;
-
+        if(!CheckConditonForEnemyType(name))
+        {
+            return;
+        }
         currentNumberSpawner++;
         numberCurrentOnceTime++;
 
@@ -57,5 +84,21 @@ public class EnemySpawnerStageCtrl : SpawnerStageCtrl
             StageSpawnerManager.Instance.CheckCondition(name);
             enemyDespawn.OnDespawmObjectCallBack -= ChangeEnemyNumber;
         }
+    }
+
+    protected virtual bool CheckConditonForEnemyType(EnemyName name)
+    {
+        for(int i=0;i<enemySpawnConditions.Count;i++)
+        {
+            if(enemySpawnConditions[i].name==name)
+            {
+                if(enemySpawnConditions[i].number>0)
+                {
+                    enemySpawnConditions[i].number--;
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

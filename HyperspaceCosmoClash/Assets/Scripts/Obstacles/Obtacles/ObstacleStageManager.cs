@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleStageManager : HaroMonoBehaviour
 {
-    [SerializeField] protected Camera mainCamera;
+    [SerializeField] protected Transform mainCamera;
     private static ObstacleStageManager instance;
     public static ObstacleStageManager Instance { get => instance; }
     protected override void Awake()
@@ -41,7 +41,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
     {
         foreach (ObstacleLazerStageActiver obj in obstacleLazerS)
         {
-            if(obj.StageID==stageid)
+            if(obj.StageData.StageID==stageid)
             {
                 obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOnLazer();
             }
@@ -53,7 +53,7 @@ public class ObstacleStageManager : HaroMonoBehaviour
         foreach (ObstacleLazerStageActiver obj in obstacleLazerS)
         {
             //Debug.Log(stageid + ":" + obj.StageID);
-            if (obj.StageID == stageid)
+            if (obj.StageData.StageID == stageid)
             {
                 objs.Add(obj);
             }

@@ -72,7 +72,7 @@ public class StageSpawnerManager : HaroMonoBehaviour
         isCurrentStageUnlock = false;
         foreach(EnemySpawnerStageCtrl enemySpawnerStage in spawnerStageCtrls)
         {
-            
+            //Debug.Log(enemySpawnerStage.StageID);
             if(enemySpawnerStage.StageID==stageid)
             {
                 currentSpawnerStageCtrl = enemySpawnerStage;

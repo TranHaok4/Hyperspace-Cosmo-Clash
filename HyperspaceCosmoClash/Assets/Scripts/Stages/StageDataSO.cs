@@ -8,6 +8,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "StageData", menuName = "ScriptableObject/StageData")]
 public class StageDataSO : ScriptableObject
 {
+
+    [SerializeField] protected int stageid;
+    public int StageID { get => stageid; }
     [System.Serializable]
     public struct EnemyCondition
     {

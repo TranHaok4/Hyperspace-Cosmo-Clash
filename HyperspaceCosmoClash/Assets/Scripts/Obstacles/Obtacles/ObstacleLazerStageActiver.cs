@@ -4,8 +4,9 @@ public class ObstacleLazerStageActiver : HaroMonoBehaviour
 {
     [SerializeField] protected ObstaclesCtrl obstaclesCtrl;
     public ObstaclesCtrl Obstaclesctrl { get => obstaclesCtrl; }
-    [SerializeField] protected int stageID;
-    public int StageID { get => stageID; }
+    [SerializeField] protected StageDataSO stageData;
+    public StageDataSO StageData { get => stageData; }
+
     protected override void LoadComponents()
     {
         base.LoadComponents();

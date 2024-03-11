@@ -23,12 +23,13 @@ public class EnemyMoveCirclePlayer : EnemyMoveForward
             }
             float x = enemyCtrl.EnemyLookatplayer.TargetPosition.x + radius * Mathf.Cos(angle);
             float y = enemyCtrl.EnemyLookatplayer.TargetPosition.y + radius * Mathf.Sin(angle);
-            angle += (this.speed - 1) * Time.deltaTime;
+            angle += (this.speed - 1.25f) * Time.deltaTime;
             float t = Time.deltaTime * speed;
             transform.parent.position = Vector3.Lerp(transform.parent.position, 
             new Vector3(x, y, transform.parent.position.z), t);        
         }
-        else {
+        else 
+        {
             base.Moving();
             enteredCircle = false; 
         }

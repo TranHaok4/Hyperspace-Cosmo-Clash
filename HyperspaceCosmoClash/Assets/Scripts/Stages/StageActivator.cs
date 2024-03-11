@@ -7,7 +7,6 @@ public class StageActivator : HaroMonoBehaviour
 {
     [SerializeField] protected BoxCollider2D collider2d;
     [SerializeField] protected StageDataSO stageData;
-    [SerializeField] protected int stageId;
 
     /// <summary>
     /// Loads the required components and initializes the collider.
@@ -36,8 +35,8 @@ public class StageActivator : HaroMonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.transform.parent.GetComponent<ShipCtrl>()) return;
-        StageSpawnerManager.Instance.SetCurrentStageData(stageData, stageId);
-        ObstacleStageManager.Instance.TurnOnObstacleStage(stageId);
+        StageSpawnerManager.Instance.SetCurrentStageData(stageData, stageData.StageID);
+        ObstacleStageManager.Instance.TurnOnObstacleStage(stageData.StageID);
         Destroy(gameObject);
     }
 }
