@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conditions:
   - name: 1
-    numberEnemy: 10
+    numberEnemy: 8
   - name: 7
     numberEnemy: 4
   - name: 3

@@ -49,39 +49,44 @@ public class ObstacleStageManager : HaroMonoBehaviour
     }
     public virtual void TurnOffObstacleStage(int stageid)
     {
+        List<ObstacleLazerStageActiver> objs = new List<ObstacleLazerStageActiver>();
         foreach (ObstacleLazerStageActiver obj in obstacleLazerS)
         {
             //Debug.Log(stageid + ":" + obj.StageID);
             if (obj.StageID == stageid)
             {
-                StartCoroutine(MoveCameraAndTurnOffLazer(obj));
+                objs.Add(obj);
             }
         }
+        StartCoroutine(MoveCameraAndTurnOffLazer(objs));
     }
-    IEnumerator MoveCameraAndTurnOffLazer(ObstacleLazerStageActiver obj)
+    IEnumerator MoveCameraAndTurnOffLazer(List<ObstacleLazerStageActiver> objs)
     {
-        Vector3 originalCameraPosition = mainCamera.transform.position;
-        Vector3 targetPosition=obj.transform.position;
-        targetPosition=new Vector3(targetPosition.x,targetPosition.y,-10f);
-
-        Time.timeScale = 0f;
-
         float timeElapsed = 0f;
         float duration = 2f; 
-
-        while (timeElapsed < duration) {
-            float t = timeElapsed / duration;
-            mainCamera.transform.position = Vector3.Lerp(originalCameraPosition, targetPosition, t);
-            timeElapsed += Time.unscaledDeltaTime; 
-            yield return null;
+        Vector3 originalCameraPosition = mainCamera.transform.position;
+        Vector3 targetPosition=new Vector3();
+        Vector3 lastPosition = new Vector3(originalCameraPosition.x,originalCameraPosition.y,-10f);
+        for(int i=0;i<objs.Count;i++)
+        {
+            targetPosition=objs[i].transform.position;
+            targetPosition=new Vector3(targetPosition.x,targetPosition.y,-10f);
+            Time.timeScale = 0f;
+            while (timeElapsed < duration) {
+                float t = timeElapsed / duration;
+                mainCamera.transform.position = Vector3.Lerp(lastPosition, targetPosition, t);
+                timeElapsed += Time.unscaledDeltaTime; 
+                yield return null;
+            }
+            timeElapsed=0;
+            lastPosition=new Vector3(targetPosition.x,targetPosition.y,-10f);
+            objs[i].Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer(); 
         }
-
-        obj.Obstaclesctrl.ObstaclesLazercontrol.TurnOffLazer(); 
         
         timeElapsed = 0;
         while (timeElapsed < duration) {
             float t = timeElapsed / duration;
-            mainCamera.transform.position = Vector3.Lerp(targetPosition, originalCameraPosition, t);
+            mainCamera.transform.position = Vector3.Lerp(lastPosition, originalCameraPosition, t);
             timeElapsed += Time.unscaledDeltaTime; 
             yield return null;
         }
