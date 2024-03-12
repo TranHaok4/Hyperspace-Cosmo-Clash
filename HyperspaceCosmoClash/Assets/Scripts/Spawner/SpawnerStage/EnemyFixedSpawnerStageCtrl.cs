@@ -24,7 +24,7 @@ public class EnemyFixedSpawnerStageCtrl : EnemySpawnerStageCtrl
         //Debug.Log("spawn ne");
         foreach(Transform pos in Spawnpoints.Points)
         {
-            this.Spawn(enemySpawnConditions[0].name, pos.position, pos.rotation);
+            this.Spawn(enemyNames[0], pos.position, pos.rotation);
         }
     }
 }

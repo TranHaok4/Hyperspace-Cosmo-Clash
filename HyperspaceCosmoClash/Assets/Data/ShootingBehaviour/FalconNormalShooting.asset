@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28edc2454a92ea44b9b341b49d457b2d, type: 3}
-  m_Name: NormalShooting
+  m_Name: FalconNormalShooting
   m_EditorClassIdentifier: 
-  numberOfBullet: 1
-  widthRangeShooting: 0
+  numberOfBullet: 5
+  widthRangeShooting: 10
