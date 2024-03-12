@@ -9,7 +9,8 @@ using UnityEngine;
 public class EnemyLookAtPlayer : ObjectLookAtTarget
 {
     [Header("Look At Player")]
-    [SerializeField] protected GameObject player;
+    [SerializeField] protected GameObject playerPos;
+    public GameObject PlayerPos { get => playerPos; }
     [SerializeField] protected bool isDisplayLine=false;
     [SerializeField] protected LineRenderer lineRenderer;
     [SerializeField] protected EnemyCtrl enemyCtrl;
@@ -28,8 +29,8 @@ public class EnemyLookAtPlayer : ObjectLookAtTarget
     }
     protected virtual void LoadPlayer()
     {
-        if (this.player != null) return;
-        this.player = GameObject.FindGameObjectWithTag("Player");
+        if (this.playerPos != null) return;
+        this.playerPos = GameObject.FindGameObjectWithTag("Player");
         Debug.Log(transform.name + ":LoadPlayer", gameObject);
     }
     protected virtual void LoadEnemyCtrl()
@@ -40,8 +41,8 @@ public class EnemyLookAtPlayer : ObjectLookAtTarget
     }
     protected virtual void GetPlayerPosition()
     {
-        if (this.player == null) return;
-        this.targetPosition = this.player.transform.position;
+        if (this.playerPos == null) return;
+        this.targetPosition = this.playerPos.transform.position;
         this.targetPosition.z = 0;
     }
     protected override void Start()
@@ -49,7 +50,8 @@ public class EnemyLookAtPlayer : ObjectLookAtTarget
         base.Start();
         if(lineRenderer!=null)
         {
-            enemyCtrl.Objectshooting.onShootingCallBack+=TurnOffLineFewSeconds;
+            if(enemyCtrl.Objectshooting!=null) enemyCtrl.Objectshooting.onShootingCallBack+=TurnOffLineFewSeconds;
+
         }
     }
     protected virtual void Update()
@@ -72,6 +74,20 @@ public class EnemyLookAtPlayer : ObjectLookAtTarget
         lineRenderer.enabled = false;
         yield return new WaitForSeconds(0.75f);
         lineRenderer.enabled = true;
+    }
+
+    public virtual void SetDisplayLine(bool value)
+    {
+        isDisplayLine = value;
+        if(value==false)
+        {
+            lineRenderer.enabled = false;
+        }
+        else
+        {
+            lineRenderer.enabled = true;
+
+        }
     }
 
 

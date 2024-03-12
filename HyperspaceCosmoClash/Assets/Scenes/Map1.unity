@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 5
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -3862,7 +3862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -3978,7 +3978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269794016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.5, y: 42.1, z: 0}
+  m_LocalPosition: {x: 121.88, y: 6.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989204649}
@@ -4230,7 +4230,7 @@ MonoBehaviour:
   isRandomShootDelay: 0
   minRandomDelay: 0.3
   maxRandomDelay: 1
-  shootingBehaviour: {fileID: 11400000, guid: 12dc40bdf3378d540a0c7e8a122ebbc3, type: 2}
+  shootingBehaviour: {fileID: 11400000, guid: 51cdccab80ea648418129f1f264ad6cc, type: 2}
 --- !u!1 &296337440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,7 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -70073,7 +70073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -72477,7 +72477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648ec168e4214d548a82c9c7940cc56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 5
   collider2d: {fileID: 1084759230}
   enemyCtrl: {fileID: 0}
 --- !u!58 &1084759230
@@ -72495,7 +72495,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 4
 --- !u!1 &1087056304
 GameObject:
   m_ObjectHideFlags: 0
@@ -72789,7 +72789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossCtrl: {fileID: 1517642526}
-  abilites: []
+  abilites:
+  - {fileID: 11400000, guid: 372be4913555b004c999d755ffb6fef1, type: 2}
 --- !u!1 &1093701592
 GameObject:
   m_ObjectHideFlags: 0
@@ -80606,6 +80607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287159176}
   - component: {fileID: 1287159177}
+  - component: {fileID: 1287159178}
   m_Layer: 8
   m_Name: EnemyLookAtPlayer
   m_TagString: Untagged
@@ -80640,11 +80642,109 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
-  rotSpeed: 10
-  player: {fileID: 269794016}
+  rotSpeed: 6
+  playerPos: {fileID: 269794016}
   isDisplayLine: 0
-  lineRenderer: {fileID: 0}
-  enemyCtrl: {fileID: 0}
+  lineRenderer: {fileID: 1287159178}
+  enemyCtrl: {fileID: 1517642526}
+--- !u!120 &1287159178
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287159175}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0fe20f49c5569ce40acb37d3b9c6bb19, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.21925354
+        value: 0.26115417
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0.9245283, g: 0.58142954, b: 0.14304017, a: 1}
+      key1: {r: 0.9150943, g: 0.36275858, b: 0.09841575, a: 1}
+      key2: {r: 0.9528302, g: 0.2828545, b: 0, a: 0}
+      key3: {r: 0.9433962, g: 0.24803181, b: 0.0658597, a: 0}
+      key4: {r: 0.9056604, g: 0.046137344, b: 0.20394737, a: 0}
+      key5: {r: 0.9716981, g: 0, b: 0.21420892, a: 0}
+      key6: {r: 0.8584906, g: 0.05993233, b: 0.39043573, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 13493
+      ctime2: 26792
+      ctime3: 37972
+      ctime4: 52043
+      ctime5: 60716
+      ctime6: 65535
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 7
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &1289155160
 GameObject:
   m_ObjectHideFlags: 0
@@ -81635,7 +81735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cc25d556cb8cf4983860094a99df18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 10
   direction: {x: 1, y: 0, z: 0}
 --- !u!1 &1349243828
 GameObject:
@@ -83403,7 +83503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 1
   lineRenderer: {fileID: 1470849411}
   enemyCtrl: {fileID: 0}
@@ -83944,7 +84044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517642524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136.3, y: 25.6, z: 0}
+  m_LocalPosition: {x: 115.2, y: 24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 512448442}
@@ -91958,7 +92058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 2
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -92204,7 +92304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -92848,7 +92948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 0.1
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -94542,7 +94642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
@@ -94675,7 +94775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   rotSpeed: 3
-  player: {fileID: 269794016}
+  playerPos: {fileID: 0}
   isDisplayLine: 0
   lineRenderer: {fileID: 0}
   enemyCtrl: {fileID: 0}
