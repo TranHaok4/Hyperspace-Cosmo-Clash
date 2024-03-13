@@ -60,6 +60,10 @@ public class ShipShootByMouse : ObjectShooting
     {
         shootDelay -= value;
     }
+    public virtual void IncreaseShootDamage(int value)
+    {
+        shipDamage += value;
+    }
 
     /// <summary>
     /// Spawns a bullet and sets its properties based on the ship's stats.

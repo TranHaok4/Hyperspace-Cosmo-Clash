@@ -11,27 +11,8 @@ public class IncreaseShootSpeedEnhanceSO : EnhancementDataSO
 {
     [SerializeField] protected float shootspeedValue;
 
-    /// <summary>
-    /// Event that is triggered when the enhancement is applied.
-    /// </summary>
-    public UnityAction<float> beApplyEnhance;
-
-    /// <summary>
-    /// Applies the enhancement by invoking the OnApplyEnhance method.
-    /// </summary>
-    public override void ApplyEnhancement()
+    public override void OnApllyEnhancement(ShipCtrl shipCtrl)
     {
-        OnApplyEnhance();
-    }
-
-    /// <summary>
-    /// Invokes the beApplyEnhance event with the shoot speed value.
-    /// </summary>
-    protected virtual void OnApplyEnhance()
-    {
-        if (beApplyEnhance != null)
-        {
-            beApplyEnhance(shootspeedValue);
-        }
+        shipCtrl.ShipShooter.IncreaseShootRate(shootspeedValue);
     }
 }

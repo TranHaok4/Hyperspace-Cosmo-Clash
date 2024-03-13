@@ -11,21 +11,8 @@ public class IncreaseHPEnhanceSO : EnhancementDataSO
 {
     [SerializeField] protected int hpIncreaseValue;
 
-    public UnityAction<int> beApplyEnhance;
-
-    /// <summary>
-    /// Applies the enhancement by invoking the beApplyEnhance event with the hpIncreaseValue.
-    /// </summary>
-    public override void ApplyEnhancement()
+    public override void OnApllyEnhancement(ShipCtrl shipCtrl)
     {
-        OnApplyEnhance();
-    }
-
-    protected virtual void OnApplyEnhance()
-    {
-        if (beApplyEnhance != null)
-        {
-            beApplyEnhance(hpIncreaseValue);
-        }
+        shipCtrl.ShipDamageReceiver.AddHPmax(hpIncreaseValue);
     }
 }

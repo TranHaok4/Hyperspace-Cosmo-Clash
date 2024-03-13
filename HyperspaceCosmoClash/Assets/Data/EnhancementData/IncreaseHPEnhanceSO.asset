@@ -15,4 +15,4 @@ MonoBehaviour:
   discriptionEnhance: 'Increase HP '
   enhacementImage: {fileID: 21300000, guid: 17d0b8a7c4c4f2f46bd275aab483b8bb, type: 3}
   enhanceType: 1
-  hpIncreaseValue: 2
+  hpIncreaseValue: 4

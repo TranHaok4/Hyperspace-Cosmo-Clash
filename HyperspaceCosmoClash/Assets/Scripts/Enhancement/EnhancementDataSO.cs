@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Base class for enhancement data scriptable objects.
@@ -14,11 +15,16 @@ public abstract class EnhancementDataSO : ScriptableObject
     [SerializeField] protected EnhancementType enhanceType ;
     public EnhancementType EnhanceType { get => enhanceType; }
     
+    public event System.Action beApplyEnhance;
     /// <summary>
     /// Applies the enhancement.
     /// </summary>
-    public abstract void ApplyEnhancement();
+    public virtual void ApplyEnhancement()
+    {
+        beApplyEnhance?.Invoke();
+    }
 
+    public abstract void OnApllyEnhancement(ShipCtrl shipCtrl);
     /// <summary>
     /// Gets the sprite associated with the enhancement.
     /// </summary>

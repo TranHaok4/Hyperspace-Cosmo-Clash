@@ -10,21 +10,9 @@ using UnityEngine.Events;
 public class IncreaseDamageEnhanceSO : EnhancementDataSO
 {
     [SerializeField] protected int damageIncreaseValue;
-    public UnityAction<int> beApplyEnhance;
 
-    /// <summary>
-    /// Applies the enhancement by invoking the beApplyEnhance event with the damage increase value.
-    /// </summary>
-    public override void ApplyEnhancement()
+    public override void OnApllyEnhancement(ShipCtrl shipCtrl)
     {
-        OnApplyEnhance();
-    }
-
-    protected virtual void OnApplyEnhance()
-    {
-        if (beApplyEnhance != null)
-        {
-            beApplyEnhance(damageIncreaseValue);
-        }
+        shipCtrl.ShipShooter.IncreaseShootDamage(damageIncreaseValue);
     }
 }
