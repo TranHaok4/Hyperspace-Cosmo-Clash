@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BossRampageSpreadFire
   m_EditorClassIdentifier: 
   abilityName: 0
-  timeDelayActive: 6
-  lastActivationTime: 12.011598
+  timeDelayActive: 20
+  lastActivationTime: 20.001831
   condition: 1
   numberOfshoot: 6
   timeDelayBetweenFire: 0.23

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: 0
   timeDelayActive: 7
-  lastActivationTime: 7.003453
+  lastActivationTime: 37.578815
   condition: 0
-  dashSpeed: 10
-  dashTime: 3.5
+  dashSpeed: 35
+  dashTime: 2
   numberOfDash: 3

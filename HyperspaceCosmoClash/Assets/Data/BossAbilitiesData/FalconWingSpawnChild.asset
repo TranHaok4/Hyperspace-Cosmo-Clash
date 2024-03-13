@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de4be14ffec9bd94699f37abd8099f4e, type: 3}
-  m_Name: BossSpawnChild
+  m_Name: FalconWingSpawnChild
   m_EditorClassIdentifier: 
   abilityName: 2
   timeDelayActive: 10
-  lastActivationTime: 30.58
-  childObject: {fileID: 2291474865873707033, guid: d5240913bfea51047bc291484abfb538, type: 3}
-  numberChildSpawn: 5
+  lastActivationTime: 27.284588
+  childObject: {fileID: 1413408538209695660, guid: acecee6413fd25640920fe29720d4449, type: 3}
+  numberChildSpawn: 3
   numberChillDespawn: 0
-  condition: 1
+  condition: 0

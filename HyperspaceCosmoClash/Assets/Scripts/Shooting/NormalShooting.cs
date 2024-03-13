@@ -19,7 +19,7 @@ public class NormalShooting : ShootingBehaviour
     public override void Shoot(MonoBehaviour caller, Transform shooterTransform, TypeBullet typeBullet)
     {
 
-        float range = widthRangeShooting/(numberOfBullet-1);
+        float range = widthRangeShooting/(numberOfBullet);
         for(int i=0;i<numberOfBullet;i++)
         {
             // Tìm vector vuông góc

@@ -58,4 +58,6 @@ public enum EnemyName
     RedSniper,
     OrangeSpread,
     OrangeMissle,
+    FalconWing,
+
 }

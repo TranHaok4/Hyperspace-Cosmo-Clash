@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Represents a class responsible for despawning a ship object.
@@ -12,6 +13,6 @@ public class ShipDespawn : Despawn
     /// </summary>
     public override void DespawnObject()
     {
-        this.transform.parent.transform.position = Vector3.zero;
+        GameLevelManager.Instance.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

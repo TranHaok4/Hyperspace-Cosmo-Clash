@@ -56,13 +56,10 @@ public class BossDashFowardPlayerAbilitySO : BossAbilityDataSO
             {
                 float t = elapsedTime / dashTime;
 
-                // Ease-in-out for a smoother start and end
                 float easedT = Mathf.SmoothStep(0f, 1f, t); 
 
-                // Calculate the dash position based on direction and eased progress
                 Vector3 dashPosition = owner.transform.position + direction * easedT * dashSpeed * Time.deltaTime;
 
-                // Only update the position in the direction of interest
                 owner.transform.position = dashPosition;
 
                 elapsedTime += Time.deltaTime;
@@ -72,7 +69,7 @@ public class BossDashFowardPlayerAbilitySO : BossAbilityDataSO
         }
         owner.GetComponent<BossCtrl>().Enemymovement.gameObject.SetActive(true);
         owner.GetComponent<BossCtrl>().EnemyLookatplayer.SetDisplayLine(false);
-        owner.GetComponent<BossCtrl>().Objectshooting.gameObject.SetActive(false);
+        owner.GetComponent<BossCtrl>().Objectshooting.gameObject.SetActive(true);
         ResetSkill();
     }
     protected virtual void ResetSkill()

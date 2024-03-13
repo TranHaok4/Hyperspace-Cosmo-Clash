@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7e09359fa84a1a4bb1dbf66d9d53c42, type: 3}
-  m_Name: Map1_GateData 4
+  m_Name: Map1_GateData 8
   m_EditorClassIdentifier: 
-  stageid: 4
+  stageid: 8
   conditions:
-  - name: 2
-    numberEnemy: 10
-  - name: 5
-    numberEnemy: 10
-  - name: 6
-    numberEnemy: 4
+  - name: 9
+    numberEnemy: 1
